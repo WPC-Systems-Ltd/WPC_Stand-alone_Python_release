@@ -1,0 +1,6 @@
+DIO loopback pins
+=================
+
+.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/DIO/DIO_loopback_pins.py
+   :language: python
+   :linenos:

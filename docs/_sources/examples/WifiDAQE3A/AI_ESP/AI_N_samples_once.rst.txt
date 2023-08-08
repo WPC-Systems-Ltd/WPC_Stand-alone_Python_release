@@ -1,0 +1,6 @@
+AI N samples once
+=================
+
+.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/AI_ESP/AI_N_samples_once.py
+   :language: python
+   :linenos:

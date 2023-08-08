@@ -1,0 +1,6 @@
+Get system info
+===============
+
+.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/System/get_system_info.py
+   :language: python
+   :linenos:

@@ -1,0 +1,6 @@
+Get memory status
+=================
+
+.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/Tutorial_ESP/get_memory_status.py
+   :language: python
+   :linenos:
