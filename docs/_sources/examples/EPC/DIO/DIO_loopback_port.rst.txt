@@ -1,6 +1,0 @@
-DIO loopback port
-=================
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/DIO/DIO_loopback_port.py
-   :language: python
-   :linenos:

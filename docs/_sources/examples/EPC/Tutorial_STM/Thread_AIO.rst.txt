@@ -1,6 +1,0 @@
-AIO thread
-==========
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/Tutorial_STM/Thread_AIO.py
-   :language: python
-   :linenos:

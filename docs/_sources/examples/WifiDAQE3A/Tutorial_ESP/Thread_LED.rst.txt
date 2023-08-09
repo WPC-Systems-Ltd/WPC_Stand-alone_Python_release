@@ -1,6 +1,0 @@
-LED thread
-==========
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/Tutorial_ESP/Thread_LED.py
-   :language: python
-   :linenos:

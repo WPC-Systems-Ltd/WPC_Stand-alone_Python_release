@@ -1,6 +1,0 @@
-AIO one channel loopback
-========================
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/AIO/AIO_one_channel_loopback.py
-   :language: python
-   :linenos:

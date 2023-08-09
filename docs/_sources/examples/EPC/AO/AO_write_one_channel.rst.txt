@@ -1,6 +1,0 @@
-AO write one channel
-====================
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/AO/AO_write_one_channel.py
-   :language: python
-   :linenos:

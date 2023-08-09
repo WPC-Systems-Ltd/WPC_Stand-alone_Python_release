@@ -1,6 +1,0 @@
-OLED write Line
-===============
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/OLED/OLED_writeLine.py
-   :language: python
-   :linenos:

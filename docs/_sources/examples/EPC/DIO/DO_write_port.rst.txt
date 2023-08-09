@@ -1,6 +1,0 @@
-DO write port
-=============
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/EPC/DIO/DO_write_port.py
-   :language: python
-   :linenos:

@@ -1,6 +1,0 @@
-LED control
-===========
-
-.. literalinclude:: ../../../../../../WPC_MicroPython_driver_source/examples/WifiDAQE3A/LED/LED_control.py
-   :language: python
-   :linenos:
