@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.0.13 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/WPC-trademark.jpg"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PYCO-WIFI" href="api_pyco_wifi.html" />
+    <link rel="prev" title="Get memory status" href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            WPC Stand-alone Python
+              <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.13
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">EXAMPLE CODES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Codes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API REFERNECE</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PYCO-ETH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#aio">AIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery">Battery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system">SYSTEM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi.html">PYCO-WIFI</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WPC Stand-alone Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PYCO-ETH</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyco-eth">
+<h1>PYCO-ETH<a class="headerlink" href="#pyco-eth" title="Permalink to this heading"></a></h1>
+<section id="aio">
+<h2>AIO<a class="headerlink" href="#aio" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415AI_readOnDemandv">
+<span id="_CPPv315AI_readOnDemandv"></span><span id="_CPPv215AI_readOnDemandv"></span><span id="AI_readOnDemand"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AI_readOnDemandv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read AI on demand. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>List</strong> – Analog voltage with 8 channels.</p></li>
+<li><p><strong>List</strong> – Analog voltage with 8 channels. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t">
+<span id="_CPPv318AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv218AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="AO_writeOneChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write AO on demand by channel. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – Channel number (0~7). </p></li>
+<li><p><strong>value</strong> – Voltage (-10~10). </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419AO_writeAllChannels8mp_obj_t">
+<span id="_CPPv319AO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219AO_writeAllChannels8mp_obj_t"></span><span id="AO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AO_writeAllChannels8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write AO on demand by synchronizing all channels. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value_list</strong> – The list of voltage (-10~10). </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="battery">
+<h2>Battery<a class="headerlink" href="#battery" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412DO_writePort8mp_obj_t">
+<span id="_CPPv312DO_writePort8mp_obj_t"></span><span id="_CPPv212DO_writePort8mp_obj_t"></span><span id="DO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412DO_writePort8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write DO current voltage with the port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state_list</strong> – The list of voltage state. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412DO_writePins8mp_obj_t8mp_obj_t">
+<span id="_CPPv312DO_writePins8mp_obj_t8mp_obj_t"></span><span id="_CPPv212DO_writePins8mp_obj_t8mp_obj_t"></span><span id="DO_writePins__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_list</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412DO_writePins8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write DO current voltage with the pins. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pin_list</strong> – The list of pin index. </p></li>
+<li><p><strong>value_list</strong> – The list of voltage state. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411DI_readPortv">
+<span id="_CPPv311DI_readPortv"></span><span id="_CPPv211DI_readPortv"></span><span id="DI_readPort"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411DI_readPortv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read DI current voltage from the port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>List</strong> – Voltage state with port. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411DI_readPins8mp_obj_t">
+<span id="_CPPv311DI_readPins8mp_obj_t"></span><span id="_CPPv211DI_readPins8mp_obj_t"></span><span id="DI_readPins__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411DI_readPins8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read DI current voltage from the pins. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pin_list</strong> – The list of pin index. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>List</strong> – Voltage state with pins. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="system">
+<h2>SYSTEM<a class="headerlink" href="#system" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420Sys_getDriverVersionv">
+<span id="_CPPv320Sys_getDriverVersionv"></span><span id="_CPPv220Sys_getDriverVersionv"></span><span id="Sys_getDriverVersion"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getDriverVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420Sys_getDriverVersionv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get stand-alone python version. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>String</strong> – Version name.</p></li>
+<li><p><strong>String</strong> – Version name. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417Sys_getDriverNamev">
+<span id="_CPPv317Sys_getDriverNamev"></span><span id="_CPPv217Sys_getDriverNamev"></span><span id="Sys_getDriverName"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getDriverName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417Sys_getDriverNamev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get stand-alone python driver name. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>String</strong> – Driver name.</p></li>
+<li><p><strong>String</strong> – Driver name. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419Sys_getSerialNumberv">
+<span id="_CPPv319Sys_getSerialNumberv"></span><span id="_CPPv219Sys_getSerialNumberv"></span><span id="Sys_getSerialNumber"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getSerialNumber</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_getSerialNumberv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get stand-alone python driver serial number. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>String</strong> – Serial number. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html" class="btn btn-neutral float-left" title="Get memory status" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api_pyco_wifi.html" class="btn btn-neutral float-right" title="PYCO-WIFI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
