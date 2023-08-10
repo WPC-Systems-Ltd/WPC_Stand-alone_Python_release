@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="_w_p_c___w_i_f_i___a_i_o_8c" kind="file"><name>WPC_WIFI_AIO.c</name>
+    <member refid="_w_p_c___w_i_f_i___a_i_o_8c_1acd740023e715db8c0b0508a5dd493c93" kind="variable"><name>u8_arr</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" kind="function"><name>AI_start</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" kind="function"><name>AI_readNsample</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___a_i_o_8h" kind="file"><name>WPC_WIFI_AIO.h</name>
+    <member refid="_w_p_c___w_i_f_i___a_i_o_8h_1a32f6e552b7083681f542d09749eabaf3" kind="define"><name>WPC_MP_MAX_POINTS</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" kind="function"><name>AI_readNsample</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" kind="function"><name>AI_start</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__battery_8c" kind="file"><name>WPC_WIFI_battery.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___b_a_t_t_e_r_y_1gab3be9d00ff34e58043d896e1da86bdd6" kind="function"><name>Batt_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__battery_8h" kind="file"><name>WPC_WIFI_battery.h</name>
+    <member refid="group___p_y_c_o___w_i_f_i___b_a_t_t_e_r_y_1gab3be9d00ff34e58043d896e1da86bdd6" kind="function"><name>Batt_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___l_e_d_8c" kind="file"><name>WPC_WIFI_LED.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" kind="function"><name>LED_setBlue</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" kind="function"><name>LED_setGreen</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" kind="function"><name>LED_setRed</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___l_e_d_8h" kind="file"><name>WPC_WIFI_LED.h</name>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" kind="function"><name>LED_setBlue</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" kind="function"><name>LED_setGreen</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" kind="function"><name>LED_setRed</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___o_l_e_d_8c" kind="file"><name>WPC_WIFI_OLED.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga74c83432d331a9d67868cfaae4963466" kind="function"><name>OLED_erase</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga38fb4872189c11e171141bad260962b0" kind="function"><name>OLED_writeLine</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___o_l_e_d_8h" kind="file"><name>WPC_WIFI_OLED.h</name>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga74c83432d331a9d67868cfaae4963466" kind="function"><name>OLED_erase</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga38fb4872189c11e171141bad260962b0" kind="function"><name>OLED_writeLine</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__system_8c" kind="file"><name>WPC_WIFI_system.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" kind="function"><name>Sys_getMAC</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" kind="function"><name>Sys_getDAQHeapSize</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__system_8h" kind="file"><name>WPC_WIFI_system.h</name>
+    <member refid="_w_p_c___w_i_f_i__system_8h_1a8676bec868522fa917cf30f5b3a6daf3" kind="define"><name>MPYWPC_VERSION</name></member>
+    <member refid="_w_p_c___w_i_f_i__system_8h_1ace835c48c235446d1e7a364ab9acdf37" kind="define"><name>MPYWPC_FULL_NAME</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" kind="function"><name>Sys_getMAC</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" kind="function"><name>Sys_getDAQHeapSize</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___t_c_p_8c" kind="file"><name>WPC_WIFI_TCP.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" kind="function"><name>TCPServer_open</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" kind="function"><name>TCPServer_close</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" kind="function"><name>TCPServer_write</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" kind="function"><name>TCPServer_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i___t_c_p_8h" kind="file"><name>WPC_WIFI_TCP.h</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" kind="function"><name>TCPServer_open</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" kind="function"><name>TCPServer_close</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" kind="function"><name>TCPServer_write</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" kind="function"><name>TCPServer_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__temperature_8c" kind="file"><name>WPC_WIFI_temperature.c</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e_1gaef5f63547977d78f00681f5687e42d70" kind="function"><name>Temperature_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___w_i_f_i__temperature_8h" kind="file"><name>WPC_WIFI_temperature.h</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e_1gaef5f63547977d78f00681f5687e42d70" kind="function"><name>Temperature_read</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h___a_i_o_8c" kind="file"><name>WPC_ETH_AIO.c</name>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594" kind="function"><name>AO_writeOneChannel</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1" kind="function"><name>AO_writeAllChannels</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h___a_i_o_8h" kind="file"><name>WPC_ETH_AIO.h</name>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594" kind="function"><name>AO_writeOneChannel</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1" kind="function"><name>AO_writeAllChannels</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h___d_i_o_8c" kind="file"><name>WPC_ETH_DIO.c</name>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kind="function"><name>DO_writePort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kind="function"><name>DO_writePins</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kind="function"><name>DI_readPort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kind="function"><name>DI_readPins</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h___d_i_o_8h" kind="file"><name>WPC_ETH_DIO.h</name>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kind="function"><name>DO_writePort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kind="function"><name>DO_writePins</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kind="function"><name>DI_readPort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kind="function"><name>DI_readPins</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h__system_8c" kind="file"><name>WPC_ETH_system.c</name>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kind="function"><name>Sys_getSerialNumber</name></member>
+  </compound>
+  <compound refid="_w_p_c___e_t_h__system_8h" kind="file"><name>WPC_ETH_system.h</name>
+    <member refid="_w_p_c___e_t_h__system_8h_1a8676bec868522fa917cf30f5b3a6daf3" kind="define"><name>MPYWPC_VERSION</name></member>
+    <member refid="_w_p_c___e_t_h__system_8h_1ace835c48c235446d1e7a364ab9acdf37" kind="define"><name>MPYWPC_FULL_NAME</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kind="function"><name>Sys_getSerialNumber</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___e_t_h___a_i_o" kind="group"><name>PYCO_ETH_AIO</name>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594" kind="function"><name>AO_writeOneChannel</name></member>
+    <member refid="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1" kind="function"><name>AO_writeAllChannels</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___e_t_h___d_i_o" kind="group"><name>PYCO_ETH_DIO</name>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kind="function"><name>DO_writePort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kind="function"><name>DO_writePins</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kind="function"><name>DI_readPort</name></member>
+    <member refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kind="function"><name>DI_readPins</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m" kind="group"><name>PYCO_ETH_SYSTEM</name>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+    <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kind="function"><name>Sys_getSerialNumber</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___a_i_o" kind="group"><name>PYCO_WIFI_AIO</name>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" kind="function"><name>AI_readNsample</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" kind="function"><name>AI_start</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___b_a_t_t_e_r_y" kind="group"><name>PYCO_WIFI_BATTERY</name>
+    <member refid="group___p_y_c_o___w_i_f_i___b_a_t_t_e_r_y_1gab3be9d00ff34e58043d896e1da86bdd6" kind="function"><name>Batt_read</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___l_e_d" kind="group"><name>PYCO_WIFI_LED</name>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" kind="function"><name>LED_setBlue</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" kind="function"><name>LED_setGreen</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" kind="function"><name>LED_setRed</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___o_l_e_d" kind="group"><name>PYCO_WIFI_OLED</name>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga74c83432d331a9d67868cfaae4963466" kind="function"><name>OLED_erase</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga38fb4872189c11e171141bad260962b0" kind="function"><name>OLED_writeLine</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m" kind="group"><name>PYCO_WIFI_SYSTEM</name>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" kind="function"><name>Sys_getMAC</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" kind="function"><name>Sys_getDAQHeapSize</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___t_c_p" kind="group"><name>PYCO_WIFI_TCP</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" kind="function"><name>TCPServer_open</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" kind="function"><name>TCPServer_close</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" kind="function"><name>TCPServer_write</name></member>
+    <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" kind="function"><name>TCPServer_read</name></member>
+  </compound>
+  <compound refid="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e" kind="group"><name>PYCO_WIFI_TEMPERATURE</name>
+    <member refid="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e_1gaef5f63547977d78f00681f5687e42d70" kind="function"><name>Temperature_read</name></member>
+  </compound>
+  <compound refid="dir_461ee4461ce238c9a0a0b4a2f49cf829" kind="dir"><name>ESP32</name>
+  </compound>
+  <compound refid="dir_e05d7e2b1ecd646af5bb94391405f3b5" kind="dir"><name>modules</name>
+  </compound>
+  <compound refid="dir_8a4d1531b962c1d71b126c9e8c90f189" kind="dir"><name>modules/STM32</name>
+  </compound>
+</doxygenindex>

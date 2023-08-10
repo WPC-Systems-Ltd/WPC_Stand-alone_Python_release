@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___p_y_c_o___e_t_h___a_i_o" kind="group">
+    <compoundname>PYCO_ETH_AIO</compoundname>
+    <title>PYCO_ETH_AIO</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AI_readOnDemand</definition>
+        <argsstring>()</argsstring>
+        <name>AI_readOnDemand</name>
+        <briefdescription>
+<para>Read AI on demand. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>List</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Analog voltage with 8 channels.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>List</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Analog voltage with 8 channels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modules/STM32/WPC_ETH_AIO.h" line="32" column="10" bodyfile="modules/STM32/WPC_ETH_AIO.c" bodystart="23" bodyend="43" declfile="modules/STM32/WPC_ETH_AIO.h" declline="32" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AO_writeOneChannel</definition>
+        <argsstring>(mp_obj_t channel, mp_obj_t value)</argsstring>
+        <name>AO_writeOneChannel</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write AO on demand by channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number (0~7). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Voltage (-10~10). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modules/STM32/WPC_ETH_AIO.h" line="33" column="10" bodyfile="modules/STM32/WPC_ETH_AIO.c" bodystart="52" bodyend="66" declfile="modules/STM32/WPC_ETH_AIO.h" declline="33" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AO_writeAllChannels</definition>
+        <argsstring>(mp_obj_t value_list)</argsstring>
+        <name>AO_writeAllChannels</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>value_list</declname>
+        </param>
+        <briefdescription>
+<para>Write AO on demand by synchronizing all channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of voltage (-10~10). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modules/STM32/WPC_ETH_AIO.h" line="34" column="10" bodyfile="modules/STM32/WPC_ETH_AIO.c" bodystart="74" bodyend="94" declfile="modules/STM32/WPC_ETH_AIO.h" declline="34" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

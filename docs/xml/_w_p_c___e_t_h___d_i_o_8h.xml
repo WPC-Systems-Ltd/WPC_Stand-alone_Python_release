@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___e_t_h___d_i_o_8h" kind="file" language="C++">
+    <compoundname>WPC_ETH_DIO.h</compoundname>
+    <includes local="yes">py/obj.h</includes>
+    <includes local="yes">py/runtime.h</includes>
+    <includes local="yes">py/builtin.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">stm32f4xx.h</includes>
+    <includes local="yes">WPC_lv4_main.h</includes>
+    <includedby refid="_w_p_c___e_t_h___d_i_o_8c" local="yes">modules/STM32/WPC_ETH_DIO.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_DIO.h</label>
+        <link refid="_w_p_c___e_t_h___d_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>WPC_lv4_main.h</label>
+      </node>
+      <node id="4">
+        <label>py/builtin.h</label>
+      </node>
+      <node id="2">
+        <label>py/obj.h</label>
+      </node>
+      <node id="3">
+        <label>py/runtime.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>stm32f4xx.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>modules/STM32/WPC_ETH_DIO.c</label>
+        <link refid="_w_p_c___e_t_h___d_i_o_8c"/>
+      </node>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_DIO.h</label>
+        <link refid="_w_p_c___e_t_h___d_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kind="function"><name>DO_writePort</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kind="function"><name>DO_writePins</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kind="function"><name>DI_readPort</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kind="function"><name>DI_readPins</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with STM32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Micropython</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/obj.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/runtime.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/builtin.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Standard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WPC_lv4_main.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kindref="member">DO_writePort</ref>(mp_obj_t<sp/>state_list);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kindref="member">DO_writePins</ref>(mp_obj_t<sp/>pin_list,<sp/>mp_obj_t<sp/>value_list);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kindref="member">DI_readPort</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kindref="member">DI_readPins</ref>(mp_obj_t<sp/>pin_list);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+    </programlisting>
+    <location file="modules/STM32/WPC_ETH_DIO.h"/>
+  </compounddef>
+</doxygen>

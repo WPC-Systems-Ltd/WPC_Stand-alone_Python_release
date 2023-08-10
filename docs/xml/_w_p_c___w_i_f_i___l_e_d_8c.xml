@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___w_i_f_i___l_e_d_8c" kind="file" language="C++">
+    <compoundname>WPC_WIFI_LED.c</compoundname>
+    <includes refid="_w_p_c___w_i_f_i___l_e_d_8h" local="yes">WPC_WIFI_LED.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ESP32/WPC_WIFI_LED.c</label>
+        <link refid="_w_p_c___w_i_f_i___l_e_d_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WPC_WIFI_LED.h</label>
+        <link refid="_w_p_c___w_i_f_i___l_e_d_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Lv2_modules/WPC_Lv2_main.h</label>
+      </node>
+      <node id="4">
+        <label>py/mphal.h</label>
+      </node>
+      <node id="3">
+        <label>py/runtime.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" kind="function"><name>LED_setBlue</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" kind="function"><name>LED_setGreen</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" kind="function"><name>LED_setRed</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with ESP32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WPC_WIFI_LED.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1" kindref="member">LED_setBlue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_LED_setBlueStatus(0);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___l_e_d_1ga5137115fbc1c7b4abab8ce42f6c94403" kindref="member">LED_setGreen</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_LED_setGreenStatus(0);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(0);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___l_e_d_1gabcc983dec38d2bf9a911522d89ee28f0" kindref="member">LED_setRed</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_LED_setRedStatus(0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+    </programlisting>
+    <location file="ESP32/WPC_WIFI_LED.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___e_t_h__system_8c" kind="file" language="C++">
+    <compoundname>WPC_ETH_system.c</compoundname>
+    <includes refid="_w_p_c___e_t_h__system_8h" local="yes">WPC_ETH_system.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_system.c</label>
+        <link refid="_w_p_c___e_t_h__system_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WPC_ETH_system.h</label>
+        <link refid="_w_p_c___e_t_h__system_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>WPC_lv2_core.h</label>
+      </node>
+      <node id="9">
+        <label>WPC_lv4_main.h</label>
+      </node>
+      <node id="5">
+        <label>py/builtin.h</label>
+      </node>
+      <node id="3">
+        <label>py/obj.h</label>
+      </node>
+      <node id="4">
+        <label>py/runtime.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>stm32f4xx.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kind="function"><name>Sys_getSerialNumber</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with STM32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_p_c___e_t_h__system_8h" kindref="compound">WPC_ETH_system.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kindref="member">Sys_getDriverVersion</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>version<sp/>=<sp/>MPYWPC_VERSION;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_str(version,<sp/>strlen(version));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kindref="member">Sys_getDriverName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>driver_name<sp/>=<sp/>MPYWPC_FULL_NAME;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_str(driver_name,<sp/>strlen(driver_name));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kindref="member">Sys_getSerialNumber</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_str((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)WPC_core.serial_num,<sp/>8);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_getDriverInfo()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uint8_t<sp/>u8_arr[32];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>mode<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>WPC_Sys_GetInfo(mode,<sp/>u8_arr);<sp/><sp/><sp/>//--<sp/>there<sp/>is<sp/>a<sp/>bug<sp/>in<sp/>sprintf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>n<sp/>=<sp/>sizeof(u8_arr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)u8_arr,<sp/>n);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uint8_t<sp/>u8_arr[32]<sp/>=<sp/>{85,<sp/>83,<sp/>66,<sp/>45,<sp/>68,<sp/>65,<sp/>81,<sp/>45,<sp/>70,<sp/>49,<sp/>45,<sp/>65,<sp/>68,<sp/>95,<sp/>109,<sp/>97,<sp/>105,<sp/>110,<sp/>95,<sp/>82,<sp/>48,<sp/>46,<sp/>49,<sp/>48,<sp/>46,<sp/>56,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(i=0;<sp/>i&lt;sizeof(u8_arr);<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>if<sp/>(u8_arr[i]<sp/>==<sp/>0x00<sp/>&amp;&amp;<sp/>u8_arr[i+1]<sp/>==<sp/>0x00)<sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)u8_arr,<sp/>i);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_getRTC()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_arr[6];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>WPC_RTC_GetDateTime(u8_arr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>char<sp/>str[30]<sp/>=<sp/>{0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/>sizeof(str),<sp/>&quot;%d-%d-%d,<sp/>%02d:%02d:%02d&quot;,<sp/>u8_arr[0]+1900,<sp/>u8_arr[1],<sp/>u8_arr[2],<sp/>u8_arr[3],<sp/>u8_arr[4],<sp/>u8_arr[5]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>for<sp/>(i=0;<sp/>i&lt;sizeof(str);<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(str[i]<sp/>==<sp/>&apos;\0&apos;)<sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)str,<sp/>i);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_reboot()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>Which<sp/>API<sp/>should<sp/>i<sp/>call?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>return<sp/>mp_const_none;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_rebootOnBootloader()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>WPC_Boot_SaveBootloaderOn(0x00);<sp/>//--<sp/>Pull<sp/>down<sp/>bootloader<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>return<sp/>mp_const_none;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getGateway()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>uint8_t<sp/>u8_arr[4];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>WPC_LwIP_LoadGateway(u8_arr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>gw[4]<sp/>=<sp/>{192,<sp/>168,<sp/>1,<sp/>10};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>char<sp/>str[16]<sp/>=<sp/>{0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/>16,<sp/>&quot;%d.%d.%d.%d&quot;,<sp/>gw[0],<sp/>gw[1],<sp/>gw[2],<sp/>gw[3]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>for<sp/>(i=0;<sp/>i&lt;sizeof(str);<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(str[i]<sp/>==<sp/>&apos;\0&apos;)<sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)str,<sp/>i);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getIPAddrAndSubmask()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>uint8_t<sp/>ip[4];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>uint8_t<sp/>sbk[4];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>WPC_LwIP_LoadIPAddr(ip,<sp/>sbk);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>ip[4]<sp/>=<sp/>{192,<sp/>168,<sp/>1,<sp/>110};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>sbk[4]<sp/>=<sp/>{255,<sp/>255,<sp/>255,<sp/>0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>char<sp/>str[30]<sp/>=<sp/>{0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/>30,<sp/>&quot;%d.%d.%d.%d,<sp/>%d.%d.%d.%d&quot;,<sp/>ip[0],<sp/>ip[1],<sp/>ip[2],<sp/>ip[3],<sp/>sbk[0],<sp/>sbk[1],<sp/>sbk[2],<sp/>sbk[3]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>for<sp/>(i=0;<sp/>i&lt;sizeof(str);<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(str[i]<sp/>==<sp/>&apos;\0&apos;)<sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)str,<sp/>i);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getMACAddr()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>uint8_t<sp/>u8_arr[6];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>WPC_LwIP_LoadMACAddr(u8_arr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>u8_arr[6]<sp/>=<sp/>{90,<sp/>195,<sp/>8,<sp/>153,<sp/>222,<sp/>87};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>char<sp/>str[18]<sp/>=<sp/>{0};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>snprintf(str,<sp/>18,<sp/>&quot;%02X:%02X:%02X:%02X:%02X:%02X&quot;,<sp/>u8_arr[0],<sp/>u8_arr[1],<sp/>u8_arr[2],<sp/>u8_arr[3],<sp/>u8_arr[4],<sp/>u8_arr[5]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>for<sp/>(i=0;<sp/>i&lt;sizeof(str);<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(str[i]<sp/>==<sp/>&apos;\0&apos;)<sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>mp_obj_new_str((const<sp/>char<sp/>*)str,<sp/>i);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="modules/STM32/WPC_ETH_system.c"/>
+  </compounddef>
+</doxygen>
