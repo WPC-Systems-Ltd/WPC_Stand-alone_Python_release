@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_8a4d1531b962c1d71b126c9e8c90f189" kind="dir">
+    <compoundname>modules/STM32</compoundname>
+    <innerfile refid="_w_p_c___e_t_h___a_i_o_8c">WPC_ETH_AIO.c</innerfile>
+    <innerfile refid="_w_p_c___e_t_h___a_i_o_8h">WPC_ETH_AIO.h</innerfile>
+    <innerfile refid="_w_p_c___e_t_h___d_i_o_8c">WPC_ETH_DIO.c</innerfile>
+    <innerfile refid="_w_p_c___e_t_h___d_i_o_8h">WPC_ETH_DIO.h</innerfile>
+    <innerfile refid="_w_p_c___e_t_h__system_8c">WPC_ETH_system.c</innerfile>
+    <innerfile refid="_w_p_c___e_t_h__system_8h">WPC_ETH_system.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="modules/STM32/"/>
+  </compounddef>
+</doxygen>

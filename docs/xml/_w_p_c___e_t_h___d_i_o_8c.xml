@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___e_t_h___d_i_o_8c" kind="file" language="C++">
+    <compoundname>WPC_ETH_DIO.c</compoundname>
+    <includes refid="_w_p_c___e_t_h___d_i_o_8h" local="yes">WPC_ETH_DIO.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_DIO.c</label>
+        <link refid="_w_p_c___e_t_h___d_i_o_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WPC_ETH_DIO.h</label>
+        <link refid="_w_p_c___e_t_h___d_i_o_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>WPC_lv4_main.h</label>
+      </node>
+      <node id="5">
+        <label>py/builtin.h</label>
+      </node>
+      <node id="3">
+        <label>py/obj.h</label>
+      </node>
+      <node id="4">
+        <label>py/runtime.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>stm32f4xx.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kind="function"><name>DO_writePort</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kind="function"><name>DO_writePins</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kind="function"><name>DI_readPort</name></member>
+      <member refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kind="function"><name>DI_readPins</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with STM32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_p_c___e_t_h___d_i_o_8h" kindref="compound">WPC_ETH_DIO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209" kindref="member">DO_writePort</ref>(mp_obj_t<sp/>state_list)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Check<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mp_obj_is_type(state_list,<sp/>&amp;mp_type_list))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(-1);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Convert<sp/>to<sp/>C<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>port<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>*feature_s;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>len_s;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_list_get(state_list,<sp/>&amp;len_s,<sp/>&amp;feature_s);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_s_list[len_s];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len_s;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8_s_list[i]<sp/>=<sp/>mp_obj_get_int(feature_s[i]);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Initialize<sp/>u8_idx_list<sp/>value<sp/>depended<sp/>on<sp/>the<sp/>len<sp/>of<sp/>state<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_idx_list[len_s];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len_s;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8_idx_list[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Send<sp/>to<sp/>MCU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>state<sp/>=<sp/>WPC_Lv0_ConvertIndexAndBinaryListsToInt(u8_idx_list,<sp/>u8_s_list,<sp/>len_s);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>mask<sp/>=<sp/>0xFFFF;<sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>to<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>WPC_DO_SetAndWrite(port,<sp/>mask,<sp/>state,<sp/>NULL);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Return<sp/>error<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(err);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8" kindref="member">DO_writePins</ref>(mp_obj_t<sp/>pin_list,<sp/>mp_obj_t<sp/>value_list)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Check<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mp_obj_is_type(pin_list,<sp/>&amp;mp_type_list))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(-1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mp_obj_is_type(value_list,<sp/>&amp;mp_type_list))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(-1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>*feature_p;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>len_p;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_list_get(pin_list,<sp/>&amp;len_p,<sp/>&amp;feature_p);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>*feature_v;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>len_v;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_list_get(value_list,<sp/>&amp;len_v,<sp/>&amp;feature_v);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_p_list[len_p];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len_p;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8_p_list[i]<sp/>=<sp/>mp_obj_get_int(feature_p[i]);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_v_list[len_v];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len_v;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8_v_list[i]<sp/>=<sp/>mp_obj_get_int(feature_v[i]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Convert<sp/>list<sp/>to<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>mask<sp/>=<sp/>WPC_Lv0_ConvertIndexListToInt((uint8_t*)u8_p_list,<sp/>len_p);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>state<sp/>=<sp/>WPC_Lv0_ConvertIndexAndBinaryListsToInt((uint8_t*)u8_p_list,<sp/>(uint8_t*)u8_v_list,<sp/>len_p);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Send<sp/>to<sp/>MCU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>WPC_DO_SetAndWrite(port,<sp/>mask,<sp/>state,<sp/>NULL);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Return<sp/>error<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(err);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606" kindref="member">DI_readPort</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>port<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Send<sp/>to<sp/>MCU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_arr[2];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_state_arr[8]={0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_DI_ReadAndGet(port,<sp/>0xFFFF,<sp/>u8_arr);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Get<sp/>U8<sp/>state<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>state<sp/>=<sp/>WPC_Lv0_Convert2U8ToU16(u8_arr);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_Lv0_ConvertIntToBinaryList(state,<sp/>8,<sp/>(uint8_t*)u8_state_arr);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>state_list<sp/>=<sp/>mp_obj_new_list(0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;8;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp_obj_list_append(state_list,<sp/>mp_obj_new_int(u8_state_arr[i]));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Return<sp/>error<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state_list;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a" kindref="member">DI_readPins</ref>(mp_obj_t<sp/>pin_list)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Check<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mp_obj_is_type(pin_list,<sp/>&amp;mp_type_list))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(-1);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Convert<sp/>to<sp/>C<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>port<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>*feature;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>len;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_list_get(pin_list,<sp/>&amp;len,<sp/>&amp;feature);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_list[len];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8_list[i]<sp/>=<sp/>mp_obj_get_int(feature[i]);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Convert<sp/>list<sp/>to<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>mask<sp/>=<sp/>WPC_Lv0_ConvertIndexListToInt((uint8_t*)u8_list,<sp/>len);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Send<sp/>to<sp/>MCU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_arr[8];</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>u8_state_arr[8]={0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_DI_ReadAndGet(port,<sp/>mask,<sp/>u8_arr);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Convert<sp/>2U8<sp/>to<sp/>U16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>state<sp/>=<sp/>WPC_Lv0_Convert2U8ToU16(u8_arr);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>WPC_Lv0_ConvertIntToBinaryList(state,<sp/>8,<sp/>(uint8_t*)u8_state_arr);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>state_list<sp/>=<sp/>mp_obj_new_list(0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp_obj_list_append(state_list,<sp/>mp_obj_new_int(u8_state_arr[u8_list[i]]));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--<sp/>Return<sp/>error<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state_list;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="modules/STM32/WPC_ETH_DIO.c"/>
+  </compounddef>
+</doxygen>
