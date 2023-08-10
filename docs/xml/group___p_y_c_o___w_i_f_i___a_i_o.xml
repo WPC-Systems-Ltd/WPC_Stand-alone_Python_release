@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___p_y_c_o___w_i_f_i___a_i_o" kind="group">
+    <compoundname>PYCO_WIFI_AIO</compoundname>
+    <title>PYCO_WIFI_AIO</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AI_readOnDemand</definition>
+        <argsstring>()</argsstring>
+        <name>AI_readOnDemand</name>
+        <briefdescription>
+<para>Read AI on demand. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>List</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Analog voltage with 8 channels.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>List</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Analog voltage with 8 channels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_AIO.h" line="27" column="10" bodyfile="modules/STM32/WPC_ETH_AIO.c" bodystart="23" bodyend="43" declfile="ESP32/WPC_WIFI_AIO.h" declline="27" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AI_readNsample</definition>
+        <argsstring>(mp_obj_t points, mp_obj_t delay)</argsstring>
+        <name>AI_readNsample</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+<para>Read AI N-samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of receiving sample points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time in seconds to wait for the indicated amount of data to arrive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>2D_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of list of AI data in volt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_AIO.h" line="28" column="10" bodyfile="ESP32/WPC_WIFI_AIO.c" bodystart="64" bodyend="95" declfile="ESP32/WPC_WIFI_AIO.h" declline="28" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t AI_start</definition>
+        <argsstring>(mp_obj_t sampling_rate, mp_obj_t points)</argsstring>
+        <name>AI_start</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Start AI streaming. Before executing <computeroutput>AI_readNsample</computeroutput>, it should call <computeroutput>AI_start</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampling_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sampling rate in Hz. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of sample points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_AIO.h" line="29" column="10" bodyfile="ESP32/WPC_WIFI_AIO.c" bodystart="44" bodyend="55" declfile="ESP32/WPC_WIFI_AIO.h" declline="29" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

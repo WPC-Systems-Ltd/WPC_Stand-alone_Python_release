@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___w_i_f_i___a_i_o_8h" kind="file" language="C++">
+    <compoundname>WPC_WIFI_AIO.h</compoundname>
+    <includes local="yes">py/runtime.h</includes>
+    <includes local="yes">py/mphal.h</includes>
+    <includes local="yes">Lv2_modules/WPC_Lv2_main.h</includes>
+    <includedby refid="_w_p_c___w_i_f_i___a_i_o_8c" local="yes">ESP32/WPC_WIFI_AIO.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ESP32/WPC_WIFI_AIO.h</label>
+        <link refid="_w_p_c___w_i_f_i___a_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Lv2_modules/WPC_Lv2_main.h</label>
+      </node>
+      <node id="3">
+        <label>py/mphal.h</label>
+      </node>
+      <node id="2">
+        <label>py/runtime.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ESP32/WPC_WIFI_AIO.c</label>
+        <link refid="_w_p_c___w_i_f_i___a_i_o_8c"/>
+      </node>
+      <node id="1">
+        <label>ESP32/WPC_WIFI_AIO.h</label>
+        <link refid="_w_p_c___w_i_f_i___a_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_w_p_c___w_i_f_i___a_i_o_8h_1a32f6e552b7083681f542d09749eabaf3" prot="public" static="no">
+        <name>WPC_MP_MAX_POINTS</name>
+        <initializer>2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_AIO.h" line="20" column="9" bodyfile="ESP32/WPC_WIFI_AIO.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kind="function"><name>AI_readOnDemand</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" kind="function"><name>AI_readNsample</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" kind="function"><name>AI_start</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with ESP32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Micropython</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/runtime.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/mphal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Lv2_modules/WPC_Lv2_main.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPC_MP_MAX_POINTS<sp/>2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declartions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144" kindref="member">AI_readOnDemand</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593" kindref="member">AI_readNsample</ref>(mp_obj_t<sp/>points,<sp/>mp_obj_t<sp/>delay);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0" kindref="member">AI_start</ref>(mp_obj_t<sp/>sampling_rate,<sp/>mp_obj_t<sp/>points);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+    </programlisting>
+    <location file="ESP32/WPC_WIFI_AIO.h"/>
+  </compounddef>
+</doxygen>

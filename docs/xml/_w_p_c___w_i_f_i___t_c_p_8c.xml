@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___w_i_f_i___t_c_p_8c" kind="file" language="C++">
+    <compoundname>WPC_WIFI_TCP.c</compoundname>
+    <includes refid="_w_p_c___w_i_f_i___t_c_p_8h" local="yes">WPC_WIFI_TCP.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ESP32/WPC_WIFI_TCP.c</label>
+        <link refid="_w_p_c___w_i_f_i___t_c_p_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WPC_WIFI_TCP.h</label>
+        <link refid="_w_p_c___w_i_f_i___t_c_p_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Lv3_transport/WPC_Lv3_TCP.h</label>
+      </node>
+      <node id="4">
+        <label>py/mphal.h</label>
+      </node>
+      <node id="3">
+        <label>py/runtime.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" kind="function"><name>TCPServer_open</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" kind="function"><name>TCPServer_close</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" kind="function"><name>TCPServer_write</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" kind="function"><name>TCPServer_read</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with ESP32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_p_c___w_i_f_i___t_c_p_8h" kindref="compound">WPC_WIFI_TCP.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" kindref="member">TCPServer_open</ref>(mp_obj_t<sp/>port)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tcp_port<sp/>=<sp/>mp_obj_get_int(port);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>WPC_TCP_MPY_openServer(tcp_port);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(status);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" kindref="member">TCPServer_close</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>WPC_TCP_MPY_closeServer();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(status);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" kindref="member">TCPServer_write</ref>(mp_obj_t<sp/>write_data,<sp/>mp_obj_t<sp/>write_len)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message<sp/>=<sp/>mp_obj_str_get_str(write_data);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>mp_obj_get_int(write_len);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>actual_write_len<sp/>=<sp/>WPC_TCP_MPY_writeServer((uint8_t*)<sp/>message,<sp/>len);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(actual_write_len);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" kindref="member">TCPServer_read</ref>(mp_obj_t<sp/>read_len)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>read_bytes<sp/>=<sp/>mp_obj_get_int(read_len);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>uint8_t<sp/>u8_arr[read_bytes];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>mp_obj_t<sp/>send_list<sp/>=<sp/>mp_obj_new_list(0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recv_len<sp/>=<sp/>WPC_TCP_MPY_readServer(u8_arr,<sp/>read_bytes);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;recv_len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mp_obj_list_append(send_list,<sp/>mp_obj_new_int(u8_arr[i]));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>send_list;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ESP32/WPC_WIFI_TCP.c"/>
+  </compounddef>
+</doxygen>

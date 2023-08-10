@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e" kind="group">
+    <compoundname>PYCO_WIFI_TEMPERATURE</compoundname>
+    <title>PYCO_WIFI_TEMPERATURE</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___t_e_m_p_e_r_a_t_u_r_e_1gaef5f63547977d78f00681f5687e42d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t Temperature_read</definition>
+        <argsstring>()</argsstring>
+        <name>Temperature_read</name>
+        <briefdescription>
+<para>Get temperature from thermal sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>float</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in Celsius. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_temperature.h" line="24" column="10" bodyfile="ESP32/WPC_WIFI_temperature.c" bodystart="20" bodyend="24" declfile="ESP32/WPC_WIFI_temperature.h" declline="24" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

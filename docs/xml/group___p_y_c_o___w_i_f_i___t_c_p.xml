@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___p_y_c_o___w_i_f_i___t_c_p" kind="group">
+    <compoundname>PYCO_WIFI_TCP</compoundname>
+    <title>PYCO_WIFI_TCP</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t TCPServer_open</definition>
+        <argsstring>(mp_obj_t port)</argsstring>
+        <name>TCPServer_open</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Open TCP server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TCP port. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_TCP.h" line="24" column="10" bodyfile="ESP32/WPC_WIFI_TCP.c" bodystart="24" bodyend="28" declfile="ESP32/WPC_WIFI_TCP.h" declline="24" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t TCPServer_close</definition>
+        <argsstring>()</argsstring>
+        <name>TCPServer_close</name>
+        <briefdescription>
+<para>Close TCP server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_TCP.h" line="25" column="10" bodyfile="ESP32/WPC_WIFI_TCP.c" bodystart="35" bodyend="38" declfile="ESP32/WPC_WIFI_TCP.h" declline="25" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t TCPServer_write</definition>
+        <argsstring>(mp_obj_t write_data, mp_obj_t write_len)</argsstring>
+        <name>TCPServer_write</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>write_data</declname>
+        </param>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>write_len</declname>
+        </param>
+        <briefdescription>
+<para>Write message via TCP server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>write_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>write_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The len of message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_TCP.h" line="26" column="10" bodyfile="ESP32/WPC_WIFI_TCP.c" bodystart="47" bodyend="52" declfile="ESP32/WPC_WIFI_TCP.h" declline="26" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mp_obj_t</type>
+        <definition>mp_obj_t TCPServer_read</definition>
+        <argsstring>(mp_obj_t read_len)</argsstring>
+        <name>TCPServer_read</name>
+        <param>
+          <type>mp_obj_t</type>
+          <declname>read_len</declname>
+        </param>
+        <briefdescription>
+<para>Read message via TCP server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>read_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The len of message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPC error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ESP32/WPC_WIFI_TCP.h" line="27" column="10" bodyfile="ESP32/WPC_WIFI_TCP.c" bodystart="60" bodyend="69" declfile="ESP32/WPC_WIFI_TCP.h" declline="27" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,6 @@
+AIO all channels loopback 
+==========================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_ETH/AIO/AIO_all_channels_loopback.py
+   :language: python
+   :linenos:

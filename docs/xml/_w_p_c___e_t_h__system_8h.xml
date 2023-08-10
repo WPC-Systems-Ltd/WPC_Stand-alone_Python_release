@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___e_t_h__system_8h" kind="file" language="C++">
+    <compoundname>WPC_ETH_system.h</compoundname>
+    <includes local="yes">py/obj.h</includes>
+    <includes local="yes">py/runtime.h</includes>
+    <includes local="yes">py/builtin.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">stm32f4xx.h</includes>
+    <includes local="yes">WPC_lv2_core.h</includes>
+    <includes local="yes">WPC_lv4_main.h</includes>
+    <includedby refid="_w_p_c___e_t_h__system_8c" local="yes">modules/STM32/WPC_ETH_system.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_system.h</label>
+        <link refid="_w_p_c___e_t_h__system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>WPC_lv2_core.h</label>
+      </node>
+      <node id="8">
+        <label>WPC_lv4_main.h</label>
+      </node>
+      <node id="4">
+        <label>py/builtin.h</label>
+      </node>
+      <node id="2">
+        <label>py/obj.h</label>
+      </node>
+      <node id="3">
+        <label>py/runtime.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>stm32f4xx.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>modules/STM32/WPC_ETH_system.c</label>
+        <link refid="_w_p_c___e_t_h__system_8c"/>
+      </node>
+      <node id="1">
+        <label>modules/STM32/WPC_ETH_system.h</label>
+        <link refid="_w_p_c___e_t_h__system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_w_p_c___e_t_h__system_8h_1a8676bec868522fa917cf30f5b3a6daf3" prot="public" static="no">
+        <name>MPYWPC_VERSION</name>
+        <initializer>&quot;0.0.13&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modules/STM32/WPC_ETH_system.h" line="30" column="9" bodyfile="modules/STM32/WPC_ETH_system.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_w_p_c___e_t_h__system_8h_1ace835c48c235446d1e7a364ab9acdf37" prot="public" static="no">
+        <name>MPYWPC_FULL_NAME</name>
+        <initializer>&quot;WPC_Stand-alone_Python&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modules/STM32/WPC_ETH_system.h" line="31" column="9" bodyfile="modules/STM32/WPC_ETH_system.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kind="function"><name>Sys_getSerialNumber</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with STM32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Micropython</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/obj.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/runtime.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;py/builtin.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Standard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WPC_lv2_core.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WPC_lv4_main.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPYWPC_VERSION<sp/>&quot;0.0.13&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPYWPC_FULL_NAME<sp/>&quot;WPC_Stand-alone_Python&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kindref="member">Sys_getDriverVersion</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kindref="member">Sys_getDriverName</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906" kindref="member">Sys_getSerialNumber</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_getDriverInfo();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_getRTC();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_reboot();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Sys_rebootOnBootloader();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getGateway();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getIPAddrAndSubmask();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mp_obj_t<sp/>pywpc_Net_getMACAddr();</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="modules/STM32/WPC_ETH_system.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_w_p_c___w_i_f_i__system_8c" kind="file" language="C++">
+    <compoundname>WPC_WIFI_system.c</compoundname>
+    <includes refid="_w_p_c___w_i_f_i__system_8h" local="yes">WPC_WIFI_system.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ESP32/WPC_WIFI_system.c</label>
+        <link refid="_w_p_c___w_i_f_i__system_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WPC_WIFI_system.h</label>
+        <link refid="_w_p_c___w_i_f_i__system_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Lv2_modules/WPC_Lv2_main.h</label>
+      </node>
+      <node id="4">
+        <label>py/mphal.h</label>
+      </node>
+      <node id="3">
+        <label>py/runtime.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" kind="function"><name>Sys_getMAC</name></member>
+      <member refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" kind="function"><name>Sys_getDAQHeapSize</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kind="function"><name>Sys_getDriverVersion</name></member>
+      <member refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kind="function"><name>Sys_getDriverName</name></member>
+      </sectiondef>
+    <briefdescription>
+<para>MicroPython with ESP32. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chungleepeople </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 WPC Systems Ltd. All rights reserved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>Inclusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>WPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_w_p_c___w_i_f_i__system_8h" kindref="compound">WPC_WIFI_system.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14" kindref="member">Sys_getMAC</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mac_arr[6];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>WPC_Sys_getMAC(mac_arr);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>mp_obj_t<sp/>send_list<sp/>=<sp/>mp_obj_new_list(0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;6;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp_obj_list_append(send_list,<sp/>mp_obj_new_int(mac_arr[5-i]));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>send_list;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga95ca469b134c05721441cb59be914639" kindref="member">Sys_getDAQHeapSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_int(esp_get_free_heap_size());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9" kindref="member">Sys_getDriverVersion</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>version<sp/>=<sp/>MPYWPC_VERSION;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_str(version,<sp/>strlen(version));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" refkind="member"><highlight class="normal">mp_obj_t<sp/><ref refid="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033" kindref="member">Sys_getDriverName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>driver_name<sp/>=<sp/>MPYWPC_FULL_NAME;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mp_obj_new_str(driver_name,<sp/>strlen(driver_name));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//--<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+    </programlisting>
+    <location file="ESP32/WPC_WIFI_system.c"/>
+  </compounddef>
+</doxygen>
