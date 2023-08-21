@@ -56,3 +56,7 @@ PYCO-WIFI
 
    examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.rst
 
+   examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.rst
+
+   examples/PYCO_WIFI/Tutorial_WIFI/upip_install.rst
+

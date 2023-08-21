@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCP server write &mdash; WPC Stand-alone Python 0.0.13 documentation</title>
+  <title>New package install &mdash; WPC Stand-alone Python 0.0.13 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="LED thread" href="../Tutorial_WIFI/Thread_LED.html" />
-    <link rel="prev" title="TCP server read" href="TCP_server_read.html" /> 
+    <link rel="next" title="PYCO-ETH" href="../../../api_pyco_eth.html" />
+    <link rel="prev" title="Wifi connect" href="Wifi_connect.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,12 +59,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../OLED/OLED_writeLine.html">OLED write Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../LED/LED_control.html">LED control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../System/get_system_info.html">Get system info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">TCP server write</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/upip_install.html">New package install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_read.html">TCP server read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write.html">TCP server write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thread_LED.html">LED thread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_memory_status.html">Get memory status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Wifi_connect.html">Wifi connect</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">New package install</a></li>
 </ul>
 </li>
 </ul>
@@ -91,7 +91,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples.html">Example Codes</a></li>
-      <li class="breadcrumb-item active">TCP server write</li>
+      <li class="breadcrumb-item active">New package install</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -100,31 +100,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tcp-server-write">
-<h1>TCP server write<a class="headerlink" href="#tcp-server-write" title="Permalink to this heading"></a></h1>
+  <section id="new-package-install">
+<h1>New package install<a class="headerlink" href="#new-package-install" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">TCP_server - TCP_server_write.py.</span>
+<span class="linenos"> 2</span><span class="sd">Tutorial - New_package_install.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write data via tcp server</span>
+<span class="linenos"> 4</span><span class="sd">This example project demonstrates how to install new package.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Paremeters setting</span>
-<span class="linenos">13</span><span class="n">port</span> <span class="o">=</span> <span class="mi">5566</span>
-<span class="linenos">14</span><span class="n">write_data</span> <span class="o">=</span> <span class="s2">&quot;Chungleepeople&quot;</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## Open TCP with port</span>
-<span class="linenos">17</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_open</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="c1">## Write string</span>
-<span class="linenos">20</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_write</span><span class="p">(</span><span class="n">write_data</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">write_data</span><span class="p">))</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="c1">## Close TCP</span>
-<span class="linenos">23</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_close</span><span class="p">()</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">upip</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="n">upip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;micropython_ota&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -133,8 +121,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="TCP_server_read.html" class="btn btn-neutral float-left" title="TCP server read" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Tutorial_WIFI/Thread_LED.html" class="btn btn-neutral float-right" title="LED thread" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Wifi_connect.html" class="btn btn-neutral float-left" title="Wifi connect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../api_pyco_eth.html" class="btn btn-neutral float-right" title="PYCO-ETH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

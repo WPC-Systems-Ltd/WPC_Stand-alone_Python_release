@@ -1,3 +1,8 @@
+v0.0.14 Date: 2023/08/10, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Example code: Wifi connect & New package install
+
 v0.0.13.1 Date: 2023/08/10, Developer: Chunglee_people
 ---------------------------------------------------
 ### Fixed
