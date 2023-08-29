@@ -58,5 +58,5 @@ PYCO-WIFI
 
    examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.rst
 
-   examples/PYCO_WIFI/Tutorial_WIFI/upip_install.rst
+   examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
 
