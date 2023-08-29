@@ -20,6 +20,11 @@
 
    api_pyco_wifi
 
+.. toctree::
+   :maxdepth: 1
+   :caption: REFERNECE
+
+   update_ota
 ..
    automodule:: pywpc
 

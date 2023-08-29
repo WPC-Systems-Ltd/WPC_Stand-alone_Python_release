@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update file over-the-air &mdash; WPC Stand-alone Python 0.0.13 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/WPC-trademark.jpg"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="PYCO-WIFI" href="api_pyco_wifi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            WPC Stand-alone Python
+              <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.13
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">EXAMPLE CODES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Codes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API REFERNECE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_pyco_eth.html">PYCO-ETH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi.html">PYCO-WIFI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">REFERNECE</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Update file over-the-air</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-connect-wifi">Step 1 - Connect Wifi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-use-mip-to-install-package">Step 2 - Use mip to install package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-create-folder-and-files">Step 3 - Create folder and files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-add-code">Step 4 - Add code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-open-sever">Step 5 - Open sever</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-6-reboot">Step 6 - Reboot</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WPC Stand-alone Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Update file over-the-air</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="update-file-over-the-air">
+<h1>Update file over-the-air<a class="headerlink" href="#update-file-over-the-air" title="Permalink to this heading"></a></h1>
+<p>This is a user guide about upgrading code over-the-air(OTA)</p>
+<section id="step-1-connect-wifi">
+<h2>Step 1 - Connect Wifi<a class="headerlink" href="#step-1-connect-wifi" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you have downloaded the package <code class="docutils literal notranslate"><span class="pre">micropython_ota</span></code>, please skip it.</p></li>
+<li><p>In order to download package</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">network</span>
+<span class="k">def</span> <span class="nf">do_connect</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="n">sta_if</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connecting to network...&#39;</span><span class="p">)</span>
+        <span class="n">sta_if</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">sta_if</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+            <span class="k">pass</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Network config:&#39;</span><span class="p">,</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+<span class="n">do_connect</span><span class="p">(</span><span class="s1">&#39;WPC Systems 1&#39;</span><span class="p">,</span> <span class="s1">&#39;25114629&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-use-mip-to-install-package">
+<h2>Step 2 - Use mip to install package<a class="headerlink" href="#step-2-use-mip-to-install-package" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you have downloaded the package <code class="docutils literal notranslate"><span class="pre">micropython_ota</span></code>, please skip it.</p></li>
+<li><p>Installation using mpip</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mpip</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;github:olivergregorius/micropython_ota/micropython_ota.py&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="step-3-create-folder-and-files">
+<h2>Step 3 - Create folder and files<a class="headerlink" href="#step-3-create-folder-and-files" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Create folder <code class="docutils literal notranslate"><span class="pre">sample</span></code> in desktop</p></li>
+<li><p>Create folder <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> in <code class="docutils literal notranslate"><span class="pre">sample</span></code></p></li>
+<li><p>Create file <code class="docutils literal notranslate"><span class="pre">version</span></code> in <code class="docutils literal notranslate"><span class="pre">sample</span></code></p></li>
+<li><p>Create boot.py and main.py in <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">desktop</span><span class="o">/</span>
+<span class="o">|-</span> <span class="n">sample</span><span class="o">/</span>
+<span class="o">|</span>  <span class="o">|-</span> <span class="n">version</span>
+<span class="o">|</span>  <span class="o">|-</span> <span class="mf">1.0.0</span><span class="o">/</span>
+   <span class="o">|</span>  <span class="o">|-</span> <span class="n">boot</span><span class="o">.</span><span class="n">py</span>
+   <span class="o">|</span>  <span class="o">|-</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="step-4-add-code">
+<h2>Step 4 - Add code<a class="headerlink" href="#step-4-add-code" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Add code in boot.py</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micropython_ota</span>
+
+<span class="k">def</span> <span class="nf">do_update</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+    <span class="c1"># connect to network</span>
+    <span class="n">ota_host</span> <span class="o">=</span> <span class="s2">&quot;http://</span><span class="si">%s</span><span class="s2">:</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ota_host</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;update_micropython&#39;</span>
+    <span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;boot.py&#39;</span><span class="p">,</span> <span class="s1">&#39;main.py&#39;</span><span class="p">]</span>
+    <span class="n">micropython_ota</span><span class="o">.</span><span class="n">ota_update</span><span class="p">(</span><span class="n">ota_host</span><span class="p">,</span> <span class="n">project_name</span><span class="p">,</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">use_version_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hard_reset_device</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">soft_reset_device</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">do_update</span><span class="p">(</span><span class="s1">&#39;192.168.5.118&#39;</span><span class="p">,</span> <span class="mi">9000</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add code in main.py</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is version 1.0.0 in main.py from chungleepeople&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add code in version</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.0.0</span>
+</pre></div>
+</div>
+</section>
+<section id="step-5-open-sever">
+<h2>Step 5 - Open sever<a class="headerlink" href="#step-5-open-sever" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open prompt in your PC</p></li>
+<li><p>python -m http.server <code class="docutils literal notranslate"><span class="pre">port</span></code> –bind <code class="docutils literal notranslate"><span class="pre">YOUR</span> <span class="pre">PC</span> <span class="pre">IP</span></code> –directory
+<code class="docutils literal notranslate"><span class="pre">LOCATION</span> <span class="pre">OF</span> <span class="pre">FOLDER</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">9000</span> <span class="o">--</span><span class="n">bind</span> <span class="mf">192.168.5.118</span> <span class="o">--</span><span class="n">directory</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">Desktop</span>
+</pre></div>
+</div>
+</section>
+<section id="step-6-reboot">
+<h2>Step 6 - Reboot<a class="headerlink" href="#step-6-reboot" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Reboot your device</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api_pyco_wifi.html" class="btn btn-neutral float-left" title="PYCO-WIFI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

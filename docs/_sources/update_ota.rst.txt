@@ -1,0 +1,98 @@
+Update file over-the-air
+========================
+
+This is a user guide about upgrading code over-the-air(OTA)
+
+Step 1 - Connect Wifi
+---------------------
+-  If you have downloaded the package ``micropython_ota``, please skip it.
+-  In order to download package
+
+.. code:: python
+
+   import network
+   def do_connect(ssid, password):
+       sta_if = network.WLAN(network.STA_IF)
+       if not sta_if.isconnected():
+           print('Connecting to network...')
+           sta_if.active(True)
+           sta_if.connect(ssid, password)
+           while not sta_if.isconnected():
+               pass
+       print('Network config:', sta_if.ifconfig())
+   do_connect('WPC Systems 1', '25114629')
+
+Step 2 - Use mip to install package
+-----------------------------------
+-  If you have downloaded the package ``micropython_ota``, please skip it.
+-  Installation using mpip
+
+.. code:: python
+
+   import mpip
+   mip.install('github:olivergregorius/micropython_ota/micropython_ota.py')
+
+Step 3 - Create folder and files
+---------------------------------
+
+-  Create folder ``sample`` in desktop
+-  Create folder ``1.0.0`` in ``sample``
+-  Create file ``version`` in ``sample``
+-  Create boot.py and main.py in ``1.0.0``
+
+::
+
+   desktop/
+   |- sample/
+   |  |- version
+   |  |- 1.0.0/
+      |  |- boot.py
+      |  |- main.py
+
+Step 4 - Add code
+-----------------
+
+-  Add code in boot.py
+
+.. code:: python
+
+   import micropython_ota
+
+   def do_update(host_ip, port):
+       # connect to network
+       ota_host = "http://%s:%d" % (host_ip, port)
+       print(ota_host)
+       project_name = 'update_micropython'
+       filenames = ['boot.py', 'main.py']
+       micropython_ota.ota_update(ota_host, project_name, filenames, use_version_prefix=False, hard_reset_device=True, soft_reset_device=False, timeout=1)
+
+   do_update('192.168.5.118', 9000)
+
+-  Add code in main.py
+
+.. code:: python
+
+   print("This is version 1.0.0 in main.py from chungleepeople")
+
+-  Add code in version
+
+::
+
+   1.0.0
+
+Step 5 - Open sever
+--------------------
+
+-  Open prompt in your PC
+
+-  python -m http.server ``port`` --bind ``YOUR PC IP`` --directory
+   ``LOCATION OF FOLDER``
+
+::
+
+     python -m http.server 9000 --bind 192.168.5.118 --directory C:/Users/user/Desktop
+
+Step 6 - Reboot
+---------------
+
+-  Reboot your device
