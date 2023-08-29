@@ -2,14 +2,10 @@
 v0.0.15 Date: 2023/08/29, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
-- requirements.txt
-- update_ota.rst
-- How to `Generate Sphinx documentation` in ReadME.md
+- OTA update user guide in sphinx
 
 ### Changed
-- Change micropython version to v1.20
 - python example file name: upip_install->mip_install
-
 
 v0.0.14 Date: 2023/08/21, Developer: Chunglee_people
 ---------------------------------------------------
