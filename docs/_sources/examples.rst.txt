@@ -42,6 +42,8 @@ PYCO-WIFI
 
    examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.rst
 
+   examples/PYCO_WIFI/FFT/fourier_transform.rst
+
    examples/PYCO_WIFI/OLED/OLED_writeLine.rst
 
    examples/PYCO_WIFI/LED/LED_control.rst
