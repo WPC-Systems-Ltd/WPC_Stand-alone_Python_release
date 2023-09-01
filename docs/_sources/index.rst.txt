@@ -2,8 +2,8 @@
 
 .. meta::
    :title: WPC Stand-alone Python
-   :description: The easiest way to Control & Data Acquisition (DAQ)
-   :keywords: DAQ, MircoPython, RealTime
+   :description: The fastest, cleanest, and easiest way to deal with embedded applications
+   :keywords: DAQ, Micropython, RealTime
 
 .. toctree::
    :hidden:

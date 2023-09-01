@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LED control &mdash; WPC Stand-alone Python 0.0.16 documentation</title>
+  <title>Fourier transform &mdash; WPC Stand-alone Python 0.0.16 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Get system info" href="../System/get_system_info.html" />
-    <link rel="prev" title="OLED write Line" href="../OLED/OLED_writeLine.html" /> 
+    <link rel="next" title="OLED write Line" href="../OLED/OLED_writeLine.html" />
+    <link rel="prev" title="AI N samples with logger" href="../AI_WIFI/AI_N_samples_with_logger.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,9 +56,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform.html">Fourier transform</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Fourier transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../OLED/OLED_writeLine.html">OLED write Line</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">LED control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LED/LED_control.html">LED control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../System/get_system_info.html">Get system info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_read.html">TCP server read</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write.html">TCP server write</a></li>
@@ -96,7 +96,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples.html">Example Codes</a></li>
-      <li class="breadcrumb-item active">LED control</li>
+      <li class="breadcrumb-item active">Fourier transform</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -105,27 +105,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="led-control">
-<h1>LED control<a class="headerlink" href="#led-control" title="Permalink to this heading"></a></h1>
+  <section id="fourier-transform">
+<h1>Fourier transform<a class="headerlink" href="#fourier-transform" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">LED - LED_control.py.</span>
+<span class="linenos"> 2</span><span class="sd">FFT - fourier_transform.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to control LED.</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to use fourier transform</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
+<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">ulab</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Set LED to blue</span>
-<span class="linenos">13</span><span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setBlue</span><span class="p">()</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="c1">## Set LED to green</span>
-<span class="linenos">16</span><span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setGreen</span><span class="p">()</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="c1">## Set LED to red</span>
-<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setRed</span><span class="p">()</span>
+<span class="linenos">12</span><span class="c1">## Parameters</span>
+<span class="linenos">13</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">14</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1">## Generate sine signal</span>
+<span class="linenos">17</span><span class="n">signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">frequency</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1">## Apply the FFT on the signal</span>
+<span class="linenos">20</span><span class="n">fourier_real</span><span class="p">,</span> <span class="n">fourier_imaginary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+<span class="linenos">21</span><span class="n">power_spectrum</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">fourier_real</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">fourier_imaginary</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1">## Print result</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">)</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">))</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -134,8 +141,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../OLED/OLED_writeLine.html" class="btn btn-neutral float-left" title="OLED write Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../System/get_system_info.html" class="btn btn-neutral float-right" title="Get system info" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../AI_WIFI/AI_N_samples_with_logger.html" class="btn btn-neutral float-left" title="AI N samples with logger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../OLED/OLED_writeLine.html" class="btn btn-neutral float-right" title="OLED write Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
