@@ -1,10 +1,10 @@
-Update file over-the-air
-========================
+Over-The-Air (OTA) update
+=========================
 
 This is a user guide about upgrading code over-the-air(OTA)
 
-Step 1 - Connect Wifi
----------------------
+Step 1 - Connect to Wifi
+------------------------
 -  If you have downloaded the package ``micropython_ota``, please skip it.
 -  In order to download package
 
@@ -22,8 +22,8 @@ Step 1 - Connect Wifi
        print('Network config:', sta_if.ifconfig())
    do_connect('WPC Systems 1', '25114629')
 
-Step 2 - Use mip to install package
------------------------------------
+Step 2 - Using mip to install package
+-------------------------------------
 -  If you have downloaded the package ``micropython_ota``, please skip it.
 -  Installation using mpip
 
@@ -32,8 +32,8 @@ Step 2 - Use mip to install package
    import mpip
    mip.install('github:olivergregorius/micropython_ota/micropython_ota.py')
 
-Step 3 - Create folder and files
----------------------------------
+Step 3 - Creating files and folders
+-----------------------------------
 
 -  Create folder ``sample`` in desktop
 -  Create folder ``1.0.0`` in ``sample``
@@ -49,8 +49,8 @@ Step 3 - Create folder and files
       |  |- boot.py
       |  |- main.py
 
-Step 4 - Add code
------------------
+Step 4 - Adding user codes
+--------------------------
 
 -  Add code in boot.py
 
