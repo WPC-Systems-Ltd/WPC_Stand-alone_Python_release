@@ -1,3 +1,13 @@
+
+v0.0.17 Date: 2023/09/05, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- Decorate sphinx's homepage
+
+### Changed
+- Example name: Fourier transform -> FFT
+- friendly_repl_reset's messages
+
 v0.0.16 Date: 2023/09/01, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added

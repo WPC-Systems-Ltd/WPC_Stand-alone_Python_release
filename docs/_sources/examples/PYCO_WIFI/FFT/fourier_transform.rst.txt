@@ -1,5 +1,5 @@
-Fourier transform
-=================
+FFT
+===
 
 .. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/FFT/fourier_transform.py
    :language: python

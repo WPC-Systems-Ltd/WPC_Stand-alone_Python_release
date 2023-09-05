@@ -7,7 +7,7 @@
 <meta content="DAQ, Micropython, RealTime" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; WPC Stand-alone Python 0.0.16 documentation</title>
+  <title>Introduction &mdash; WPC Stand-alone Python 0.0.17 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -40,7 +40,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.0.16
+                0.0.17
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -54,12 +54,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Example Codes</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API REFERNECE</span></p>
+<p class="caption" role="heading"><span class="caption-text">API REFERENCE</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_pyco_eth.html">PYCO-ETH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi.html">PYCO-WIFI</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">REFERNECE</span></p>
+<p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="update_ota.html">Over-The-Air (OTA) update</a></li>
 </ul>
@@ -78,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Overview</li>
+      <li class="breadcrumb-item active">Introduction</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -87,9 +87,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
-<p>This is WPC_Stand-alone_Python_release repo</p>
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p>Welcome to the API reference documentation for <strong>WPC_Stand-alone_Python</strong>. We provide excellent example codes to help you quickly get started with our products.</p>
+<p>Our platform is beginner-friendly and open-source, specifically designed for microcontrollers and embedded systems.
+It represents a compact implementation of Python 3, finely tuned to operate efficiently on resource-constrained hardware.
+This makes it a favored choice among developers engaged in projects involving embedded devices.</p>
+<p>Moreover, we also provide support for <code class="docutils literal notranslate"><span class="pre">ulab</span></code>, a numerical computing library.
+ulab offers a comprehensive suite of functions for working with numerical data, implementing a compact subset of <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and scipy.
+For detailed API support, please refer to the <a class="reference external" href="https://micropython-ulab.readthedocs.io/en/latest/index.html">ulab</a> documentation.</p>
+</section>
+<section id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h1>
+<p><strong>Easy, fast, and just works!</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverName</span><span class="p">()</span>
+<span class="go">&#39;WPC_Stand-alone_Python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">()</span>
+<span class="go">[1.638031, 1.642151, 1.645813, 1.642303, 1.6362, 1.638489, 1.643829, 1.642761]</span>
+</pre></div>
+</div>
+</section>
+<section id="products">
+<h1>Products<a class="headerlink" href="#products" title="Permalink to this heading"></a></h1>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Product/module</p></td>
+<td><p>PYCO-WIFI</p></td>
+<td><p>PYCO-ETH</p></td>
+</tr>
+<tr class="row-even"><td><p>AI</p></td>
+<td><p>V</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td><p>AO</p></td>
+<td></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td><p>DIO</p></td>
+<td></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td><p>TCP</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Wifi</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>OLED</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LED</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">V</span></code> stands for support</p>
 </section>
 <section id="license">
 <h1>License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h1>
@@ -98,31 +155,8 @@ All licenses allow for non-commercial and commercial use.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">API REFERNECE</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api_pyco_eth.html">PYCO-ETH</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_eth.html#aio">AIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_eth.html#battery">Battery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_eth.html#system">SYSTEM</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi.html">PYCO-WIFI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#aio">AIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#battery">Battery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#led">LED</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#oled">OLED</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#system">SYSTEM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#tcp">TCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_pyco_wifi.html#temperature">TEMPERATURE</a></li>
-</ul>
-</li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">REFERNECE</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="update_ota.html">Over-The-Air (OTA) update</a></li>
-</ul>
 </div>
 </section>
 
