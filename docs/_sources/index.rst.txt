@@ -13,16 +13,18 @@
    examples
 
 .. toctree::
-   :maxdepth: 4
-   :caption: API REFERNECE
+   :hidden:
+   :maxdepth: 2
+   :caption: API REFERENCE
 
    api_pyco_eth
 
    api_pyco_wifi
 
 .. toctree::
-   :maxdepth: 1
-   :caption: REFERNECE
+   :hidden:
+   :maxdepth: 2
+   :caption: REFERENCE
 
    update_ota
 ..
