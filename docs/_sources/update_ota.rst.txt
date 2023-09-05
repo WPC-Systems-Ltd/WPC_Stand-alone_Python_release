@@ -83,7 +83,7 @@ Step 4 - Adding user codes
 Step 5 - Open sever
 --------------------
 
--  Open prompt in your PC
+-  Open command prompt in your PC
 
 -  python -m http.server ``port`` --bind ``YOUR PC IP`` --directory
    ``LOCATION OF FOLDER``
