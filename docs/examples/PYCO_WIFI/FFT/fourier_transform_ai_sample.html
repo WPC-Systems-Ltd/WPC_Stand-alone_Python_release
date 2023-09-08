@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCP server write string &mdash; WPC Stand-alone Python 0.0.18 documentation</title>
+  <title>FFT (AI sample) &mdash; WPC Stand-alone Python 0.0.18 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TCP server write U8 list" href="TCP_server_write_U8_list.html" />
-    <link rel="prev" title="TCP server read" href="TCP_server_read.html" /> 
+    <link rel="next" title="OLED write Line" href="../OLED/OLED_writeLine.html" />
+    <link rel="prev" title="FFT (plot)" href="fourier_transform_plot.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,15 +56,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_simulate.html">FFT (simulate)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_plot.html">FFT (plot)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_ai_sample.html">FFT (AI sample)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fourier_transform_simulate.html">FFT (simulate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fourier_transform_plot.html">FFT (plot)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">FFT (AI sample)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../OLED/OLED_writeLine.html">OLED write Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../LED/LED_control.html">LED control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../System/get_system_info.html">Get system info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">TCP server write string</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_read.html">TCP server read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
@@ -99,7 +99,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples.html">Example Codes</a></li>
-      <li class="breadcrumb-item active">TCP server write string</li>
+      <li class="breadcrumb-item active">FFT (AI sample)</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -108,32 +108,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tcp-server-write-string">
-<h1>TCP server write string<a class="headerlink" href="#tcp-server-write-string" title="Permalink to this heading"></a></h1>
+  <section id="fft-ai-sample">
+<h1>FFT (AI sample)<a class="headerlink" href="#fft-ai-sample" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">TCP_server - TCP_server_write.py.</span>
+<span class="linenos"> 2</span><span class="sd">FFT - fourier_transform_simulate.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write string via tcp server</span>
-<span class="linenos"> 5</span><span class="sd">It should connect wifi before tcp connection</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 8</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c1">## WPC</span>
-<span class="linenos">11</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span><span class="c1">## Paremeters setting</span>
-<span class="linenos">14</span><span class="n">port</span> <span class="o">=</span> <span class="mi">5566</span>
-<span class="linenos">15</span><span class="n">write_data</span> <span class="o">=</span> <span class="s2">&quot;Hello_world&quot;</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to use fourier transform with AI N-sample data</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
+<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">ulab</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">## Parameters</span>
+<span class="linenos">13</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="linenos">14</span><span class="n">sample</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="linenos">15</span><span class="n">delay</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Open TCP with port</span>
-<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_open</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1">## Start AI acquisition</span>
+<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">AI_start</span><span class="p">(</span><span class="n">sampling_rate</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Write string</span>
-<span class="linenos">21</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_writeString</span><span class="p">(</span><span class="n">write_data</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">write_data</span><span class="p">))</span>
+<span class="linenos">20</span><span class="c1">## Read data acquisition</span>
+<span class="linenos">21</span><span class="n">ai_sample</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readNsample</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
 <span class="linenos">22</span>
-<span class="linenos">23</span><span class="c1">## Close TCP</span>
-<span class="linenos">24</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_close</span><span class="p">()</span>
+<span class="linenos">23</span><span class="c1">## Convert AI data</span>
+<span class="linenos">24</span><span class="n">ai_sample_cvt</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">ai_sample</span><span class="p">)]</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="c1">## Convert from list to array</span>
+<span class="linenos">27</span><span class="n">ai_sample_cvt_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ai_sample_cvt</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="c1">## Apply the FFT on the signal</span>
+<span class="linenos">30</span><span class="c1">## Get channel 1 data</span>
+<span class="linenos">31</span><span class="n">fourier_real</span><span class="p">,</span> <span class="n">fourier_imaginary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">ai_sample_cvt_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="linenos">32</span><span class="n">power_spectrum</span> <span class="o">=</span> <span class="n">fourier_real</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fourier_imaginary</span><span class="o">**</span><span class="mi">2</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1">## Print result</span>
+<span class="linenos">35</span><span class="nb">print</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">)</span>
+<span class="linenos">36</span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">))</span>
+<span class="linenos">37</span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">power_spectrum</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -142,8 +155,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="TCP_server_read.html" class="btn btn-neutral float-left" title="TCP server read" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="TCP_server_write_U8_list.html" class="btn btn-neutral float-right" title="TCP server write U8 list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fourier_transform_plot.html" class="btn btn-neutral float-left" title="FFT (plot)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../OLED/OLED_writeLine.html" class="btn btn-neutral float-right" title="OLED write Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

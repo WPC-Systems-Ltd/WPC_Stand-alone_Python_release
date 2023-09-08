@@ -1,7 +1,7 @@
 '''
 FFT - fourier_transform_simulate.py.
 
-This example demonstrates how to use fourier transform
+This example demonstrates how to use fourier transform with simulated data
 
 Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 '''

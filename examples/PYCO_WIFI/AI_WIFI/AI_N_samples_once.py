@@ -14,7 +14,7 @@ import pywpc
 
 ## Parameters setting
 sampling_rate = 8000
-sample = 10000
+sample = 1000
 delay = 2000
 
 ## Start AI acquisition

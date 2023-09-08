@@ -6,7 +6,7 @@ import numpy as np
 def convert4U8ToF32(int_list):
     return struct.unpack('>f', bytes(int_list))[0]
 
-HOST = '192.168.5.123'
+HOST = '192.168.5.107'
 PORT = 5566
 
 def main():
@@ -33,7 +33,9 @@ def main():
     frequency = np.linspace(0, data_len//2, data_len//2)
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Power spectrum')
-    plt.bar(frequency, data_float_list)
+    plt.plot(frequency, data_float_list[0:data_len//2])
+
+    # plt.bar(frequency, data_float_list)
     plt.show()
 
 if __name__ == '__main__':

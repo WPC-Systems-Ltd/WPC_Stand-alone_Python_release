@@ -28,10 +28,6 @@ frequency = 50          ## frequency of the signal
 ## Sine signal
 signal = np.sin(2*np.pi*frequency*t)
 
-## Square signal
-# signal = [1.0 if (frequency*x % 1) < 0.5 else -1.0 for x in t]
-# signal = np.array(signal)
-
 ## Apply the FFT on the signal
 fourier_real, fourier_imaginary = np.fft.fft(signal)
 power_spectrum = fourier_real**2 + fourier_imaginary**2
