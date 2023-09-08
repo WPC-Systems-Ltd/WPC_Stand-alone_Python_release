@@ -42,7 +42,9 @@ PYCO-WIFI
 
    examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.rst
 
-   examples/PYCO_WIFI/FFT/fourier_transform.rst
+   examples/PYCO_WIFI/FFT/fourier_transform_simulate.rst
+
+   examples/PYCO_WIFI/FFT/fourier_transform_plot.rst
 
    examples/PYCO_WIFI/OLED/OLED_writeLine.rst
 
@@ -52,7 +54,9 @@ PYCO-WIFI
 
    examples/PYCO_WIFI/TCP_server/TCP_server_read.rst
 
-   examples/PYCO_WIFI/TCP_server/TCP_server_write.rst
+   examples/PYCO_WIFI/TCP_server/TCP_server_write_string.rst
+
+   examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.rst
 
    examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.rst
 
