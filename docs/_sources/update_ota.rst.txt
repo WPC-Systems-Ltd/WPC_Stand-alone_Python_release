@@ -20,7 +20,7 @@ Step 1 - Connect to Wifi
            while not sta_if.isconnected():
                pass
        print('Network config:', sta_if.ifconfig())
-   do_connect('WPC Systems 1', '25114629')
+   do_connect('my_ssid', 'my_password')
 
 Step 2 - Using mip to install package
 -------------------------------------
