@@ -1,3 +1,13 @@
+v0.0.18 Date: 2023/09/08, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- Example: TCP server write U8 list, FFT (AI sample), FFT (plot)
+- PC example: CSV_plot_AI.py, TCP_client_with_plot_FFT.py
+
+### Changed
+- Example name:
+    - TCP server write -> TCP server write string
+    - FFT -> FFT (simulate)
 
 v0.0.17 Date: 2023/09/05, Developer: Chunglee_people
 ----------------------------------------------------

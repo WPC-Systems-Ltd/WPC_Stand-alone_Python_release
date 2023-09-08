@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get memory status &mdash; WPC Stand-alone Python 0.0.17 documentation</title>
+  <title>Get memory status &mdash; WPC Stand-alone Python 0.0.18 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.0.17
+                0.0.18
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -56,12 +56,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform.html">FFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_simulate.html">FFT (simulate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_plot.html">FFT (plot)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../FFT/fourier_transform_ai_sample.html">FFT (AI sample)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../OLED/OLED_writeLine.html">OLED write Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../LED/LED_control.html">LED control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../System/get_system_info.html">Get system info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write.html">TCP server write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Thread_LED.html">LED thread</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Wifi_connect.html">Wifi connect</a></li>
@@ -132,7 +135,7 @@
 <span class="linenos">23</span>  <span class="n">A</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()</span>
 <span class="linenos">24</span>  <span class="n">T</span> <span class="o">=</span> <span class="n">F</span><span class="o">+</span><span class="n">A</span>
 <span class="linenos">25</span>  <span class="n">P</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">F</span><span class="o">/</span><span class="n">T</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
-<span class="linenos">26</span>  <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;Total SRAM: </span><span class="si">{0}</span><span class="s1"> MB, Free SRAM: </span><span class="si">{1}</span><span class="s1"> MB (</span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">T</span><span class="o">/</span><span class="mi">1048576</span><span class="p">),(</span><span class="n">F</span><span class="o">/</span><span class="mi">1048576</span><span class="p">),</span><span class="n">P</span><span class="p">))</span>
+<span class="linenos">26</span>  <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;Total SRAM: </span><span class="si">{0}</span><span class="s1"> MB, Free SRAM: </span><span class="si">{1}</span><span class="s1"> MB (</span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">T</span><span class="o">/</span><span class="mi">1048576</span><span class="p">),</span> <span class="p">(</span><span class="n">F</span><span class="o">/</span><span class="mi">1048576</span><span class="p">),</span> <span class="n">P</span><span class="p">))</span>
 <span class="linenos">27</span>
 <span class="linenos">28</span><span class="nb">print</span><span class="p">(</span><span class="n">WPC_getFlashInfo</span><span class="p">())</span>
 <span class="linenos">29</span><span class="nb">print</span><span class="p">(</span><span class="n">WPC_getRAMInfo</span><span class="p">())</span>

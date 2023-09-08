@@ -1,0 +1,6 @@
+TCP server write U8 list
+========================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.py
+   :language: python
+   :linenos:
