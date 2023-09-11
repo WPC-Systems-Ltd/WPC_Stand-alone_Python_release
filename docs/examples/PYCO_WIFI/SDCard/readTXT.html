@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OLED write Line &mdash; WPC Stand-alone Python 0.1.0 documentation</title>
+  <title>Read from SDCard &mdash; WPC Stand-alone Python 0.1.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="LED control" href="../LED/LED_control.html" />
-    <link rel="prev" title="FFT (AI Nsample)" href="../FFT/fourier_transform_ai_sample.html" /> 
+    <link rel="next" title="Write into SDCard" href="writeTXT.html" />
+    <link rel="prev" title="New package install" href="../Tutorial_WIFI/mip_install.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,15 +54,16 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#ai">AI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#fft">FFT</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">OLED write Line</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-server">TCP server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sdcard">SDCard</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sdcard">SDCard</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Read from SDCard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writeTXT.html">Write into SDCard</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -91,7 +92,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">OLED write Line</li>
+      <li class="breadcrumb-item active">Read from SDCard</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -100,33 +101,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="oled-write-line">
-<h1>OLED write Line<a class="headerlink" href="#oled-write-line" title="Permalink to this heading"></a></h1>
+  <section id="read-from-sdcard">
+<h1>Read from SDCard<a class="headerlink" href="#read-from-sdcard" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">OLED - OLED_writeLine.py.</span>
+<span class="linenos"> 2</span><span class="sd">SDCard - Read from SDCard.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write message on the screen.</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to read from txt file.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Erase all message on the screen</span>
-<span class="linenos">13</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_erase</span><span class="p">()</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="c1">## Write in line 1</span>
-<span class="linenos">16</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;WPC Systems Ltd.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">sdcard</span>
+<span class="linenos">10</span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
+<span class="linenos">11</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1">## Initialize the SD card</span>
+<span class="linenos">14</span><span class="n">sd_spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sck</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">mosi</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">miso</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">))</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="n">sd</span> <span class="o">=</span> <span class="n">sdcard</span><span class="o">.</span><span class="n">SDCard</span><span class="p">(</span><span class="n">sd_spi</span><span class="p">,</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">))</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="c1">## Write in line 2</span>
-<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;ChungleePeople&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="linenos">18</span><span class="c1">## Create a instance of MicroPython Unix-like Virtual File System (VFS)</span>
+<span class="linenos">19</span><span class="n">vfs</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">VfsFat</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span><span class="c1">## Write in line 3</span>
-<span class="linenos">22</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;LincPeople&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="linenos">21</span><span class="c1">## Mount the SD card</span>
+<span class="linenos">22</span><span class="n">os</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span><span class="s1">&#39;/sd&#39;</span><span class="p">)</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="c1">## Write in line 4</span>
-<span class="linenos">25</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;JustinPeople&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="linenos">24</span><span class="c1">## Debug print SD card directory and files</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;/sd&#39;</span><span class="p">))</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1">## Open the file in &quot;read mode&quot;.</span>
+<span class="linenos">28</span><span class="c1">## Read the file and print the text on debug port.</span>
+<span class="linenos">29</span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/sd/sample.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="linenos">30</span><span class="k">if</span> <span class="n">file</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">31</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading from SD card&quot;</span><span class="p">)</span>
+<span class="linenos">32</span>    <span class="n">read_data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="linenos">33</span>    <span class="nb">print</span> <span class="p">(</span><span class="n">read_data</span><span class="p">)</span>
+<span class="linenos">34</span><span class="c1">## Close the file</span>
+<span class="linenos">35</span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -135,8 +146,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../FFT/fourier_transform_ai_sample.html" class="btn btn-neutral float-left" title="FFT (AI Nsample)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../LED/LED_control.html" class="btn btn-neutral float-right" title="LED control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Tutorial_WIFI/mip_install.html" class="btn btn-neutral float-left" title="New package install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="writeTXT.html" class="btn btn-neutral float-right" title="Write into SDCard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

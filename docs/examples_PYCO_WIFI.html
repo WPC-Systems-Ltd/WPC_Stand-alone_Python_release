@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example Codes &mdash; WPC Stand-alone Python 0.0.18 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AI on demand once" href="examples/PYCO_ETH/AI_ETH/AI_on_demand_once.html" />
-    <link rel="prev" title="Introduction" href="index.html" /> 
+    <link rel="next" title="AI on demand once" href="examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.html" />
+    <link rel="prev" title="AIO thread" href="examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.0.18
+                0.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -50,38 +50,48 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">EXAMPLE CODES</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Codes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pyco-eth">PYCO-ETH</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/AI_ETH/AI_on_demand_once.html">AI on demand once</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/AO/AO_write_all_channels.html">AO write all channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/AO/AO_write_one_channel.html">AO write one channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/AIO/AIO_one_channel_loopback.html">AIO one channel loopback</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/AIO/AIO_all_channels_loopback.html">AIO all channels loopback</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/DIO/DIO_loopback_pins.html">DIO loopback pins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/DIO/DIO_loopback_port.html">DIO loopback port</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/DIO/DO_write_pins.html">DO write pins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/DIO/DO_write_port.html">DO write port</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/System/get_system_info.html">Get system info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.html">AIO thread</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#pyco-wifi">PYCO-WIFI</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="examples_PYCO_ETH.html">PYCO-ETH</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PYCO-WIFI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ai">AI</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_simulate.html">FFT (simulate)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fft">FFT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_simulate.html">FFT (simulated)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_plot.html">FFT (plot)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.html">FFT (AI sample)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.html">FFT (AI Nsample)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oled">OLED</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#led">LED</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/LED/LED_control.html">LED control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#system">System</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/System/get_system_info.html">Get system info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-server">TCP server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_read.html">TCP server read</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/mip_install.html">New package install</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sdcard">SDCard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SDCard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write into SDCard</a></li>
 </ul>
 </li>
 </ul>
@@ -111,7 +121,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Example Codes</li>
+      <li class="breadcrumb-item active">PYCO-WIFI</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -120,46 +130,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="example-codes">
-<h1>Example Codes<a class="headerlink" href="#example-codes" title="Permalink to this heading"></a></h1>
-<section id="pyco-eth">
-<h2>PYCO-ETH<a class="headerlink" href="#pyco-eth" title="Permalink to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/AI_ETH/AI_on_demand_once.html">AI on demand once</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/AO/AO_write_all_channels.html">AO write all channels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/AO/AO_write_one_channel.html">AO write one channel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/AIO/AIO_one_channel_loopback.html">AIO one channel loopback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/AIO/AIO_all_channels_loopback.html">AIO all channels loopback</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/DIO/DIO_loopback_pins.html">DIO loopback pins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/DIO/DIO_loopback_port.html">DIO loopback port</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/DIO/DO_write_pins.html">DO write pins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/DIO/DO_write_port.html">DO write port</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/System/get_system_info.html">Get system info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.html">AIO thread</a></li>
-</ul>
-</div>
-</section>
-<section id="pyco-wifi">
-<h2>PYCO-WIFI<a class="headerlink" href="#pyco-wifi" title="Permalink to this heading"></a></h2>
+  <section id="pyco-wifi">
+<h1>PYCO-WIFI<a class="headerlink" href="#pyco-wifi" title="Permalink to this heading"></a></h1>
+<section id="ai">
+<h2>AI<a class="headerlink" href="#ai" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_simulate.html">FFT (simulate)</a></li>
+</ul>
+</div>
+</section>
+<section id="fft">
+<h2>FFT<a class="headerlink" href="#fft" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_simulate.html">FFT (simulated)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_plot.html">FFT (plot)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.html">FFT (AI sample)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.html">FFT (AI Nsample)</a></li>
+</ul>
+</div>
+</section>
+<section id="oled">
+<h2>OLED<a class="headerlink" href="#oled" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
+</ul>
+</div>
+</section>
+<section id="led">
+<h2>LED<a class="headerlink" href="#led" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/LED/LED_control.html">LED control</a></li>
+</ul>
+</div>
+</section>
+<section id="system">
+<h2>System<a class="headerlink" href="#system" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/System/get_system_info.html">Get system info</a></li>
+</ul>
+</div>
+</section>
+<section id="tcp-server">
+<h2>TCP server<a class="headerlink" href="#tcp-server" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_read.html">TCP server read</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
+</ul>
+</div>
+</section>
+<section id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/mip_install.html">New package install</a></li>
+</ul>
+</div>
+</section>
+<section id="sdcard">
+<h2>SDCard<a class="headerlink" href="#sdcard" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SDCard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write into SDCard</a></li>
 </ul>
 </div>
 </section>
@@ -169,8 +212,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="examples/PYCO_ETH/AI_ETH/AI_on_demand_once.html" class="btn btn-neutral float-right" title="AI on demand once" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.html" class="btn btn-neutral float-left" title="AIO thread" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.html" class="btn btn-neutral float-right" title="AI on demand once" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

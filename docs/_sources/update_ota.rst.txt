@@ -72,7 +72,7 @@ Step 4 - Adding user codes
 
 .. code:: python
 
-   print("This is version 1.0.0 in main.py from chungleepeople")
+   print("This is version 1.0.0 in main.py.")
 
 -  Add code in version
 
