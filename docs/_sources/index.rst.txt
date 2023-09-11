@@ -10,7 +10,8 @@
    :maxdepth: 2
    :caption: EXAMPLE CODES
 
-   examples
+   examples_PYCO_ETH
+   examples_PYCO_WIFI
 
 .. toctree::
    :hidden:
@@ -21,12 +22,10 @@
 
    api_pyco_wifi
 
+
 .. toctree::
    :hidden:
    :maxdepth: 2
    :caption: REFERENCE
 
    update_ota
-..
-   automodule:: pywpc
-

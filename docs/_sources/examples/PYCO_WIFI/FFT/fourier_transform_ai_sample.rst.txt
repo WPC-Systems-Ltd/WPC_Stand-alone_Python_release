@@ -1,5 +1,5 @@
-FFT (AI sample)
-===============
+FFT (AI Nsample)
+================
 
 .. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.py
    :language: python
