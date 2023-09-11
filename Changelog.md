@@ -1,3 +1,20 @@
+v0.1.0 Date: 2023/09/11, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- examples_PYCO_ETH.rst & examples_PYCO_WIFI.rst
+- SDCard example code: Read from SDCard.py, Write into SDCard.py
+
+### Changed
+- example name:
+    - FFT (simulate)  -> FFT (simulated)
+    - FFT (AI sample) -> FFT (AI Nsample)
+
+### Fixed
+- Depended on product's modules, rearrange the display of example codes
+
+### Removed
+- examples.rst
+
 v0.0.18 Date: 2023/09/08, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
