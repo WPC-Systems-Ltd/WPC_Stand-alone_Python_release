@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FFT (AI sample) &mdash; WPC Stand-alone Python 0.0.18 documentation</title>
+  <title>FFT (AI Nsample) &mdash; WPC Stand-alone Python 0.1.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.0.18
+                0.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -50,27 +50,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">EXAMPLE CODES</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../../examples.html">Example Codes</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../examples.html#pyco-eth">PYCO-ETH</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples.html#pyco-wifi">PYCO-WIFI</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_on_demand_once.html">AI on demand once</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_once.html">AI N samples once</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../AI_WIFI/AI_N_samples_with_logger.html">AI N samples with logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fourier_transform_simulate.html">FFT (simulate)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_PYCO_ETH.html">PYCO-ETH</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#ai">AI</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#fft">FFT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="fourier_transform_simulate.html">FFT (simulated)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fourier_transform_plot.html">FFT (plot)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">FFT (AI sample)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../OLED/OLED_writeLine.html">OLED write Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../LED/LED_control.html">LED control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../System/get_system_info.html">Get system info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorial_WIFI/mip_install.html">New package install</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">FFT (AI Nsample)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-server">TCP server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sdcard">SDCard</a></li>
 </ul>
 </li>
 </ul>
@@ -98,8 +92,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../../examples.html">Example Codes</a></li>
-      <li class="breadcrumb-item active">FFT (AI sample)</li>
+          <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
+      <li class="breadcrumb-item active">FFT (AI Nsample)</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -108,8 +102,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="fft-ai-sample">
-<h1>FFT (AI sample)<a class="headerlink" href="#fft-ai-sample" title="Permalink to this heading"></a></h1>
+  <section id="fft-ai-nsample">
+<h1>FFT (AI Nsample)<a class="headerlink" href="#fft-ai-nsample" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 2</span><span class="sd">FFT - fourier_transform_simulate.py.</span>
 <span class="linenos"> 3</span>

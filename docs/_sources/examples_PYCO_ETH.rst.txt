@@ -1,0 +1,60 @@
+PYCO-ETH
+========
+AI
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/AI_ETH/AI_on_demand_once.rst
+
+AO
+--
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/AO/AO_write_all_channels.rst
+
+   examples/PYCO_ETH/AO/AO_write_one_channel.rst
+
+AIO
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/AIO/AIO_one_channel_loopback.rst
+
+   examples/PYCO_ETH/AIO/AIO_all_channels_loopback.rst
+
+DIO
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/DIO/DIO_loopback_pins.rst
+
+   examples/PYCO_ETH/DIO/DIO_loopback_port.rst
+
+   examples/PYCO_ETH/DIO/DO_write_pins.rst
+
+   examples/PYCO_ETH/DIO/DO_write_port.rst
+
+System
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/System/get_system_info.rst
+
+Tutorial
+------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.rst
+

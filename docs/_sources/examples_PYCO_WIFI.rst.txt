@@ -1,0 +1,86 @@
+PYCO-WIFI
+=========
+AI
+-------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.rst
+
+   examples/PYCO_WIFI/AI_WIFI/AI_N_samples_once.rst
+
+   examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.rst
+
+FFT
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/FFT/fourier_transform_simulate.rst
+
+   examples/PYCO_WIFI/FFT/fourier_transform_plot.rst
+
+   examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.rst
+
+OLED
+----
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/OLED/OLED_writeLine.rst
+
+LED
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/LED/LED_control.rst
+
+System
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/System/get_system_info.rst
+
+TCP server
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/TCP_server/TCP_server_read.rst
+
+   examples/PYCO_WIFI/TCP_server/TCP_server_write_string.rst
+
+   examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.rst
+
+Tutorial
+-------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.rst
+
+   examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.rst
+
+   examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.rst
+
+   examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
+
+SDCard
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/SDCard/readTXT.rst
+
+   examples/PYCO_WIFI/SDCard/writeTXT.rst
+
