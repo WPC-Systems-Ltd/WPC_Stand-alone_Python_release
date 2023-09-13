@@ -1,3 +1,18 @@
+v0.1.1 Date: 2023/09/13, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- pywpc_ex.py
+- v0.1.1_20230913.bin file
+
+### Changed
+- example name:
+    - Read from SDCard -> Read from SD Card
+    - Write into SDCard -> Write to SD Card
+
+### Fixed
+- mip.install.py's contents
+- Initialize sdcard pin in the class of SDcard
+
 v0.1.0 Date: 2023/09/11, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
