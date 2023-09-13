@@ -1,5 +1,5 @@
-Read from SDCard
-================
+Read from SD Card
+=================
 
 .. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/SDCard/readTXT.py
    :language: python
