@@ -1,3 +1,12 @@
+v0.2.0 Date: 2023/09/14, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- tinyml's folder
+
+### Changed
+- API name:
+    - getFiles -> getFileDirectory
+
 v0.1.1 Date: 2023/09/13, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added

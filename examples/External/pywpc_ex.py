@@ -8,7 +8,7 @@ class SDCard:
         sd = sdcard.SDCard(SPI(1), Pin(15, Pin.OUT))
         os.mount(sd,'/sd')
 
-    def getFiles(self):
+    def getFileDirectory(self):
         return os.listdir('/sd')
 
     def openFile(self, filename, mode):

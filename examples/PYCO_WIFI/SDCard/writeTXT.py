@@ -12,7 +12,7 @@ import pywpc_ex
 dev = pywpc_ex.SDCard()
 
 ## Debug print SD card directory and files
-print(dev.getFiles())
+print(dev.getFileDirectory())
 
 ## Create / Open a file in write mode.
 ## Write mode creates a new file.
