@@ -12,7 +12,7 @@ import pywpc_ex
 dev = pywpc_ex.SDCard()
 
 ## Debug print SD card directory and files
-print(dev.getFiles())
+print(dev.getFileDirectory())
 
 ## Open the file in "read mode".
 ## Read the file and print the text on debug port.
