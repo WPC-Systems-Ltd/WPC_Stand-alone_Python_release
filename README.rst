@@ -7,6 +7,9 @@ Our platform is beginner-friendly and open-source, specifically designed for mic
 It represents a compact implementation of Python 3, finely tuned to operate efficiently on resource-constrained hardware.
 This makes it a favored choice among developers engaged in projects involving embedded devices.
 
+Amazingly, we could employ `TinyML <https://github.com/tkeyo/tinyml-esp>`_  to meet up with machine learning requirements.
+One such application is the real-time detection of gestures from time-series data.
+
 Moreover, we also provide support for ``ulab``, a numerical computing library. For example, We are using the ``FFT`` function from it.
 ulab offers a comprehensive suite of functions for working with numerical data, implementing a compact subset of ``numpy`` and scipy.
 For detailed API support, please refer to the `ulab <https://micropython-ulab.readthedocs.io/en/latest/index.html>`_ documentation.
@@ -52,3 +55,4 @@ License
 
 **WPC Stand-alone Python release** is licensed under an MIT-style license see `LICENSE <https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/blob/main/LICENSE>`_ Other incorporated projects may be licensed under different licenses.
 All licenses allow for non-commercial and commercial use.
+
