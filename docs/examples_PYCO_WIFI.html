@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.2.0 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.2.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.0
+                0.2.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -64,16 +64,21 @@
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.html">FFT (AI Nsample)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#oled">OLED</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#led">LED</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/LED/LED_control.html">LED control</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#oled">OLED</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#system">System</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/System/get_system_info.html">Get system info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sdcard">SDCard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SD Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write to SD Card</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tcp-server">TCP server</a><ul>
@@ -89,9 +94,8 @@
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/mip_install.html">New package install</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sdcard">SDCard</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SD Card</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write to SD Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tinyml">TinyML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TinyML/gesture_detect.html">Gesture detect</a></li>
 </ul>
 </li>
 </ul>
@@ -152,14 +156,6 @@
 </ul>
 </div>
 </section>
-<section id="oled">
-<h2>OLED<a class="headerlink" href="#oled" title="Permalink to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
-</ul>
-</div>
-</section>
 <section id="led">
 <h2>LED<a class="headerlink" href="#led" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
@@ -168,11 +164,28 @@
 </ul>
 </div>
 </section>
+<section id="oled">
+<h2>OLED<a class="headerlink" href="#oled" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/OLED/OLED_writeLine.html">OLED write Line</a></li>
+</ul>
+</div>
+</section>
 <section id="system">
 <h2>System<a class="headerlink" href="#system" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/System/get_system_info.html">Get system info</a></li>
+</ul>
+</div>
+</section>
+<section id="sdcard">
+<h2>SDCard<a class="headerlink" href="#sdcard" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SD Card</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write to SD Card</a></li>
 </ul>
 </div>
 </section>
@@ -197,12 +210,11 @@
 </ul>
 </div>
 </section>
-<section id="sdcard">
-<h2>SDCard<a class="headerlink" href="#sdcard" title="Permalink to this heading"></a></h2>
+<section id="tinyml">
+<h2>TinyML<a class="headerlink" href="#tinyml" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/readTXT.html">Read from SD Card</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write to SD Card</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TinyML/gesture_detect.html">Gesture detect</a></li>
 </ul>
 </div>
 </section>

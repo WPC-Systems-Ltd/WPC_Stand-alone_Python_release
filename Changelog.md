@@ -1,3 +1,8 @@
+v0.2.1 Date: 2023/09/18, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- gesture detect.py in Sphinx
+
 v0.2.0 Date: 2023/09/14, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
