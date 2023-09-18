@@ -1,3 +1,15 @@
+v0.2.2 Date: 2023/09/18, Developer: Chunglee_people
+----------------------------------------------------
+### Changed
+- example name:
+    - gesture_detect -> acceleration_movement
+
+### Fixed
+- The content in Tutorial_ETH/Thread_AIO.py, OLED_writeLine.py
+
+### Removed
+- Inappropriate words
+
 v0.2.1 Date: 2023/09/18, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
