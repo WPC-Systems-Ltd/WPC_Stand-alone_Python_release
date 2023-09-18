@@ -3,36 +3,7 @@ Over-The-Air (OTA) update
 
 This is a user guide about upgrading code over-the-air(OTA)
 
-Step 1 - Connect to Wifi
-------------------------
--  If you have downloaded the package ``micropython_ota``, please skip it.
--  In order to download package
-
-.. code:: python
-
-   import network
-   def do_connect(ssid, password):
-       sta_if = network.WLAN(network.STA_IF)
-       if not sta_if.isconnected():
-           print('Connecting to network...')
-           sta_if.active(True)
-           sta_if.connect(ssid, password)
-           while not sta_if.isconnected():
-               pass
-       print('Network config:', sta_if.ifconfig())
-   do_connect('my_ssid', 'my_password')
-
-Step 2 - Using mip to install package
--------------------------------------
--  If you have downloaded the package ``micropython_ota``, please skip it.
--  Installation using mpip
-
-.. code:: python
-
-   import mpip
-   mip.install('github:olivergregorius/micropython_ota/micropython_ota.py')
-
-Step 3 - Creating files and folders
+Step 1 - Creating files and folders
 -----------------------------------
 
 -  Create folder ``sample`` in desktop
@@ -49,7 +20,7 @@ Step 3 - Creating files and folders
       |  |- boot.py
       |  |- main.py
 
-Step 4 - Adding user codes
+Step 2 - Adding user codes
 --------------------------
 
 -  Add code in boot.py
@@ -80,7 +51,7 @@ Step 4 - Adding user codes
 
    1.0.0
 
-Step 5 - Open sever
+Step 3 - Open sever
 --------------------
 
 -  Open command prompt in your PC
@@ -92,7 +63,7 @@ Step 5 - Open sever
 
      python -m http.server 9000 --bind 192.168.5.118 --directory C:/Users/user/Desktop
 
-Step 6 - Reboot
+Step 4 - Reboot
 ---------------
 
 -  Reboot your device
