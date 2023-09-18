@@ -1,6 +1,0 @@
-Gesture detect
-==============
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/TinyML/gesture_detect.py
-   :language: python
-   :linenos:
