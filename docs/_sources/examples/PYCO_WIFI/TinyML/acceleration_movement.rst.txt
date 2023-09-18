@@ -1,0 +1,6 @@
+Acceleration movement
+=====================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/TinyML/acceleration_movement.py
+   :language: python
+   :linenos:

@@ -1,7 +1,10 @@
 '''
-TinyML - Gesture detect.py.
+TinyML - Acceleration movement.py.
 
-This example demonstrates how to detect gestures from time-series data.
+This example demonstrates how to detect the acceleration of movement from time-series data.
+
+In data read function, you should sequentially put acceleration X, acceleration Y, acceleration Z, gyro Y and gyro Z data in it.
+Then, It will predict three situation, which is X-move, Y-move and circle-move.
 
 Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 '''

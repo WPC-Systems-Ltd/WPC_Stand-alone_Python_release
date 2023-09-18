@@ -90,5 +90,5 @@ TinyML
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/TinyML/gesture_detect.rst
+   examples/PYCO_WIFI/TinyML/acceleration_movement.rst
 

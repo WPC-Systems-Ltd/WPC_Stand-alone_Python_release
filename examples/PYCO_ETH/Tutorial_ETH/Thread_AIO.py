@@ -1,14 +1,7 @@
 '''
-Tutorial - Thread_AIO.py with asynchronous mode.
+Tutorial - Thread_AIO.py
 
-This example project demonstrates how to use thread to get RTC from EthanO.
-
--------------------------------------------------------------------------------------
-Please change correct serial number or IP and port number BEFORE you run example code.
-
-For other examples please check:
-    https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release/tree/main/examples
-See README.md file to get detailed usage of this example.
+This example project demonstrates how use one thread to write AO value and the other thread to read AI data.
 
 Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 '''

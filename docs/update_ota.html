@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Over-The-Air (OTA) update &mdash; WPC Stand-alone Python 0.2.1 documentation</title>
+  <title>Over-The-Air (OTA) update &mdash; WPC Stand-alone Python 0.2.2 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -37,7 +37,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.1
+                0.2.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -60,12 +60,10 @@
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Over-The-Air (OTA) update</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-connect-to-wifi">Step 1 - Connect to Wifi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-using-mip-to-install-package">Step 2 - Using mip to install package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-creating-files-and-folders">Step 3 - Creating files and folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-4-adding-user-codes">Step 4 - Adding user codes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-5-open-sever">Step 5 - Open sever</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-6-reboot">Step 6 - Reboot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-creating-files-and-folders">Step 1 - Creating files and folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-adding-user-codes">Step 2 - Adding user codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-open-sever">Step 3 - Open sever</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-reboot">Step 4 - Reboot</a></li>
 </ul>
 </li>
 </ul>
@@ -96,39 +94,8 @@
   <section id="over-the-air-ota-update">
 <h1>Over-The-Air (OTA) update<a class="headerlink" href="#over-the-air-ota-update" title="Permalink to this heading"></a></h1>
 <p>This is a user guide about upgrading code over-the-air(OTA)</p>
-<section id="step-1-connect-to-wifi">
-<h2>Step 1 - Connect to Wifi<a class="headerlink" href="#step-1-connect-to-wifi" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>If you have downloaded the package <code class="docutils literal notranslate"><span class="pre">micropython_ota</span></code>, please skip it.</p></li>
-<li><p>In order to download package</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">network</span>
-<span class="k">def</span> <span class="nf">do_connect</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-    <span class="n">sta_if</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connecting to network...&#39;</span><span class="p">)</span>
-        <span class="n">sta_if</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">sta_if</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-        <span class="k">while</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
-            <span class="k">pass</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Network config:&#39;</span><span class="p">,</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
-<span class="n">do_connect</span><span class="p">(</span><span class="s1">&#39;my_ssid&#39;</span><span class="p">,</span> <span class="s1">&#39;my_password&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="step-2-using-mip-to-install-package">
-<h2>Step 2 - Using mip to install package<a class="headerlink" href="#step-2-using-mip-to-install-package" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>If you have downloaded the package <code class="docutils literal notranslate"><span class="pre">micropython_ota</span></code>, please skip it.</p></li>
-<li><p>Installation using mpip</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mpip</span>
-<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;github:olivergregorius/micropython_ota/micropython_ota.py&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="step-3-creating-files-and-folders">
-<h2>Step 3 - Creating files and folders<a class="headerlink" href="#step-3-creating-files-and-folders" title="Permalink to this heading"></a></h2>
+<section id="step-1-creating-files-and-folders">
+<h2>Step 1 - Creating files and folders<a class="headerlink" href="#step-1-creating-files-and-folders" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Create folder <code class="docutils literal notranslate"><span class="pre">sample</span></code> in desktop</p></li>
 <li><p>Create folder <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> in <code class="docutils literal notranslate"><span class="pre">sample</span></code></p></li>
@@ -144,8 +111,8 @@
 </pre></div>
 </div>
 </section>
-<section id="step-4-adding-user-codes">
-<h2>Step 4 - Adding user codes<a class="headerlink" href="#step-4-adding-user-codes" title="Permalink to this heading"></a></h2>
+<section id="step-2-adding-user-codes">
+<h2>Step 2 - Adding user codes<a class="headerlink" href="#step-2-adding-user-codes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Add code in boot.py</p></li>
 </ul>
@@ -175,8 +142,8 @@
 </pre></div>
 </div>
 </section>
-<section id="step-5-open-sever">
-<h2>Step 5 - Open sever<a class="headerlink" href="#step-5-open-sever" title="Permalink to this heading"></a></h2>
+<section id="step-3-open-sever">
+<h2>Step 3 - Open sever<a class="headerlink" href="#step-3-open-sever" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Open command prompt in your PC</p></li>
 <li><p>python -m http.server <code class="docutils literal notranslate"><span class="pre">port</span></code> –bind <code class="docutils literal notranslate"><span class="pre">YOUR</span> <span class="pre">PC</span> <span class="pre">IP</span></code> –directory
@@ -186,8 +153,8 @@
 </pre></div>
 </div>
 </section>
-<section id="step-6-reboot">
-<h2>Step 6 - Reboot<a class="headerlink" href="#step-6-reboot" title="Permalink to this heading"></a></h2>
+<section id="step-4-reboot">
+<h2>Step 4 - Reboot<a class="headerlink" href="#step-4-reboot" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Reboot your device</p></li>
 </ul>

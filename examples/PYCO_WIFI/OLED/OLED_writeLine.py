@@ -13,13 +13,13 @@ import pywpc
 pywpc.OLED_erase()
 
 ## Write in line 1
-pywpc.OLED_writeLine("WPC Systems Ltd.", 1)
+pywpc.OLED_writeLine("Welcome to", 1)
 
 ## Write in line 2
-pywpc.OLED_writeLine("ChungleePeople", 2)
+pywpc.OLED_writeLine("WPC Systems Ltd", 2)
 
 ## Write in line 3
-pywpc.OLED_writeLine("LincPeople", 3)
+pywpc.OLED_writeLine("Hello world", 3)
 
 ## Write in line 4
-pywpc.OLED_writeLine("JustinPeople", 4)
+pywpc.OLED_writeLine("Happy day", 4)
