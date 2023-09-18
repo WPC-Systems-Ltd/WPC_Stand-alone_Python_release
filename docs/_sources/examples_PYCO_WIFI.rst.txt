@@ -24,14 +24,6 @@ FFT
 
    examples/PYCO_WIFI/FFT/fourier_transform_ai_sample.rst
 
-OLED
-----
-
-.. toctree::
-   :maxdepth: 4
-
-   examples/PYCO_WIFI/OLED/OLED_writeLine.rst
-
 LED
 ---
 
@@ -40,6 +32,14 @@ LED
 
    examples/PYCO_WIFI/LED/LED_control.rst
 
+OLED
+----
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/OLED/OLED_writeLine.rst
+
 System
 ------
 
@@ -47,6 +47,16 @@ System
    :maxdepth: 4
 
    examples/PYCO_WIFI/System/get_system_info.rst
+
+SDCard
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/SDCard/readTXT.rst
+
+   examples/PYCO_WIFI/SDCard/writeTXT.rst
 
 TCP server
 ----------
@@ -74,13 +84,11 @@ Tutorial
 
    examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
 
-SDCard
+TinyML
 ------
 
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/SDCard/readTXT.rst
-
-   examples/PYCO_WIFI/SDCard/writeTXT.rst
+   examples/PYCO_WIFI/TinyML/gesture_detect.rst
 
