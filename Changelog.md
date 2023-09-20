@@ -1,3 +1,19 @@
+v0.3.0 Date: 2023/09/19, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- The content of main.py when execute initial setup
+(micropython/ports/esp32/modules/inisetup.py)
+- pywpc_ex.mpy, pywpc_ota.mpy, sdcard.mpy in ports/esp32/modules
+- modify_configuration/PYCO_ETH.md & PYCO_WIFI.md
+
+### Fixed
+- The print content when file system corrupted
+- The content of boot.py when execute initial setup
+- The content of mip.install.py example code
+
+### Removed
+- examples/External/pywpc_ex.py
+
 v0.2.2 Date: 2023/09/18, Developer: Chunglee_people
 ----------------------------------------------------
 ### Changed
