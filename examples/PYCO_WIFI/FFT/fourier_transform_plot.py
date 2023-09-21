@@ -2,6 +2,7 @@
 FFT - fourier_transform.py.
 
 This example demonstrates how to plot FFT signal
+For PC relative plotting code, please refer https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/blob/main/examples/PC/TCP_client_with_plot_FFT.py
 
 Step1: Generate FFT signal
 

@@ -3,6 +3,7 @@ FFT - fourier_transform_simulate.py.
 
 This example demonstrates how to use fourier transform with AI N-sample data
 
+
 Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 '''
 

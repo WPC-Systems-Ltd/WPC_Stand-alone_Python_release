@@ -48,7 +48,7 @@ System
 
    examples/PYCO_WIFI/System/get_system_info.rst
 
-SDCard
+SD Card
 ------
 
 .. toctree::

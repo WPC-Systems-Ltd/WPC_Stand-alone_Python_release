@@ -1,5 +1,5 @@
 '''
-TinyML - Acceleration movement.py.
+TinyML - Movement classification.py.
 
 This example demonstrates how to detect the acceleration of movement from time-series data.
 
