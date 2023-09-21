@@ -28,7 +28,7 @@ Step 2 - Adding user codes
 .. code:: python
 
    import pywpc_ota
-   
+
    def do_update(host_ip, port):
        # connect to network
        ota_host = "http://%s:%d" % (host_ip, port)

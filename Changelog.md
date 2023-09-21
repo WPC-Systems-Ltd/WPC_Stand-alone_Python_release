@@ -1,3 +1,15 @@
+v0.3.1 Date: 2023/09/21, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- pywpc_sd.mpy
+
+### Changed
+- example name:
+    - SDCard -> SD Card
+
+### Removed
+- pywpc_ex.mpy
+
 v0.3.0 Date: 2023/09/19, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
