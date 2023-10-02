@@ -1,5 +1,5 @@
-Over-The-Air (OTA) update
-=========================
+Update with OTA
+===============
 
 This is a user guide about upgrading code over-the-air(OTA)
 
