@@ -6,10 +6,10 @@ This example demonstrates how to read from txt file.
 Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 '''
 
-import pywpc_ex
+import pywpc_sd
 
 ## Initialize the SD card
-dev = pywpc_ex.SDCard()
+dev = pywpc_sd.SDCard()
 
 ## Debug print SD card directory and files
 print(dev.getFileDirectory())
