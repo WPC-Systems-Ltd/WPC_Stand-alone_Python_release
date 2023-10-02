@@ -21,18 +21,6 @@ voltage0 = -10
 status = pywpc.AO_writeOneChannel(ch0, voltage0)
 print("AO_writeOneChannel status: ", status)
 
-## Write AO vaule 3.3(V) in channel 1
-ch1 = 1
-voltage1 = 3.3
-status = pywpc.AO_writeOneChannel(ch1, voltage1)
-print("AO_writeOneChannel status: ", status)
-
-## Write AO vaule -10(V) in channel 0
-ch2 = 2
-voltage2 = -10
-status = pywpc.AO_writeOneChannel(ch2, voltage2)
-print("AO_writeOneChannel status: ", status)
-
 ## Read data acquisition
 ai_data = pywpc.AI_readOnDemand()
 print(ai_data)

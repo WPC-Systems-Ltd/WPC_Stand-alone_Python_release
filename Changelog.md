@@ -1,3 +1,15 @@
+
+v0.4.0 Date: 2023/10/02, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add SDcard, Save pin
+- Advantage of PYCO at documentation
+- function: pywpc.LED_reset
+
+### Removed
+- All accelerometer relative functions
+- DO_writePins and DI_readPins in PYCO_ETH
+
 v0.3.1 Date: 2023/09/21, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added

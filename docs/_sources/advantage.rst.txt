@@ -1,0 +1,18 @@
+Advantage of PYCO
+=================
+
+- PYCO separates the operating system, driver programs, and user applications, maintaining the cleanliness of the codebase.
+
+- PYCO includes a ``FAT`` File System for storing Python code, data, and external libraries as files.
+
+- PYCO allows the importation of external libraries, facilitating AI inference for tinyML applications.
+
+- PYCO supports multi-threading and object-oriented programming (OOP).
+
+- PYCO supports ``ulab`` library, similar to numpy, enables powerful mathematical computations.
+
+- PYCO is suitable for ultra-low-power applications, making it ideal for battery environments without generating heat.
+
+- PYCO can serve both ``remote control`` and ``stand-alone`` functionalities simultaneously.
+
+- PYCO is a script language, eliminating the need for compilation before execution.
