@@ -1,3 +1,10 @@
+v0.4.1 Date: 2023/10/05, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New function: OLED_erase and OLED_writeLine in PYCO_ETH
+
+### Fixed
+- Fix LED_control.py's example code
 
 v0.4.0 Date: 2023/10/02, Developer: Chunglee_people
 ---------------------------------------------------
