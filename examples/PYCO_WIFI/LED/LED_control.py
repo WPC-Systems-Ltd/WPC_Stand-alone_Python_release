@@ -9,6 +9,9 @@ Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 ## WPC
 import pywpc
 
+## Reset LED
+pywpc.LED_reset()
+
 ## Set LED to blue
 pywpc.LED_setBlue()
 
