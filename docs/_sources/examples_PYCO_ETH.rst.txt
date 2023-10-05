@@ -34,11 +34,7 @@ DIO
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_ETH/DIO/DIO_loopback_pins.rst
-
    examples/PYCO_ETH/DIO/DIO_loopback_port.rst
-
-   examples/PYCO_ETH/DIO/DO_write_pins.rst
 
    examples/PYCO_ETH/DIO/DO_write_port.rst
 
