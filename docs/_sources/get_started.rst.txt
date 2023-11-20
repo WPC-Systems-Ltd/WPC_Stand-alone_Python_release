@@ -1,0 +1,29 @@
+Get Started
+===========
+This document is intended to help you set up the software development environment for the hardware based on the PYCO by WPC Systems Ltd.
+After that, a simple example will show you how to use PYCO.
+
+What You Need
+-------------
+
+-  Hardware
+
+1. A PYCO board.
+2. USB cable - USB A.
+3. Computer running Windows, Linux, or macOS.
+
+-  Software
+
+1. WPC Device Manger(WDM) or any other IDE.
+
+Installation
+------------
+- Download `WPC Stand-Alone Python Editor <http://www.wpc.com.tw/255112104622120-controller.html>`_.
+- Unpack and go to ``WPC Device Manager/data/WPCPyEditor``.
+- Click WPC Stand-Alone Python Editor.exe.
+
+Run Your First Example Code
+---------------------------
+If you already have installed IDE, you can run your `example code <https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html>`_ on your board.
+
+

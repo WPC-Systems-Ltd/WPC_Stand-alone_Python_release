@@ -28,5 +28,6 @@
    :maxdepth: 2
    :caption: REFERENCE
 
+   get_started
    advantage
    update_ota

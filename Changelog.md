@@ -1,3 +1,13 @@
+v0.5.0 Date: 2023/11/20, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Get Started for user
+- example code: hello_world.py
+
+### Fixed
+- The content of Thread_LED.py
+- Add a conditional statement inside the while loop in Wifi_connect.py
+
 v0.4.1 Date: 2023/10/05, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
