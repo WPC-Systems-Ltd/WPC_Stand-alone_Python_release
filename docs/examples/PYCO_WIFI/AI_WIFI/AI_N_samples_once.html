@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI N samples once &mdash; WPC Stand-alone Python 0.4.0 documentation</title>
+  <title>AI N samples once &mdash; WPC Stand-alone Python 0.5.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -76,6 +76,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../advantage.html">Advantage of PYCO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../update_ota.html">Update with OTA</a></li>
 </ul>
@@ -121,8 +122,8 @@
 <span class="linenos">13</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">14</span>
 <span class="linenos">15</span><span class="c1">## Parameters setting</span>
-<span class="linenos">16</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="mi">8000</span>
-<span class="linenos">17</span><span class="n">sample</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="linenos">16</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="linenos">17</span><span class="n">sample</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="linenos">18</span><span class="n">delay</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span><span class="c1">## Start AI acquisition</span>
@@ -130,7 +131,7 @@
 <span class="linenos">22</span>
 <span class="linenos">23</span><span class="c1">## Read data acquisition</span>
 <span class="linenos">24</span><span class="n">ai_sample</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readNsample</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
-<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ai_sample</span><span class="p">))</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="n">ai_sample</span><span class="p">)</span>
 <span class="linenos">26</span>
 <span class="linenos">27</span><span class="k">del</span> <span class="n">ai_sample</span>
 </pre></div>

@@ -1,0 +1,6 @@
+New package install
+===================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/System/mip_install.py
+   :language: python
+   :linenos:

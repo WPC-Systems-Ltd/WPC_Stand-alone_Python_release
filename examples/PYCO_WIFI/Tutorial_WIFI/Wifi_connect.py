@@ -8,13 +8,17 @@ Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 
 import network
 
+TRY_TIMES = 50
+
 def do_connect(ssid, password):
     sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
         print('Connecting to network...')
         sta_if.active(True)
         sta_if.connect(ssid, password)
-        while not sta_if.isconnected():
+        try_times = 0
+        while not sta_if.isconnected() and try_times < TRY_TIMES:
+            try_times+=1
             pass
     print('Network config:', sta_if.ifconfig())
 
