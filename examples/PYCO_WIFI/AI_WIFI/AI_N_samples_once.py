@@ -13,8 +13,8 @@ Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
 import pywpc
 
 ## Parameters setting
-sampling_rate = 8000
-sample = 1000
+sampling_rate = 1000
+sample = 10
 delay = 2000
 
 ## Start AI acquisition
@@ -22,6 +22,6 @@ pywpc.AI_start(sampling_rate, sample)
 
 ## Read data acquisition
 ai_sample = pywpc.AI_readNsample(sample, delay)
-print(len(ai_sample))
+print(ai_sample)
 
 del ai_sample

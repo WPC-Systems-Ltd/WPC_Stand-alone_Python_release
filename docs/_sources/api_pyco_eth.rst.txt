@@ -7,8 +7,8 @@ AIO
 .. doxygengroup:: PYCO_ETH_AIO
    :content-only:
 
-Battery
--------
+DIO
+---
 
 .. doxygengroup:: PYCO_ETH_DIO
    :content-only:

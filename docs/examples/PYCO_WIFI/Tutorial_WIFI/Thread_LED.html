@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LED thread &mdash; WPC Stand-alone Python 0.4.0 documentation</title>
+  <title>LED thread &mdash; WPC Stand-alone Python 0.5.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -63,7 +63,6 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">LED thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Wifi_connect.html">Wifi connect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mip_install.html">New package install</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
@@ -77,6 +76,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../advantage.html">Advantage of PYCO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../update_ota.html">Update with OTA</a></li>
 </ul>
@@ -113,8 +113,8 @@
 <span class="linenos"> 4</span><span class="sd">This example project demonstrates how to use two thread to read AI data and set LED value.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 8</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 9</span><span class="c1">## WPC</span>
 <span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">11</span>
@@ -122,25 +122,26 @@
 <span class="linenos">13</span><span class="kn">import</span> <span class="nn">time</span>
 <span class="linenos">14</span><span class="kn">import</span> <span class="nn">_thread</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## Define AI thread</span>
-<span class="linenos">17</span><span class="k">def</span> <span class="nf">AI_thread</span><span class="p">():</span>
-<span class="linenos">18</span>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="linenos">19</span>        <span class="nb">print</span><span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">())</span>
-<span class="linenos">20</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="c1">## Define LED thread</span>
-<span class="linenos">23</span><span class="k">def</span> <span class="nf">LED_thread</span><span class="p">():</span>
-<span class="linenos">24</span>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="linenos">25</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setBlue</span><span class="p">()</span>
+<span class="linenos">16</span><span class="n">f_run</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1">## Define LED thread</span>
+<span class="linenos">19</span><span class="k">def</span> <span class="nf">LED_thread</span><span class="p">():</span>
+<span class="linenos">20</span>    <span class="k">while</span> <span class="n">f_run</span><span class="p">:</span>
+<span class="linenos">21</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setBlue</span><span class="p">()</span>
+<span class="linenos">22</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="linenos">23</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setGreen</span><span class="p">()</span>
+<span class="linenos">24</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="linenos">25</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setRed</span><span class="p">()</span>
 <span class="linenos">26</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="linenos">27</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setGreen</span><span class="p">()</span>
-<span class="linenos">28</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="linenos">29</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">LED_setRed</span><span class="p">()</span>
-<span class="linenos">30</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="linenos">31</span>
-<span class="linenos">32</span><span class="c1"># Start AI and LED thread</span>
-<span class="linenos">33</span><span class="n">_thread</span><span class="o">.</span><span class="n">start_new_thread</span><span class="p">(</span><span class="n">AI_thread</span><span class="p">,</span> <span class="p">())</span>
-<span class="linenos">34</span><span class="n">_thread</span><span class="o">.</span><span class="n">start_new_thread</span><span class="p">(</span><span class="n">LED_thread</span><span class="p">,</span> <span class="p">())</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1">## Start LED thread</span>
+<span class="linenos">29</span><span class="n">_thread</span><span class="o">.</span><span class="n">start_new_thread</span><span class="p">(</span><span class="n">LED_thread</span><span class="p">,</span> <span class="p">())</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="c1">## Delay 10 seconds</span>
+<span class="linenos">32</span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1">## Change flag</span>
+<span class="linenos">35</span><span class="n">f_run</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </section>

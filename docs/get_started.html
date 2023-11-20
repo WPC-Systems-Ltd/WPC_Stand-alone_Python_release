@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advantage of PYCO &mdash; WPC Stand-alone Python 0.5.0 documentation</title>
+  <title>Get Started &mdash; WPC Stand-alone Python 0.5.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Update with OTA" href="update_ota.html" />
-    <link rel="prev" title="Get Started" href="get_started.html" /> 
+    <link rel="next" title="Advantage of PYCO" href="advantage.html" />
+    <link rel="prev" title="PYCO-WIFI" href="api_pyco_wifi.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,8 +60,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Advantage of PYCO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-need">What You Need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-your-first-example-code">Run Your First Example Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advantage.html">Advantage of PYCO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="update_ota.html">Update with OTA</a></li>
 </ul>
 
@@ -79,7 +84,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Advantage of PYCO</li>
+      <li class="breadcrumb-item active">Get Started</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -88,26 +93,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="advantage-of-pyco">
-<h1>Advantage of PYCO<a class="headerlink" href="#advantage-of-pyco" title="Permalink to this heading"></a></h1>
+  <section id="get-started">
+<h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading"></a></h1>
+<p>This document is intended to help you set up the software development environment for the hardware based on the PYCO by WPC Systems Ltd.
+After that, a simple example will show you how to use PYCO.</p>
+<section id="what-you-need">
+<h2>What You Need<a class="headerlink" href="#what-you-need" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>PYCO separates the operating system, driver programs, and user applications, maintaining the cleanliness of the codebase.</p></li>
-<li><p>PYCO includes a <code class="docutils literal notranslate"><span class="pre">FAT</span></code> File System for storing Python code, data, and external libraries as files.</p></li>
-<li><p>PYCO allows the importation of external libraries, facilitating AI inference for tinyML applications.</p></li>
-<li><p>PYCO supports multi-threading and object-oriented programming (OOP).</p></li>
-<li><p>PYCO supports <code class="docutils literal notranslate"><span class="pre">ulab</span></code> library, similar to numpy, enables powerful mathematical computations.</p></li>
-<li><p>PYCO is suitable for ultra-low-power applications, making it ideal for battery environments without generating heat.</p></li>
-<li><p>PYCO can serve both <code class="docutils literal notranslate"><span class="pre">remote</span> <span class="pre">control</span></code> and <code class="docutils literal notranslate"><span class="pre">stand-alone</span></code> functionalities simultaneously.</p></li>
-<li><p>PYCO is a script language, eliminating the need for compilation before execution.</p></li>
+<li><p>Hardware</p></li>
 </ul>
+<ol class="arabic simple">
+<li><p>A PYCO board.</p></li>
+<li><p>USB cable - USB A.</p></li>
+<li><p>Computer running Windows, Linux, or macOS.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Software</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>WPC Device Manger(WDM) or any other IDE.</p></li>
+</ol>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Download <a class="reference external" href="http://www.wpc.com.tw/255112104622120-controller.html">WPC Stand-Alone Python Editor</a>.</p></li>
+<li><p>Unpack and go to <code class="docutils literal notranslate"><span class="pre">WPC</span> <span class="pre">Device</span> <span class="pre">Manager/data/WPCPyEditor</span></code>.</p></li>
+<li><p>Click WPC Stand-Alone Python Editor.exe.</p></li>
+</ul>
+</section>
+<section id="run-your-first-example-code">
+<h2>Run Your First Example Code<a class="headerlink" href="#run-your-first-example-code" title="Permalink to this heading"></a></h2>
+<p>If you already have installed IDE, you can run your <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html">example code</a> on your board.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="get_started.html" class="btn btn-neutral float-left" title="Get Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="update_ota.html" class="btn btn-neutral float-right" title="Update with OTA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api_pyco_wifi.html" class="btn btn-neutral float-left" title="PYCO-WIFI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="advantage.html" class="btn btn-neutral float-right" title="Advantage of PYCO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
