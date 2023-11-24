@@ -48,10 +48,6 @@ System
 
    examples/PYCO_WIFI/System/get_system_info.rst
 
-   examples/PYCO_WIFI/System/hello_world.rst
-
-   examples/PYCO_WIFI/System/mip_install.rst
-
 SD Card
 ------
 
@@ -85,6 +81,8 @@ Tutorial
    examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.rst
 
    examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.rst
+
+   examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
 
 TinyML
 ------
