@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIO all channels loopback &mdash; WPC Stand-alone Python 0.5.3 documentation</title>
+  <title>AIO all channels loopback &mdash; WPC Stand-alone Python 0.5.5 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.3
+                0.5.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -107,32 +107,31 @@
 <span class="linenos"> 2</span><span class="sd">AIO - AIO_all_channels_loopback.py.</span>
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="sd">This example demonstrates the process of AIO loopback across all channels.</span>
-<span class="linenos"> 5</span><span class="sd">There are 8 channels for AO and its range is -10 to 10 V.</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="sd">It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.</span>
-<span class="linenos"> 8</span><span class="sd">The AI and AO pins are connected using a wire.</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="sd">First, it reads AI data and displays its corresponding values.</span>
-<span class="linenos">11</span><span class="sd">Following that, it writes digital signals to the AO pins and reads AI on demand data once again.</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos">14</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## WPC</span>
-<span class="linenos">17</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="c1">## Read data acquisition</span>
-<span class="linenos">20</span><span class="n">ai_data</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">()</span>
-<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="n">ai_data</span><span class="p">)</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="c1">## Write AO value simultaneously</span>
-<span class="linenos">24</span><span class="n">voltage_list</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="linenos">25</span><span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AO_writeAllChannels</span><span class="p">(</span><span class="n">voltage_list</span><span class="p">)</span>
-<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AO_writeAllChannels status: &quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
-<span class="linenos">27</span>
-<span class="linenos">28</span><span class="c1">## Read data acquisition</span>
-<span class="linenos">29</span><span class="n">ai_data</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">()</span>
-<span class="linenos">30</span><span class="nb">print</span><span class="p">(</span><span class="n">ai_data</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="sd">It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.</span>
+<span class="linenos"> 6</span><span class="sd">The AI and AO pins are connected using a wire.</span>
+<span class="linenos"> 7</span><span class="sd">The AO range is -10 to 10 V.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="sd">First, it reads AI data and displays its corresponding values.</span>
+<span class="linenos">10</span><span class="sd">Following that, it writes digital signals to the AO pins and reads AI on demand data once again.</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
+<span class="linenos">13</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1">## WPC</span>
+<span class="linenos">16</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1">## Read data acquisition</span>
+<span class="linenos">19</span><span class="n">ai_data</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">()</span>
+<span class="linenos">20</span><span class="nb">print</span><span class="p">(</span><span class="n">ai_data</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1">## Write AO value simultaneously</span>
+<span class="linenos">23</span><span class="n">voltage_list</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="linenos">24</span><span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AO_writeAllChannels</span><span class="p">(</span><span class="n">voltage_list</span><span class="p">)</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AO_writeAllChannels status: &quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1">## Read data acquisition</span>
+<span class="linenos">28</span><span class="n">ai_data</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readOnDemand</span><span class="p">()</span>
+<span class="linenos">29</span><span class="nb">print</span><span class="p">(</span><span class="n">ai_data</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
