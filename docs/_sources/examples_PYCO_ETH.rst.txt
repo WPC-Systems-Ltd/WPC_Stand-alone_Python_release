@@ -46,10 +46,6 @@ System
 
    examples/PYCO_ETH/System/get_system_info.rst
 
-   examples/PYCO_ETH/System/hello_world.rst
-
-   examples/PYCO_ETH/System/mip_install.rst
-
 Tutorial
 ------------
 
