@@ -1,5 +1,6 @@
-Get Started
-===========
+Getting Started
+===============
+
 This document is intended to help you set up the software development environment for the hardware based on the PYCO by WPC Systems Ltd.
 After that, a simple example will show you how to use PYCO.
 
@@ -20,7 +21,7 @@ Installation
 ------------
 - Download `WPC Stand-Alone Python Editor <http://www.wpc.com.tw/255112104622120-controller.html>`_.
 - Unpack and go to ``WPC Device Manager/data/WPCPyEditor``.
-- Click WPC Stand-Alone Python Editor.exe.
+- Open WPC Stand-Alone Python Editor.exe.
 
 Run Your First Example Code
 ---------------------------

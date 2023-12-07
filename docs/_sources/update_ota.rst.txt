@@ -30,12 +30,12 @@ Step 2 - Adding user codes
    import pywpc_ota
 
    def do_update(host_ip, port):
-       # connect to network
-       ota_host = "http://%s:%d" % (host_ip, port)
-       print(ota_host)
-       project_name = 'sample'
-       filenames = ['boot.py', 'main.py']
-       pywpc_ota.ota_update(ota_host, project_name, filenames, use_version_prefix=False, hard_reset_device=True, soft_reset_device=False, timeout=1)
+      # connect to network
+      ota_host = "http://%s:%d" % (host_ip, port)
+      print(ota_host)
+      project_name = 'sample'
+      filenames = ['boot.py', 'main.py']
+      pywpc_ota.ota_update(ota_host, project_name, filenames, use_version_prefix=False, hard_reset_device=True, soft_reset_device=False, timeout=1)
 
    do_update('192.168.5.118', 9000)
 
@@ -61,7 +61,7 @@ Step 3 - Open sever
 
 ::
 
-     python -m http.server 9000 --bind 192.168.5.118 --directory C:/Users/user/Desktop
+   python -m http.server 9000 --bind 192.168.5.118 --directory C:/Users/user/Desktop
 
 Step 4 - Reboot
 ---------------

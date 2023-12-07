@@ -19,7 +19,6 @@
    :caption: API REFERENCE
 
    api_pyco_eth
-
    api_pyco_wifi
 
 
@@ -28,6 +27,6 @@
    :maxdepth: 2
    :caption: REFERENCE
 
-   get_started
+   getting_started
    advantage
    update_ota
