@@ -12,6 +12,14 @@ AI
 
    examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.rst
 
+AHRS
+----
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/AHRS/AHRS_read.rst
+
 FFT
 ---
 

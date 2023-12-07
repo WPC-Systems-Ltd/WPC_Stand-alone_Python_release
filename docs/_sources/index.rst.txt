@@ -19,7 +19,6 @@
    :caption: API REFERENCE
 
    api_pyco_eth
-
    api_pyco_wifi
 
 

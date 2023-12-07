@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OLED write Line &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
+  <title>AHRS read &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Get system info" href="../System/get_system_info.html" />
-    <link rel="prev" title="LED control" href="../LED/LED_control.html" /> 
+    <link rel="next" title="FFT (simulated)" href="../FFT/fourier_transform_simulate.html" />
+    <link rel="prev" title="AI N samples with logger" href="../AI_WIFI/AI_N_samples_with_logger.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,13 +53,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../examples_PYCO_ETH.html">PYCO-ETH</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#ai">AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#ahrs">AHRS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#fft">FFT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">OLED write Line</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#ahrs">AHRS</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AHRS read</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#fft">FFT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-server">TCP server</a></li>
@@ -95,7 +95,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">OLED write Line</li>
+      <li class="breadcrumb-item active">AHRS read</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -104,12 +104,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="oled-write-line">
-<h1>OLED write Line<a class="headerlink" href="#oled-write-line" title="Permalink to this heading"></a></h1>
+  <section id="ahrs-read">
+<h1>AHRS read<a class="headerlink" href="#ahrs-read" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">OLED - OLED_writeLine.py.</span>
+<span class="linenos"> 2</span><span class="sd">AHRS - AHRS_read.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write message on the screen.</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates the process of obtaining AHRS three axis estimation data.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
@@ -117,20 +117,19 @@
 <span class="linenos"> 9</span><span class="c1">## WPC</span>
 <span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Erase all message on the screen</span>
-<span class="linenos">13</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_erase</span><span class="p">()</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="c1">## Write in line 1</span>
-<span class="linenos">16</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;Welcome to&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="c1">## Write in line 2</span>
-<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;WPC Systems Ltd&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="c1">## Write in line 3</span>
-<span class="linenos">22</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span><span class="c1">## Write in line 4</span>
-<span class="linenos">25</span><span class="n">pywpc</span><span class="o">.</span><span class="n">OLED_writeLine</span><span class="p">(</span><span class="s2">&quot;Happy day&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="linenos">12</span><span class="c1">## Parameters setting</span>
+<span class="linenos">13</span><span class="n">theo_grav</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="linenos">14</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.005</span>
+<span class="linenos">15</span><span class="n">offset_z</span> <span class="o">=</span> <span class="mf">0.005</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1">## Set general setting</span>
+<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">AHRS_setGeneral</span><span class="p">(</span><span class="n">theo_grav</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">offset_z</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1">## AHRS start</span>
+<span class="linenos">21</span><span class="n">pywpc</span><span class="o">.</span><span class="n">AHRS_start</span><span class="p">()</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1">## Get AHRS three axis estimation</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">AHRS_getOrient</span><span class="p">())</span>
 </pre></div>
 </div>
 </section>
@@ -139,8 +138,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../LED/LED_control.html" class="btn btn-neutral float-left" title="LED control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../System/get_system_info.html" class="btn btn-neutral float-right" title="Get system info" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../AI_WIFI/AI_N_samples_with_logger.html" class="btn btn-neutral float-left" title="AI N samples with logger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../FFT/fourier_transform_simulate.html" class="btn btn-neutral float-right" title="FFT (simulated)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
