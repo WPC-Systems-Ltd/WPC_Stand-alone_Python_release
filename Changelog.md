@@ -1,3 +1,11 @@
+
+v0.5.6 Date: 2023/12/07, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add `Web_editor` in examples/PC
+- example code: AHRS_read.py
+- Support Web editor
+
 v0.5.0 Date: 2023/11/20, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
