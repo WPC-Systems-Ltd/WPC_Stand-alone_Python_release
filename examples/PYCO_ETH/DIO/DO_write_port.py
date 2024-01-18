@@ -3,7 +3,7 @@ DIO - DO_write_pins.py.
 
 This example shows how to write high or low signal to DO port.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

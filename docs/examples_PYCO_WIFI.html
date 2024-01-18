@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.5.10 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.6
+                0.5.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -85,21 +85,24 @@
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/SDCard/writeTXT.html">Write to SD Card</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tcp-server">TCP server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-client">TCP client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_read.html">TCP client read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_write_string.html">TCP client write string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_write_U8_list.html">TCP client write U8 list</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/mip_install.html">New package install</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tinyml">TinyML</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/TinyML/acceleration_movement.html">Movement classification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modbus-server">Modbus server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/Modbus_server/write_data_with_register.html">Write data with register</a></li>
 </ul>
 </li>
 </ul>
@@ -203,13 +206,13 @@
 </ul>
 </div>
 </section>
-<section id="tcp-server">
-<h2>TCP server<a class="headerlink" href="#tcp-server" title="Permalink to this heading"></a></h2>
+<section id="tcp-client">
+<h2>TCP client<a class="headerlink" href="#tcp-client" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_string.html">TCP server write string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_read.html">TCP client read</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_write_string.html">TCP client write string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TCP_client/TCP_client_write_U8_list.html">TCP client write U8 list</a></li>
 </ul>
 </div>
 </section>
@@ -219,7 +222,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.html">LED thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.html">Get memory status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.html">Wifi connect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Tutorial_WIFI/mip_install.html">New package install</a></li>
 </ul>
 </div>
@@ -229,6 +231,14 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/TinyML/acceleration_movement.html">Movement classification</a></li>
+</ul>
+</div>
+</section>
+<section id="modbus-server">
+<h2>Modbus server<a class="headerlink" href="#modbus-server" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/Modbus_server/write_data_with_register.html">Write data with register</a></li>
 </ul>
 </div>
 </section>

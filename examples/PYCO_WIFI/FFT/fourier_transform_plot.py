@@ -14,7 +14,7 @@ Step4: Send data via TCP server
 
 Step5: Plot FFT signal in PC
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 from ulab import numpy as np

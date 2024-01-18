@@ -3,7 +3,7 @@ OLED - OLED_writeLine.py.
 
 This example demonstrates how to write message on the screen.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

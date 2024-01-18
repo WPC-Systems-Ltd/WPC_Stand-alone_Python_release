@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
+  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.5.10 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PYCO-WIFI" href="api_pyco_wifi.html" />
-    <link rel="prev" title="Movement classification" href="examples/PYCO_WIFI/TinyML/acceleration_movement.html" /> 
+    <link rel="prev" title="Write data with register" href="examples/PYCO_WIFI/Modbus_server/write_data_with_register.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.6
+                0.5.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -160,43 +160,12 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv412DO_writePins8mp_obj_t8mp_obj_t">
-<span id="_CPPv312DO_writePins8mp_obj_t8mp_obj_t"></span><span id="_CPPv212DO_writePins8mp_obj_t8mp_obj_t"></span><span id="DO_writePins__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga2c71d041523b264b5895a8a4cb267cc8"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_list</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412DO_writePins8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write DO current voltage with the pins. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pin_list</strong> – The list of pin index. </p></li>
-<li><p><strong>value_list</strong> – The list of voltage state. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411DI_readPortv">
 <span id="_CPPv311DI_readPortv"></span><span id="_CPPv211DI_readPortv"></span><span id="DI_readPort"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411DI_readPortv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Read DI current voltage from the port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>List</strong> – Voltage state with port. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv411DI_readPins8mp_obj_t">
-<span id="_CPPv311DI_readPins8mp_obj_t"></span><span id="_CPPv211DI_readPins8mp_obj_t"></span><span id="DI_readPins__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1gac69dd9f8834f196819cf15fc3e3fb16a"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411DI_readPins8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read DI current voltage from the pins. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>pin_list</strong> – The list of pin index. </p>
-</dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>List</strong> – Voltage state with pins. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -250,7 +219,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="examples/PYCO_WIFI/TinyML/acceleration_movement.html" class="btn btn-neutral float-left" title="Movement classification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples/PYCO_WIFI/Modbus_server/write_data_with_register.html" class="btn btn-neutral float-left" title="Write data with register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="api_pyco_wifi.html" class="btn btn-neutral float-right" title="PYCO-WIFI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

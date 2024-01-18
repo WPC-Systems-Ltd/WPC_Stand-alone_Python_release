@@ -7,7 +7,7 @@ To begin with, it start AI acquisition with sampling rate and samples.
 Then, it outlines the procedure for reading the streaming AI data.
 Last, save the AI data to CSV file.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

@@ -3,7 +3,7 @@ AHRS - AHRS_read.py.
 
 This example demonstrates the process of obtaining AHRS three axis estimation data.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

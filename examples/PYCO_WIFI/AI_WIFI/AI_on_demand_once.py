@@ -3,7 +3,7 @@ AI - AI_on_demand_once.py.
 
 This example demonstrates how to read AI data in on demand mode.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

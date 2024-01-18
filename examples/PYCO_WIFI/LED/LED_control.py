@@ -3,7 +3,7 @@ LED - LED_control.py.
 
 This example demonstrates how to control LED.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

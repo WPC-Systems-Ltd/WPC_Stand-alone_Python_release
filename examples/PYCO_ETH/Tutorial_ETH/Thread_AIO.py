@@ -3,7 +3,7 @@ Tutorial - Thread_AIO.py
 
 This example project demonstrates how use one thread to write AO value and the other thread to read AI data.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## import

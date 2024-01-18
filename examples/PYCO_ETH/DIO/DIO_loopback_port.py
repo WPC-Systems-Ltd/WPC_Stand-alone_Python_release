@@ -5,7 +5,7 @@ This example shows how to use DIO loopback with port
 It involves using DO pins to send signals and DI pins to receive signals on a single device, commonly known as "loopback".
 It performs the operation of writing to a DO pin and reading from a DI pin.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC
