@@ -7,6 +7,12 @@ AIO
 .. doxygengroup:: PYCO_WIFI_AIO
    :content-only:
 
+AHRS
+----
+
+.. doxygengroup:: PYCO_WIFI_AHRS
+   :content-only:
+
 Battery
 -------
 
@@ -31,10 +37,16 @@ SYSTEM
 .. doxygengroup:: PYCO_WIFI_SYSTEM
    :content-only:
 
-TCP
----
+TCP Client
+----------
 
 .. doxygengroup:: PYCO_WIFI_TCP
+   :content-only:
+
+Modbus server
+-------------
+
+.. doxygengroup:: PYCO_WIFI_ModbusTCP
    :content-only:
 
 TEMPERATURE

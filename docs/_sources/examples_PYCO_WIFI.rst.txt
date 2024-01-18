@@ -66,17 +66,17 @@ SD Card
 
    examples/PYCO_WIFI/SDCard/writeTXT.rst
 
-TCP server
+TCP client
 ----------
 
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/TCP_server/TCP_server_read.rst
+   examples/PYCO_WIFI/TCP_client/TCP_client_read.rst
 
-   examples/PYCO_WIFI/TCP_server/TCP_server_write_string.rst
+   examples/PYCO_WIFI/TCP_client/TCP_client_write_string.rst
 
-   examples/PYCO_WIFI/TCP_server/TCP_server_write_U8_list.rst
+   examples/PYCO_WIFI/TCP_client/TCP_client_write_U8_list.rst
 
 Tutorial
 -------------
@@ -88,8 +88,6 @@ Tutorial
 
    examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.rst
 
-   examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.rst
-
    examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
 
 TinyML
@@ -99,4 +97,12 @@ TinyML
    :maxdepth: 4
 
    examples/PYCO_WIFI/TinyML/acceleration_movement.rst
+
+Modbus server
+-------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/Modbus_server/write_data_with_register.rst
 

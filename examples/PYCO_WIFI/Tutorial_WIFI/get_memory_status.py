@@ -3,7 +3,7 @@ Tutorial - get_memory_status.py.
 
 This example project shows how to get RAM and flash memory.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

@@ -3,7 +3,7 @@ SDCard - Read from SD Card.py.
 
 This example demonstrates how to read from txt file.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 import pywpc_sd

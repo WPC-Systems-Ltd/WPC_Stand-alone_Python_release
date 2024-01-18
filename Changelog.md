@@ -1,3 +1,14 @@
+WPC Stand-alone_python_release changelog
+=======================================
+
+v0.5.10 Date: 2024/01/18, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Four mechanisms to prevent the execution of main.py:
+    - Safe pin on the board.
+    - Counting the number of reboots within a short period. If it exceeds N times, main.py will no longer be executed.
+    - In the web configuration, the option to disable/enable main.py.
+    - In MicroPython, the addition of Sys_disableMain() / Sys_enableMain(), allowing users to change the execution status of main.py at any time.
 
 v0.5.6 Date: 2023/12/07, Developer: Chunglee_people
 ---------------------------------------------------
