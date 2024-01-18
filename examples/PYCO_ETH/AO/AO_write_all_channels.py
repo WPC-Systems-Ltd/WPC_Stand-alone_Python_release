@@ -4,7 +4,7 @@ AO - AO_write_all_channels.py.
 This example demonstrates the process of writing AO signal.
 It outlines the procedure for writing digital signals simultaneously to the AO pins.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

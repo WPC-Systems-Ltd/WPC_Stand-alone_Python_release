@@ -3,7 +3,7 @@ Tutorial - thread_LED.py.
 
 This example project demonstrates how to use two thread to read AI data and set LED value.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 
 '''
 ## WPC

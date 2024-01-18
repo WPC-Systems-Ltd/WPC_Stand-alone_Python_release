@@ -3,7 +3,7 @@ System - get_system_info.py.
 
 This example demonstrates how to get system information.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

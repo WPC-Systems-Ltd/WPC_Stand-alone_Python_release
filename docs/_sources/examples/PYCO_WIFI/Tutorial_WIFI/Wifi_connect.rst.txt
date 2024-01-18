@@ -1,6 +1,0 @@
-Wifi connect
-============
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/Tutorial_WIFI/Wifi_connect.py
-   :language: python
-   :linenos:

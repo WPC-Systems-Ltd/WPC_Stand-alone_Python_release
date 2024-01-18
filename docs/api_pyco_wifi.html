@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.5.10 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.6
+                0.5.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -58,11 +58,13 @@
 <li class="toctree-l1"><a class="reference internal" href="api_pyco_eth.html">PYCO-ETH</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PYCO-WIFI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#aio">AIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ahrs">AHRS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#battery">Battery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#led">LED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#system">SYSTEM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tcp">TCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-client">TCP Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modbus-server">Modbus server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#temperature">TEMPERATURE</a></li>
 </ul>
 </li>
@@ -150,6 +152,60 @@
 </dd></dl>
 
 </section>
+<section id="ahrs">
+<h2>AHRS<a class="headerlink" href="#ahrs" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410AHRS_startv">
+<span id="_CPPv310AHRS_startv"></span><span id="_CPPv210AHRS_startv"></span><span id="AHRS_start"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga3b4d27265ad42ba01115b836bae054ff"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410AHRS_startv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Start AHRS. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49AHRS_stopv">
+<span id="_CPPv39AHRS_stopv"></span><span id="_CPPv29AHRS_stopv"></span><span id="AHRS_stop"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gafd669a7861925429f6f8655cf488424d"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49AHRS_stopv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stop AHRS. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414AHRS_getOrientv">
+<span id="_CPPv314AHRS_getOrientv"></span><span id="_CPPv214AHRS_getOrientv"></span><span id="AHRS_getOrient"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga40a7b0669806323f9c273471c126b6d7"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrient</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414AHRS_getOrientv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read AHRS samples. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X, Y, Z</strong> – axis estimation data. [x1, y1, z1] </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415AHRS_setGeneral8mp_obj_t8mp_obj_t8mp_obj_t">
+<span id="_CPPv315AHRS_setGeneral8mp_obj_t8mp_obj_t8mp_obj_t"></span><span id="_CPPv215AHRS_setGeneral8mp_obj_t8mp_obj_t8mp_obj_t"></span><span id="AHRS_setGeneral__mp_obj_t.mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gaf74a52340777c5157cfa5d66a2d43202"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_setGeneral</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gravity</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dt</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z_offset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AHRS_setGeneral8mp_obj_t8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set theoretical gravity &amp; dt and acceleration of z_offset. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gravity</strong> – in m/s^2.Near 9.81 on surface of the Earth. </p></li>
+<li><p><strong>dt</strong> – Period in seconds. </p></li>
+<li><p><strong>z_offset</strong> – The acceleration offset on z-axis in m/s^2. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="battery">
 <h2>Battery<a class="headerlink" href="#battery" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
@@ -166,6 +222,17 @@
 </section>
 <section id="led">
 <h2>LED<a class="headerlink" href="#led" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49LED_resetv">
+<span id="_CPPv39LED_resetv"></span><span id="_CPPv29LED_resetv"></span><span id="LED_reset"></span><span class="target" id="group___p_y_c_o___w_i_f_i___l_e_d_1ga30a8b95ec80a8efd72d59eebeebdff36"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LED_reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49LED_resetv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reset LED. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411LED_setBluev">
 <span id="_CPPv311LED_setBluev"></span><span id="_CPPv211LED_setBluev"></span><span id="LED_setBlue"></span><span class="target" id="group___p_y_c_o___w_i_f_i___l_e_d_1ga06db8078b64d29b6fbc9927c057dd5a1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LED_setBlue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411LED_setBluev" title="Permalink to this definition"></a><br /></dt>
@@ -208,7 +275,10 @@
 <dd><p>Erase message on the screen. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>status</strong> – WPC error codes. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> – WPC error codes.</p></li>
+<li><p><strong>status</strong> – WPC error codes. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -222,10 +292,15 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>write_data</strong> – what you want to write on the screen. </p></li>
 <li><p><strong>write_line</strong> – The location line on the screen. </p></li>
+<li><p><strong>write_data</strong> – what you want to write on the screen. </p></li>
+<li><p><strong>write_line</strong> – The location line on the screen. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>status</strong> – WPC error code.</p></li>
+<li><p><strong>status</strong> – WPC error code. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -234,12 +309,56 @@
 <section id="system">
 <h2>SYSTEM<a class="headerlink" href="#system" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410Sys_APModev">
+<span id="_CPPv310Sys_APModev"></span><span id="_CPPv210Sys_APModev"></span><span id="Sys_APMode"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga63b33eeeb0e30c12e62919139669e309"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_APMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410Sys_APModev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Got to AP mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415Sys_disableMainv">
+<span id="_CPPv315Sys_disableMainv"></span><span id="_CPPv215Sys_disableMainv"></span><span id="Sys_disableMain"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga58281accc44568741a9037e271daf397"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_disableMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415Sys_disableMainv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disable executing main.py when it reboot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414Sys_enableMainv">
+<span id="_CPPv314Sys_enableMainv"></span><span id="_CPPv214Sys_enableMainv"></span><span id="Sys_enableMain"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga0073daf94a5b51cd8af1901181a0965c"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_enableMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414Sys_enableMainv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enable executing main.py when it reboot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410Sys_getMACv">
 <span id="_CPPv310Sys_getMACv"></span><span id="_CPPv210Sys_getMACv"></span><span id="Sys_getMAC"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getMAC</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410Sys_getMACv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get MAC address. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>String</strong> – MAC address. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410Sys_rebootv">
+<span id="_CPPv310Sys_rebootv"></span><span id="_CPPv210Sys_rebootv"></span><span id="Sys_reboot"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga383f51950833445138fb23c8ffb5c7f1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_reboot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410Sys_rebootv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reboot device. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -283,43 +402,29 @@
 </dl>
 </dd></dl>
 
-</section>
-<section id="tcp">
-<h2>TCP<a class="headerlink" href="#tcp" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414TCPServer_open8mp_obj_t">
-<span id="_CPPv314TCPServer_open8mp_obj_t"></span><span id="_CPPv214TCPServer_open8mp_obj_t"></span><span id="TCPServer_open__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gae7241936ecf9582d2a35a2bb219357eb"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPServer_open</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414TCPServer_open8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Open TCP server. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>port</strong> – TCP port. </p>
-</dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv415TCPServer_closev">
-<span id="_CPPv315TCPServer_closev"></span><span id="_CPPv215TCPServer_closev"></span><span id="TCPServer_close"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gab9ed5cdbeeff9b6aca8a512da5d838b3"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPServer_close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415TCPServer_closev" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Close TCP server. </p>
+<dt class="sig sig-object cpp" id="_CPPv419Sys_convertF32To4U88mp_obj_t">
+<span id="_CPPv319Sys_convertF32To4U88mp_obj_t"></span><span id="_CPPv219Sys_convertF32To4U88mp_obj_t"></span><span id="Sys_convertF32To4U8__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gad194386259e062cd14923c0bab58e95b"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_convertF32To4U8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_convertF32To4U88mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Convert float to 4U8. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+<dd class="field-odd"><p><strong>List</strong> – of U8 </p>
 </dd>
 </dl>
 </dd></dl>
 
+</section>
+<section id="tcp-client">
+<h2>TCP Client<a class="headerlink" href="#tcp-client" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv415TCPServer_write8mp_obj_t8mp_obj_t">
-<span id="_CPPv315TCPServer_write8mp_obj_t8mp_obj_t"></span><span id="_CPPv215TCPServer_write8mp_obj_t8mp_obj_t"></span><span id="TCPServer_write__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1ga361d670bc7980c408ea00fa0254642bf"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPServer_write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">write_data</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">write_len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415TCPServer_write8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write message via TCP server. </p>
+<dt class="sig sig-object cpp" id="_CPPv414TCPClient_open8mp_obj_t8mp_obj_t">
+<span id="_CPPv314TCPClient_open8mp_obj_t8mp_obj_t"></span><span id="_CPPv214TCPClient_open8mp_obj_t8mp_obj_t"></span><span id="TCPClient_open__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gab45f97fef2270ebaaf24d32cf40361d0"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPClient_open</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">host_ip</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414TCPClient_open8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Open a client which can connect to a specified address and port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>write_data</strong> – The message to be written. </p></li>
-<li><p><strong>write_len</strong> – The len of message. </p></li>
+<li><p><strong>host_ip</strong> – The IP address that the client will connect to. </p></li>
+<li><p><strong>port</strong> – The port that the client will connect to. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
@@ -329,15 +434,113 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414TCPServer_read8mp_obj_t">
-<span id="_CPPv314TCPServer_read8mp_obj_t"></span><span id="_CPPv214TCPServer_read8mp_obj_t"></span><span id="TCPServer_read__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1ga356c3359baa00c9647e2690795a6e72a"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPServer_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">read_len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414TCPServer_read8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read message via TCP server. </p>
+<dt class="sig sig-object cpp" id="_CPPv415TCPClient_closev">
+<span id="_CPPv315TCPClient_closev"></span><span id="_CPPv215TCPClient_closev"></span><span id="TCPClient_close"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gafa994a32235480d30c240b09f1d28ea6"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPClient_close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415TCPClient_closev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Close TCP client. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421TCPClient_writeString8mp_obj_t">
+<span id="_CPPv321TCPClient_writeString8mp_obj_t"></span><span id="_CPPv221TCPClient_writeString8mp_obj_t"></span><span id="TCPClient_writeString__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1ga29e881916b81d349f7100a85c66f89a6"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPClient_writeString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">write_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421TCPClient_writeString8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write string to the server that the client is connected to. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>read_len</strong> – The len of message. </p>
+<dd class="field-odd"><p><strong>value</strong> – Value to write. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>The</strong> – number of bytes written. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414TCPClient_read8mp_obj_t">
+<span id="_CPPv314TCPClient_read8mp_obj_t"></span><span id="_CPPv214TCPClient_read8mp_obj_t"></span><span id="TCPClient_read__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gac958c934384b84c5d0a9c254c8f83acc"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPClient_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">read_len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414TCPClient_read8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read the bytes received from the server that the client is connected to. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>size</strong> – Reads available bytes up to size from the server. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>The</strong> – number of bytes read from buffer. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421TCPClient_writeU8List8mp_obj_t">
+<span id="_CPPv321TCPClient_writeU8List8mp_obj_t"></span><span id="_CPPv221TCPClient_writeU8List8mp_obj_t"></span><span id="TCPClient_writeU8List__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___t_c_p_1gabafbaf5bc849a54b0ce34c64af85a982"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TCPClient_writeU8List</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u8_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421TCPClient_writeU8List8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write U8 list to the server that the client is connected to. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u8_list</strong> – The U8 list to write. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>The</strong> – number of bytes written. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="modbus-server">
+<h2>Modbus server<a class="headerlink" href="#modbus-server" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv436ModbusServer_inputRegisterWriteFloat8mp_obj_t8mp_obj_t">
+<span id="_CPPv336ModbusServer_inputRegisterWriteFloat8mp_obj_t8mp_obj_t"></span><span id="_CPPv236ModbusServer_inputRegisterWriteFloat8mp_obj_t8mp_obj_t"></span><span id="ModbusServer_inputRegisterWriteFloat__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___modbus_t_c_p_1gaa04a8b7033e920c042cf3ca7a48f737d"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusServer_inputRegisterWriteFloat</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">float_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436ModbusServer_inputRegisterWriteFloat8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write the float value of the server’s Input Register for the specified address and value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> – The range of input registers is from 41000 to 41499. </p></li>
+<li><p><strong>value</strong> – Input register value to write. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434ModbusServer_inputRegisterWriteInt8mp_obj_t8mp_obj_t">
+<span id="_CPPv334ModbusServer_inputRegisterWriteInt8mp_obj_t8mp_obj_t"></span><span id="_CPPv234ModbusServer_inputRegisterWriteInt8mp_obj_t8mp_obj_t"></span><span id="ModbusServer_inputRegisterWriteInt__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___modbus_t_c_p_1ga3c4d64e078322776ba90fc545d677a88"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusServer_inputRegisterWriteInt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">int_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ModbusServer_inputRegisterWriteInt8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write the int value of the server’s Input Register for the specified address and value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> – The range of input registers is from 41000 to 41499. </p></li>
+<li><p><strong>value</strong> – Input register value to write. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ModbusServer_openv">
+<span id="_CPPv317ModbusServer_openv"></span><span id="_CPPv217ModbusServer_openv"></span><span id="ModbusServer_open"></span><span class="target" id="group___p_y_c_o___w_i_f_i___modbus_t_c_p_1ga167cf850e7ba1154099e2c479b0a993e"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusServer_open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ModbusServer_openv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Open the Modbus TCP server. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418ModbusServer_closev">
+<span id="_CPPv318ModbusServer_closev"></span><span id="_CPPv218ModbusServer_closev"></span><span id="ModbusServer_close"></span><span class="target" id="group___p_y_c_o___w_i_f_i___modbus_t_c_p_1ga3232d302ee30396f775d4741ddd3a71f"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusServer_close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ModbusServer_closev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Close the Modbus TCP server. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>

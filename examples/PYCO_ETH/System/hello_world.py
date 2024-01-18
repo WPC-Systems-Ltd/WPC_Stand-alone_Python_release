@@ -3,7 +3,7 @@ System - hello world.py.
 
 This example code is in the public domain from PYCO_WIFI.
 
-Copyright (c) 2023 WPC Systems Ltd. All rights reserved.
+Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 '''
 
 ## WPC

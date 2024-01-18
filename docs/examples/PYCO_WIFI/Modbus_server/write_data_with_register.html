@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCP server write string &mdash; WPC Stand-alone Python 0.5.6 documentation</title>
+  <title>Write data with register &mdash; WPC Stand-alone Python 0.5.10 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TCP server write U8 list" href="TCP_server_write_U8_list.html" />
-    <link rel="prev" title="TCP server read" href="TCP_server_read.html" /> 
+    <link rel="next" title="PYCO-ETH" href="../../../api_pyco_eth.html" />
+    <link rel="prev" title="Movement classification" href="../TinyML/acceleration_movement.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.6
+                0.5.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -59,14 +59,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-server">TCP server</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="TCP_server_read.html">TCP server read</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">TCP server write string</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TCP_server_write_U8_list.html">TCP server write U8 list</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-server">Modbus server</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Write data with register</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -97,7 +96,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">TCP server write string</li>
+      <li class="breadcrumb-item active">Write data with register</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -106,32 +105,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tcp-server-write-string">
-<h1>TCP server write string<a class="headerlink" href="#tcp-server-write-string" title="Permalink to this heading"></a></h1>
+  <section id="write-data-with-register">
+<h1>Write data with register<a class="headerlink" href="#write-data-with-register" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">TCP_server - TCP_server_write.py.</span>
+<span class="linenos"> 2</span><span class="sd">Modbus_server - write_data_with_register.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write string via tcp server</span>
-<span class="linenos"> 5</span><span class="sd">It should connect wifi before tcp connection</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="sd">Copyright (c) 2023 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 8</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c1">## WPC</span>
-<span class="linenos">11</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span><span class="c1">## Paremeters setting</span>
-<span class="linenos">14</span><span class="n">port</span> <span class="o">=</span> <span class="mi">5566</span>
-<span class="linenos">15</span><span class="n">write_data</span> <span class="o">=</span> <span class="s2">&quot;Hello_world&quot;</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write data into server</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="sd">The range of input registers is from 41000 to 41499.</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
+<span class="linenos"> 9</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1">## WPC</span>
+<span class="linenos">12</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">## Open Modbus server</span>
+<span class="linenos">15</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_open</span><span class="p">()</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Open TCP with port</span>
-<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_open</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1">## Write int value in Modbus server</span>
+<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_inputRegisterWriteInt</span><span class="p">(</span><span class="mi">41000</span><span class="p">,</span> <span class="mi">5566</span><span class="p">)</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Write string</span>
-<span class="linenos">21</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_writeString</span><span class="p">(</span><span class="n">write_data</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">write_data</span><span class="p">))</span>
+<span class="linenos">20</span><span class="c1">## Write float value in Modbus server</span>
+<span class="linenos">21</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_inputRegisterWriteFloat</span><span class="p">(</span><span class="mi">41002</span><span class="p">,</span> <span class="mf">0.1234</span><span class="p">)</span>
 <span class="linenos">22</span>
-<span class="linenos">23</span><span class="c1">## Close TCP</span>
-<span class="linenos">24</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_close</span><span class="p">()</span>
+<span class="linenos">23</span><span class="c1">## Close Modbus server</span>
+<span class="linenos">24</span><span class="c1"># pywpc.ModbusServer_close()</span>
 </pre></div>
 </div>
 </section>
@@ -140,8 +139,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="TCP_server_read.html" class="btn btn-neutral float-left" title="TCP server read" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="TCP_server_write_U8_list.html" class="btn btn-neutral float-right" title="TCP server write U8 list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../TinyML/acceleration_movement.html" class="btn btn-neutral float-left" title="Movement classification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../api_pyco_eth.html" class="btn btn-neutral float-right" title="PYCO-ETH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
