@@ -1,5 +1,5 @@
 '''
-TCP_client - TCP_client_write.py.
+TCP_client - TCP_client_write_string.py.
 
 This example demonstrates how to write string to server
 

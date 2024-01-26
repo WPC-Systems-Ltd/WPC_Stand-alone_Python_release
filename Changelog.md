@@ -1,6 +1,12 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.5.11 Date: 2024/01/26, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- Support Modbus_master
+- example code: Series of `Modbus master` code
+
 v0.5.10 Date: 2024/01/18, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

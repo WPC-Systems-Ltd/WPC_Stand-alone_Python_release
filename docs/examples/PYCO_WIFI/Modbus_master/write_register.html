@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write data with register &mdash; WPC Stand-alone Python 0.5.10 documentation</title>
+  <title>Write register &mdash; WPC Stand-alone Python 0.5.11 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="PYCO-ETH" href="../../../api_pyco_eth.html" />
-    <link rel="prev" title="Movement classification" href="../TinyML/acceleration_movement.html" /> 
+    <link rel="prev" title="Write multi registers" href="write_multi_registers.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.10
+                0.5.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -62,8 +62,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-server">Modbus server</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Write data with register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="read_coils.html">Read coils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read_discrete_input.html">Read_discrete input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read_holding_registers.html">Read holding registers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read_input_registers.html">Read input registers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write_coil.html">Write coil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write_multi_coils.html">Write multi coils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write_multi_registers.html">Write multi registers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Write register</a></li>
 </ul>
 </li>
 </ul>
@@ -96,7 +104,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">Write data with register</li>
+      <li class="breadcrumb-item active">Write register</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -105,32 +113,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="write-data-with-register">
-<h1>Write data with register<a class="headerlink" href="#write-data-with-register" title="Permalink to this heading"></a></h1>
+  <section id="write-register">
+<h1>Write register<a class="headerlink" href="#write-register" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">Modbus_server - write_data_with_register.py.</span>
+<span class="linenos"> 2</span><span class="sd">Modbus_master - write_register.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write data into server</span>
+<span class="linenos"> 4</span><span class="sd">&quot;&quot;&quot; Write single coils to the slave device. &quot;&quot;&quot;</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">The range of input registers is from 41000 to 41499.</span>
-<span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 9</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="c1">## WPC</span>
-<span class="linenos">12</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="c1">## Open Modbus server</span>
-<span class="linenos">15</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_open</span><span class="p">()</span>
+<span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
+<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">## WPC</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="linenos">13</span><span class="n">salve_id</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">14</span><span class="n">address</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">15</span><span class="n">value</span> <span class="o">=</span> <span class="mi">5566</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Write int value in Modbus server</span>
-<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_inputRegisterWriteInt</span><span class="p">(</span><span class="mi">41000</span><span class="p">,</span> <span class="mi">5566</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1">## Open Modbus master in background</span>
+<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">salve_id</span><span class="p">)</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Write float value in Modbus server</span>
-<span class="linenos">21</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusServer_inputRegisterWriteFloat</span><span class="p">(</span><span class="mi">41002</span><span class="p">,</span> <span class="mf">0.1234</span><span class="p">)</span>
+<span class="linenos">20</span><span class="c1">## Write `5566` in modbus address 0</span>
+<span class="linenos">21</span><span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_writeRegister</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 <span class="linenos">22</span>
-<span class="linenos">23</span><span class="c1">## Close Modbus server</span>
-<span class="linenos">24</span><span class="c1"># pywpc.ModbusServer_close()</span>
+<span class="linenos">23</span><span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1">## Close Modbus master in background</span>
+<span class="linenos">26</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_close</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -139,7 +149,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../TinyML/acceleration_movement.html" class="btn btn-neutral float-left" title="Movement classification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="write_multi_registers.html" class="btn btn-neutral float-left" title="Write multi registers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../../../api_pyco_eth.html" class="btn btn-neutral float-right" title="PYCO-ETH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

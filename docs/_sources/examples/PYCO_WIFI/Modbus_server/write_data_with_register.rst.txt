@@ -1,6 +1,0 @@
-Write data with register
-========================
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/Modbus_server/write_data_with_register.py
-   :language: python
-   :linenos:

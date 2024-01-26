@@ -1,0 +1,6 @@
+Write coil
+==========
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/Modbus_master/write_coil.py
+   :language: python
+   :linenos:
