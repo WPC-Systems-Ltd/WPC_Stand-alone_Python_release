@@ -98,11 +98,33 @@ TinyML
 
    examples/PYCO_WIFI/TinyML/acceleration_movement.rst
 
-Modbus server
+Modbus slave
+------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/Modbus_slave/write_data_with_register.rst
+
+Modbus master
 -------------
 
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Modbus_server/write_data_with_register.rst
+   examples/PYCO_WIFI/Modbus_master/read_coils.rst
+
+   examples/PYCO_WIFI/Modbus_master/read_discrete_input.rst
+
+   examples/PYCO_WIFI/Modbus_master/read_holding_registers.rst
+
+   examples/PYCO_WIFI/Modbus_master/read_input_registers.rst
+
+   examples/PYCO_WIFI/Modbus_master/write_coil.rst
+
+   examples/PYCO_WIFI/Modbus_master/write_multi_coils.rst
+
+   examples/PYCO_WIFI/Modbus_master/write_multi_registers.rst
+
+   examples/PYCO_WIFI/Modbus_master/write_register.rst
 

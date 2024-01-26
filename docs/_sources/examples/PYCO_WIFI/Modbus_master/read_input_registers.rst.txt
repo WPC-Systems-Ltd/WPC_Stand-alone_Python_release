@@ -1,0 +1,6 @@
+Read input registers
+====================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/Modbus_master/read_input_registers.py
+   :language: python
+   :linenos:

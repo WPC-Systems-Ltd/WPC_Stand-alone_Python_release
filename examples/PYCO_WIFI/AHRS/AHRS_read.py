@@ -10,12 +10,10 @@ Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 import pywpc
 
 ## Parameters setting
-theo_grav = 9.81
-dt = 0.005
-offset_z = 0.005
+sampling_period = 0.005
 
 ## Set general setting
-pywpc.AHRS_setGeneral(theo_grav, dt, offset_z)
+pywpc.AHRS_setSamplingPeriod(sampling_period)
 
 ## AHRS start
 pywpc.AHRS_start()
