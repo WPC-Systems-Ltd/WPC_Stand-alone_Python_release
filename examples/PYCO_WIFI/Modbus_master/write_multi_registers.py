@@ -14,7 +14,7 @@ salve_id = 1
 address = 0
 value_list = [5566, 1234]
 
-## Open Modbus master in background
+## Open Modbus master
 pywpc.ModbusMaster_open(host_ip, salve_id)
 
 ## Write multi value in modbus address 0
@@ -22,5 +22,5 @@ status = pywpc.ModbusMaster_writeMultiRegisters(address, value_list)
 
 print(status)
 
-## Close Modbus master in background
+## Close Modbus master
 pywpc.ModbusMaster_close()

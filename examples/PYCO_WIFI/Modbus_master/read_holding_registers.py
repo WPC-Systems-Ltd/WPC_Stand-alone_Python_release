@@ -14,7 +14,7 @@ salve_id = 1
 address = 0
 registers = 10
 
-## Open Modbus master in background
+## Open Modbus master
 pywpc.ModbusMaster_open(host_ip, salve_id)
 
 ## Read 10 registers at address 0, store result in regs list
@@ -22,5 +22,5 @@ regs_l = pywpc.ModbusMaster_readHoldingRegister(address, registers)
 
 print(regs_l)
 
-## Close Modbus master in background
+## Close Modbus master
 pywpc.ModbusMaster_close()

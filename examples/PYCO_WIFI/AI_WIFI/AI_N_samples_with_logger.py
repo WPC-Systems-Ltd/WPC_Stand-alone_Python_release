@@ -29,9 +29,10 @@ ai_len = len(ai_sample)
 ai_file = open("AI_test.csv", 'w')
 
 ## Write CSV file
-ai_file.write("[ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7]\r\n")
+ai_file.write("ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7\r\n")
 for i in range(ai_len):
-    ai_file.write(str(ai_sample[i])+'\r\n')
+    res = ','.join(map(str, ai_sample[i]))
+    ai_file.write(res+'\r\n')
 
 ## Close CSV file
 ai_file.close()
