@@ -14,7 +14,7 @@ salve_id = 1
 address = 0
 coils = 10
 
-## Open Modbus master in background
+## Open Modbus master
 pywpc.ModbusMaster_open(host_ip, salve_id)
 
 ## Read 10 bits (= coils) at address 0, store result in coils list
@@ -22,5 +22,5 @@ coils_l = pywpc.ModbusMaster_readDiscreteInputs(address, coils)
 
 print(coils_l)
 
-## Close Modbus master in background
+## Close Modbus master
 pywpc.ModbusMaster_close()
