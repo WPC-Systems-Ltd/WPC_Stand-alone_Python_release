@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI N samples with logger &mdash; WPC Stand-alone Python 0.5.11 documentation</title>
+  <title>AI N samples with logger &mdash; WPC Stand-alone Python 0.5.12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.11
+                0.5.12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -141,14 +141,15 @@
 <span class="linenos">29</span><span class="n">ai_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;AI_test.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 <span class="linenos">30</span>
 <span class="linenos">31</span><span class="c1">## Write CSV file</span>
-<span class="linenos">32</span><span class="n">ai_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;[ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7]</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">32</span><span class="n">ai_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos">33</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ai_len</span><span class="p">):</span>
-<span class="linenos">34</span>    <span class="n">ai_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ai_sample</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="linenos">35</span>
-<span class="linenos">36</span><span class="c1">## Close CSV file</span>
-<span class="linenos">37</span><span class="n">ai_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="linenos">38</span>
-<span class="linenos">39</span><span class="k">del</span> <span class="n">ai_sample</span>
+<span class="linenos">34</span>    <span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">ai_sample</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="linenos">35</span>    <span class="n">ai_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="c1">## Close CSV file</span>
+<span class="linenos">38</span><span class="n">ai_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="k">del</span> <span class="n">ai_sample</span>
 </pre></div>
 </div>
 </section>

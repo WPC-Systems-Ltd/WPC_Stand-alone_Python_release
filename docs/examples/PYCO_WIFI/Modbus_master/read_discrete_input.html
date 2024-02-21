@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Read_discrete input &mdash; WPC Stand-alone Python 0.5.11 documentation</title>
+  <title>Read_discrete input &mdash; WPC Stand-alone Python 0.5.12 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.11
+                0.5.12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -131,7 +131,7 @@
 <span class="linenos">14</span><span class="n">address</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos">15</span><span class="n">coils</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Open Modbus master in background</span>
+<span class="linenos">17</span><span class="c1">## Open Modbus master</span>
 <span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">salve_id</span><span class="p">)</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span><span class="c1">## Read 10 bits (= coils) at address 0, store result in coils list</span>
@@ -139,7 +139,7 @@
 <span class="linenos">22</span>
 <span class="linenos">23</span><span class="nb">print</span><span class="p">(</span><span class="n">coils_l</span><span class="p">)</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span><span class="c1">## Close Modbus master in background</span>
+<span class="linenos">25</span><span class="c1">## Close Modbus master</span>
 <span class="linenos">26</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_close</span><span class="p">()</span>
 </pre></div>
 </div>

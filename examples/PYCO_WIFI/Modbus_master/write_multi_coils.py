@@ -14,7 +14,7 @@ salve_id = 1
 address = 0
 coil_list = [1, 0, 1, 1, 0, 0, 1, 1, 1, 0]
 
-## Open Modbus master in background
+## Open Modbus master
 pywpc.ModbusMaster_open(host_ip, salve_id)
 
 ## Write multi bits in modbus address 0
@@ -22,5 +22,5 @@ status = pywpc.ModbusMaster_writeMultiCoils(address, coil_list)
 
 print(status)
 
-## Close Modbus master in background
+## Close Modbus master
 pywpc.ModbusMaster_close()
