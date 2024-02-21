@@ -4,7 +4,9 @@ WPC Stand-alone_python_release changelog
 v0.5.12 Date: 2024/02/21, Developer: Chunglee_people
 ----------------------------------------------------
 ### Fixed
-- AI_N_samples_with_logger.py
+- example code:
+    - AI_N_samples_with_logger.py
+    - modbus slave & master
 
 v0.5.11 Date: 2024/01/26, Developer: Chunglee_people
 ----------------------------------------------------
