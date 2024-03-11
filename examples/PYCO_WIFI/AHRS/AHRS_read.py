@@ -9,14 +9,14 @@ Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 ## WPC
 import pywpc
 
-## Parameters setting
-sampling_period = 0.005
-
-## Set general setting
-pywpc.AHRS_setSamplingPeriod(sampling_period)
-
 ## AHRS start
 pywpc.AHRS_start()
 
-## Get AHRS three axis estimation
-print(pywpc.AHRS_getOrient())
+##  Get AHRS's 3 axis orientation.
+print(pywpc.AHRS_getOrientation())
+
+##  Get AHRS's 3 axis angular velocity.
+print(pywpc.AHRS_getAngularVelocity())
+
+##  Get AHRS's 3 axis acceleration.
+print(pywpc.AHRS_getAcceleration())

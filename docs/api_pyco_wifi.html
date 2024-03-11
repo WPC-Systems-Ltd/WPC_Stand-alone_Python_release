@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.5.12 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.5.12
+                0.6.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -178,26 +178,34 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414AHRS_getOrientv">
-<span id="_CPPv314AHRS_getOrientv"></span><span id="_CPPv214AHRS_getOrientv"></span><span id="AHRS_getOrient"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga40a7b0669806323f9c273471c126b6d7"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrient</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414AHRS_getOrientv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read AHRS samples. </p>
+<dt class="sig sig-object cpp" id="_CPPv419AHRS_getOrientationv">
+<span id="_CPPv319AHRS_getOrientationv"></span><span id="_CPPv219AHRS_getOrientationv"></span><span id="AHRS_getOrientation"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga5a769464dfebb7b8a4ec9ccf0fc55325"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrientation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AHRS_getOrientationv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get AHRS’s 3 axis orientation. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – X, Y, Z axis estimation data. </p>
+<dd class="field-odd"><p><strong>The</strong> – list of 3 axis orientation. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv422AHRS_setSamplingPeriod8mp_obj_t">
-<span id="_CPPv322AHRS_setSamplingPeriod8mp_obj_t"></span><span id="_CPPv222AHRS_setSamplingPeriod8mp_obj_t"></span><span id="AHRS_setSamplingPeriod__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga5825d3514e50303cab0771d192355cb6"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_setSamplingPeriod</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampling_period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422AHRS_setSamplingPeriod8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set AHRS sampling period.. </p>
+<dt class="sig sig-object cpp" id="_CPPv420AHRS_getAccelerationv">
+<span id="_CPPv320AHRS_getAccelerationv"></span><span id="_CPPv220AHRS_getAccelerationv"></span><span id="AHRS_getAcceleration"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gacc59248780a3cb587bfe16613b3da5cc"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getAcceleration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420AHRS_getAccelerationv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get AHRS’s 3 axis acceleration. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>sampling_period</strong> – Period in seconds. </p>
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>The</strong> – list of 3 axis acceleration. </p>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423AHRS_getAngularVelocityv">
+<span id="_CPPv323AHRS_getAngularVelocityv"></span><span id="_CPPv223AHRS_getAngularVelocityv"></span><span id="AHRS_getAngularVelocity"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga597e9fa18d8bf23c2113f8862e33d63e"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getAngularVelocity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423AHRS_getAngularVelocityv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get AHRS’s 3 axis angular velocity. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>The</strong> – list of 3 axis angular velocity. </p>
 </dd>
 </dl>
 </dd></dl>
