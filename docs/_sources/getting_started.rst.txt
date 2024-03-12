@@ -19,7 +19,7 @@ What You Need
 
 Installation
 ------------
-- Download `WPC Stand-Alone Python Editor <http://www.wpc.com.tw/255112104622120-controller.html>`_.
+- Download `WPC Stand-Alone Python Editor <https://www.wpc.com.tw/pyco-2551121046221201.html>`_.
 - Unpack and go to ``WPC Device Manager/data/WPCPyEditor``.
 - Open WPC Stand-Alone Python Editor.exe.
 
