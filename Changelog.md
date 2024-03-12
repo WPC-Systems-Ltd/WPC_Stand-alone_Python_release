@@ -1,6 +1,17 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.6.0 Date: 2024/03/12, Developer: Chunglee_people
+----------------------------------------------------
+### Added
+- API: AHRS_getAngularVelocity, AHRS_getAcceleration
+
+### Fixed
+- Fix WPC Stand-Alone Python Editor download website
+
+### Removed
+- API: AHRS_getOrient, AHRS_setSamplingPeriod
+
 v0.5.12 Date: 2024/02/21, Developer: Chunglee_people
 ----------------------------------------------------
 ### Fixed
