@@ -28,6 +28,14 @@ AIO
 
    examples/PYCO_ETH/AIO/AIO_all_channels_loopback.rst
 
+OLED
+----
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_ETH/OLED/OLED_writeLine.rst
+
 DIO
 ---
 
