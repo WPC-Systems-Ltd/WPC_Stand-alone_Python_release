@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.6.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.0
+                0.6.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -111,7 +111,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>List</strong> – Analog voltage with 8 channels.</p></li>
+<li><p><strong>value_list</strong> – List of voltages in [V] of all 8 channels.</p></li>
 <li><p><strong>List</strong> – Analog voltage with 8 channels. </p></li>
 </ul>
 </dd>
@@ -434,6 +434,48 @@ Write message in line on the screen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>List</strong> – The list of U8. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415Sys_setWifiSSID8mp_obj_t">
+<span id="_CPPv315Sys_setWifiSSID8mp_obj_t"></span><span id="_CPPv215Sys_setWifiSSID8mp_obj_t"></span><span id="Sys_setWifiSSID__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1gaad86e35f6f53737ee1d14fb16e002b0c"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_setWifiSSID</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415Sys_setWifiSSID8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set Wifi SSID. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – SSID. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419Sys_setWifiPassword8mp_obj_t">
+<span id="_CPPv319Sys_setWifiPassword8mp_obj_t"></span><span id="_CPPv219Sys_setWifiPassword8mp_obj_t"></span><span id="Sys_setWifiPassword__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga39e70e54839cbafeea07ddf4da2c193c"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_setWifiPassword</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_setWifiPassword8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set Wifi password. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – password. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49Sys_setIP8mp_obj_t">
+<span id="_CPPv39Sys_setIP8mp_obj_t"></span><span id="_CPPv29Sys_setIP8mp_obj_t"></span><span id="Sys_setIP__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___s_y_s_t_e_m_1ga2f9d1e9127024528bbdb51b9cbc80748"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_setIP</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49Sys_setIP8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set IP. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – IP. </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -765,7 +807,7 @@ Write message in line on the screen.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

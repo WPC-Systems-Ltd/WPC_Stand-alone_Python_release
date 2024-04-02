@@ -1,6 +1,19 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+
+v0.6.3 Date: 2024/04/02, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Added OLED example in PYCO_ETH
+- API: Sys_setWifiSSID, Sys_setWifiPassword, Sys_setIP
+- DIO, AI, & AO: added APIs for read from/write to one channel
+- AI: API to send data via TCP
+- Sys: added APIs for scan engine
+
+### Fixed
+- Modified the example code folder name
+
 v0.6.0 Date: 2024/03/12, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
