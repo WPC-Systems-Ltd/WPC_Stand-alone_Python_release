@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Read coils &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
+  <title>Read from SD Card &mdash; WPC Stand-alone Python 0.6.1 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Read_discrete input" href="read_discrete_input.html" />
-    <link rel="prev" title="Write data with register" href="../Modbus_slave/write_data_with_register.html" /> 
+    <link rel="next" title="Write to SD Card" href="writeTXT.html" />
+    <link rel="prev" title="Get system info" href="../System/get_system_info.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -58,22 +58,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Read from SD Card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writeTXT.html">Write to SD Card</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Read coils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_discrete_input.html">Read_discrete input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_holding_registers.html">Read holding registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_input_registers.html">Read input registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_coil.html">Write coil</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_multi_coils.html">Write multi coils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_multi_registers.html">Write multi registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_register.html">Write register</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +98,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">Read coils</li>
+      <li class="breadcrumb-item active">Read from SD Card</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -113,34 +107,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="read-coils">
-<h1>Read coils<a class="headerlink" href="#read-coils" title="Permalink to this heading"></a></h1>
+  <section id="read-from-sd-card">
+<h1>Read from SD Card<a class="headerlink" href="#read-from-sd-card" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">Modbus_master - read_coils.py.</span>
+<span class="linenos"> 2</span><span class="sd">SDCard - Read from SD Card.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">&quot;&quot;&quot; Read 10 coils from the slave device. &quot;&quot;&quot;</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to read from txt file.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="linenos">13</span><span class="n">salve_id</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="linenos">14</span><span class="n">address</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">15</span><span class="n">coils</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">pywpc_sd</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1">## Initialize the SD card</span>
+<span class="linenos">12</span><span class="n">dev</span> <span class="o">=</span> <span class="n">pywpc_sd</span><span class="o">.</span><span class="n">SDCard</span><span class="p">()</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">## Debug print SD card directory and files</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">getFileDirectory</span><span class="p">())</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Open Modbus master</span>
-<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">salve_id</span><span class="p">)</span>
-<span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Read 10 bits (= coils) at address 0, store result in coils list</span>
-<span class="linenos">21</span><span class="n">coils_l</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_readCoils</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">coils</span><span class="p">)</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="nb">print</span><span class="p">(</span><span class="n">coils_l</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1">## Open the file in &quot;read mode&quot;.</span>
+<span class="linenos">18</span><span class="c1">## Read the file and print the text on debug port.</span>
+<span class="linenos">19</span><span class="n">file</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">openFile</span><span class="p">(</span><span class="s2">&quot;sample.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="k">if</span> <span class="n">file</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">22</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading from SD card&quot;</span><span class="p">)</span>
+<span class="linenos">23</span>    <span class="nb">print</span> <span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">readFile</span><span class="p">())</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span><span class="c1">## Close Modbus master</span>
-<span class="linenos">26</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_close</span><span class="p">()</span>
+<span class="linenos">25</span><span class="c1">## Close the file</span>
+<span class="linenos">26</span><span class="n">dev</span><span class="o">.</span><span class="n">closeFile</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -149,14 +143,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Modbus_slave/write_data_with_register.html" class="btn btn-neutral float-left" title="Write data with register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="read_discrete_input.html" class="btn btn-neutral float-right" title="Read_discrete input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../System/get_system_info.html" class="btn btn-neutral float-left" title="Get system info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="writeTXT.html" class="btn btn-neutral float-right" title="Write to SD Card" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

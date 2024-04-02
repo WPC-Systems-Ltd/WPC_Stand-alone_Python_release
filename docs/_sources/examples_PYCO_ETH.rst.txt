@@ -6,7 +6,7 @@ AI
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_ETH/AI_ETH/AI_on_demand_once.rst
+   examples/PYCO_ETH/AI/AI_on_demand_once.rst
 
 AO
 --
@@ -52,5 +52,5 @@ Tutorial
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_ETH/Tutorial_ETH/Thread_AIO.rst
+   examples/PYCO_ETH/Tutorial/Thread_AIO.rst
 

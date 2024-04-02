@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write to SD Card &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
+  <title>TCP client read &mdash; WPC Stand-alone Python 0.6.1 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="TCP client read" href="../TCP_client/TCP_client_read.html" />
-    <link rel="prev" title="Read from SD Card" href="readTXT.html" /> 
+    <link rel="next" title="TCP client write string" href="TCP_client_write_string.html" />
+    <link rel="prev" title="Write to SD Card" href="../SD%20Card/writeTXT.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -58,12 +58,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#led">LED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="readTXT.html">Read from SD Card</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Write to SD Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TCP client read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TCP_client_write_string.html">TCP client write string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TCP_client_write_U8_list.html">TCP client write U8 list</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
@@ -98,7 +99,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">Write to SD Card</li>
+      <li class="breadcrumb-item active">TCP client read</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -107,35 +108,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="write-to-sd-card">
-<h1>Write to SD Card<a class="headerlink" href="#write-to-sd-card" title="Permalink to this heading"></a></h1>
+  <section id="tcp-client-read">
+<h1>TCP client read<a class="headerlink" href="#tcp-client-read" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">SDCard - Write to SD Card.py.</span>
+<span class="linenos"> 2</span><span class="sd">TCP_client - TCP_client_read.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write messages into file.</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to read data from server</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">pywpc_sd</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="c1">## Initialize the SD card</span>
-<span class="linenos">12</span><span class="n">dev</span> <span class="o">=</span> <span class="n">pywpc_sd</span><span class="o">.</span><span class="n">SDCard</span><span class="p">()</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="c1">## Debug print SD card directory and files</span>
-<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">getFileDirectory</span><span class="p">())</span>
+<span class="linenos"> 9</span><span class="c1">## WPC</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">## Paremeters setting</span>
+<span class="linenos">13</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;192.168.5.108&quot;</span>   <span class="c1">## The server&#39;s hostname or IP address</span>
+<span class="linenos">14</span><span class="n">port</span> <span class="o">=</span> <span class="mi">3333</span>                 <span class="c1">## The port used by the server</span>
+<span class="linenos">15</span><span class="n">read_bytes</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Create / Open a file in write mode.</span>
-<span class="linenos">18</span><span class="c1">## Write mode creates a new file.</span>
-<span class="linenos">19</span><span class="c1">## If already file exists. Then, it overwrites the file.</span>
-<span class="linenos">20</span><span class="n">dev</span><span class="o">.</span><span class="n">openFile</span><span class="p">(</span><span class="s2">&quot;sample.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1">## First you should open tcp server</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1">## Open TCP client</span>
+<span class="linenos">20</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
 <span class="linenos">21</span>
-<span class="linenos">22</span><span class="c1">## Write sample text</span>
-<span class="linenos">23</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-<span class="linenos">24</span>    <span class="n">dev</span><span class="o">.</span><span class="n">writeFile</span><span class="p">(</span><span class="s2">&quot;Sample text = </span><span class="si">%s</span><span class="se">\r\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+<span class="linenos">22</span><span class="c1">## Read bytes from server</span>
+<span class="linenos">23</span><span class="n">data_read</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_read</span><span class="p">(</span><span class="n">read_bytes</span><span class="p">)</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="n">data_read</span><span class="p">)</span>
 <span class="linenos">25</span>
-<span class="linenos">26</span><span class="c1">## Close the file</span>
-<span class="linenos">27</span><span class="n">dev</span><span class="o">.</span><span class="n">closeFile</span><span class="p">()</span>
+<span class="linenos">26</span><span class="c1">## Close TCP client</span>
+<span class="linenos">27</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_close</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -144,14 +145,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="readTXT.html" class="btn btn-neutral float-left" title="Read from SD Card" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../TCP_client/TCP_client_read.html" class="btn btn-neutral float-right" title="TCP client read" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../SD%20Card/writeTXT.html" class="btn btn-neutral float-left" title="Write to SD Card" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TCP_client_write_string.html" class="btn btn-neutral float-right" title="TCP client write string" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

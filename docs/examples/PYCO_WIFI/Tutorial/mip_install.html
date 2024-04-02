@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write multi coils &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
+  <title>New package install &mdash; WPC Stand-alone Python 0.6.1 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Write multi registers" href="write_multi_registers.html" />
-    <link rel="prev" title="Write coil" href="write_coil.html" /> 
+    <link rel="next" title="Movement classification" href="../TinyML/acceleration_movement.html" />
+    <link rel="prev" title="Get memory status" href="get_memory_status.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -60,20 +60,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#system">System</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="read_coils.html">Read coils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_discrete_input.html">Read_discrete input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_holding_registers.html">Read holding registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read_input_registers.html">Read input registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_coil.html">Write coil</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Write multi coils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_multi_registers.html">Write multi registers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="write_register.html">Write register</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Thread_LED.html">LED thread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_memory_status.html">Get memory status</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">New package install</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +99,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
-      <li class="breadcrumb-item active">Write multi coils</li>
+      <li class="breadcrumb-item active">New package install</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -113,34 +108,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="write-multi-coils">
-<h1>Write multi coils<a class="headerlink" href="#write-multi-coils" title="Permalink to this heading"></a></h1>
+  <section id="new-package-install">
+<h1>New package install<a class="headerlink" href="#new-package-install" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">Modbus_master - write_multi_coils.py.</span>
+<span class="linenos"> 2</span><span class="sd">Tutorial - New_package_install.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">&quot;&quot;&quot; Write a series of 10 discrete coils to the slave device.&quot;&quot;&quot;</span>
+<span class="linenos"> 4</span><span class="sd">This example project demonstrates how to install new package.</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
 <span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="linenos">13</span><span class="n">salve_id</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="linenos">14</span><span class="n">address</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">15</span><span class="n">coil_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1">## Open Modbus master</span>
-<span class="linenos">18</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">salve_id</span><span class="p">)</span>
-<span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Write multi bits in modbus address 0</span>
-<span class="linenos">21</span><span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_writeMultiCoils</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">coil_list</span><span class="p">)</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
-<span class="linenos">24</span>
-<span class="linenos">25</span><span class="c1">## Close Modbus master</span>
-<span class="linenos">26</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusMaster_close</span><span class="p">()</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">mip</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1">## You should connect wifi first.</span>
+<span class="linenos">12</span><span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;what_you_want_download_package&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -149,14 +130,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="write_coil.html" class="btn btn-neutral float-left" title="Write coil" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="write_multi_registers.html" class="btn btn-neutral float-right" title="Write multi registers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="get_memory_status.html" class="btn btn-neutral float-left" title="Get memory status" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../TinyML/acceleration_movement.html" class="btn btn-neutral float-right" title="Movement classification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
