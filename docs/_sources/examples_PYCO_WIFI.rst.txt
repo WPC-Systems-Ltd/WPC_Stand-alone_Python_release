@@ -6,11 +6,11 @@ AI
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/AI_WIFI/AI_on_demand_once.rst
+   examples/PYCO_WIFI/AI/AI_on_demand_once.rst
 
-   examples/PYCO_WIFI/AI_WIFI/AI_N_samples_once.rst
+   examples/PYCO_WIFI/AI/AI_N_samples_once.rst
 
-   examples/PYCO_WIFI/AI_WIFI/AI_N_samples_with_logger.rst
+   examples/PYCO_WIFI/AI/AI_N_samples_with_logger.rst
 
 AHRS
 ----
@@ -62,9 +62,9 @@ SD Card
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/SDCard/readTXT.rst
+   examples/PYCO_WIFI/SD Card/readTXT.rst
 
-   examples/PYCO_WIFI/SDCard/writeTXT.rst
+   examples/PYCO_WIFI/SD Card/writeTXT.rst
 
 TCP client
 ----------
@@ -72,11 +72,11 @@ TCP client
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/TCP_client/TCP_client_read.rst
+   examples/PYCO_WIFI/TCP client/TCP_client_read.rst
 
-   examples/PYCO_WIFI/TCP_client/TCP_client_write_string.rst
+   examples/PYCO_WIFI/TCP client/TCP_client_write_string.rst
 
-   examples/PYCO_WIFI/TCP_client/TCP_client_write_U8_list.rst
+   examples/PYCO_WIFI/TCP client/TCP_client_write_U8_list.rst
 
 Tutorial
 -------------
@@ -84,11 +84,11 @@ Tutorial
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Tutorial_WIFI/Thread_LED.rst
+   examples/PYCO_WIFI/Tutorial/Thread_LED.rst
 
-   examples/PYCO_WIFI/Tutorial_WIFI/get_memory_status.rst
+   examples/PYCO_WIFI/Tutorial/get_memory_status.rst
 
-   examples/PYCO_WIFI/Tutorial_WIFI/mip_install.rst
+   examples/PYCO_WIFI/Tutorial/mip_install.rst
 
 TinyML
 ------
@@ -104,7 +104,7 @@ Modbus slave
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Modbus_slave/write_data_with_register.rst
+   examples/PYCO_WIFI/Modbus slave/write_data_with_register.rst
 
 Modbus master
 -------------
@@ -112,19 +112,19 @@ Modbus master
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Modbus_master/read_coils.rst
+   examples/PYCO_WIFI/Modbus master/read_coils.rst
 
-   examples/PYCO_WIFI/Modbus_master/read_discrete_input.rst
+   examples/PYCO_WIFI/Modbus master/read_discrete_input.rst
 
-   examples/PYCO_WIFI/Modbus_master/read_holding_registers.rst
+   examples/PYCO_WIFI/Modbus master/read_holding_registers.rst
 
-   examples/PYCO_WIFI/Modbus_master/read_input_registers.rst
+   examples/PYCO_WIFI/Modbus master/read_input_registers.rst
 
-   examples/PYCO_WIFI/Modbus_master/write_coil.rst
+   examples/PYCO_WIFI/Modbus master/write_coil.rst
 
-   examples/PYCO_WIFI/Modbus_master/write_multi_coils.rst
+   examples/PYCO_WIFI/Modbus master/write_multi_coils.rst
 
-   examples/PYCO_WIFI/Modbus_master/write_multi_registers.rst
+   examples/PYCO_WIFI/Modbus master/write_multi_registers.rst
 
-   examples/PYCO_WIFI/Modbus_master/write_register.rst
+   examples/PYCO_WIFI/Modbus master/write_register.rst
 

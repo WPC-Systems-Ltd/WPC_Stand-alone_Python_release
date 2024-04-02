@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.6.0 documentation</title>
+  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.6.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PYCO-WIFI" href="api_pyco_wifi.html" />
-    <link rel="prev" title="Write register" href="examples/PYCO_WIFI/Modbus_master/write_register.html" /> 
+    <link rel="prev" title="Write register" href="examples/PYCO_WIFI/Modbus%20master/write_register.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.0
+                0.6.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -98,13 +98,27 @@
 <section id="aio">
 <h2>AIO<a class="headerlink" href="#aio" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414AI_readChannel8mp_obj_t">
+<span id="_CPPv314AI_readChannel8mp_obj_t"></span><span id="_CPPv214AI_readChannel8mp_obj_t"></span><span id="AI_readChannel__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga3086b90710459cd160c756add2a5e122"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414AI_readChannel8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read from a single AI channel. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ch</strong> – Channel number (0 to 7). </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>volt</strong> – Voltage in [V]. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415AI_readOnDemandv">
 <span id="_CPPv315AI_readOnDemandv"></span><span id="_CPPv215AI_readOnDemandv"></span><span id="AI_readOnDemand"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AI_readOnDemandv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Read AI on demand. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>List</strong> – Analog voltage with 8 channels.</p></li>
+<li><p><strong>value_list</strong> – List of voltages in [V] of all 8 channels.</p></li>
 <li><p><strong>List</strong> – Analog voltage with 8 channels. </p></li>
 </ul>
 </dd>
@@ -112,32 +126,57 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t">
-<span id="_CPPv318AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv218AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="AO_writeOneChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gaceb7181a1284fa5d9411d180ec869594"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write AO on demand by channel. </p>
+<dt class="sig sig-object cpp" id="_CPPv411AI_readPortv">
+<span id="_CPPv311AI_readPortv"></span><span id="_CPPv211AI_readPortv"></span><span id="AI_readPort"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga0170c45a7439132a333ce4eb1664b261"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411AI_readPortv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read from the whole AI port. </p>
+<p>This function is identical to <code class="docutils literal notranslate"><span class="pre">AI_readOnDemand</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – Channel number (0~7). </p></li>
-<li><p><strong>value</strong> – Voltage (-10~10). </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value_list</strong> – List of voltage in [V] of all 8 channels. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv419AO_writeAllChannels8mp_obj_t">
-<span id="_CPPv319AO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219AO_writeAllChannels8mp_obj_t"></span><span id="AO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AO_writeAllChannels8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write AO on demand by synchronizing all channels. </p>
+<dt class="sig sig-object cpp" id="_CPPv415AI_sendOnDemandv">
+<span id="_CPPv315AI_sendOnDemandv"></span><span id="_CPPv215AI_sendOnDemandv"></span><span id="AI_sendOnDemand"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga77e2457581ab99b7e8974e0d10ee2f6b"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_sendOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AI_sendOnDemandv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send data of the whole AI port via TCP to PC. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415AO_writeChannel8mp_obj_t8mp_obj_t">
+<span id="_CPPv315AO_writeChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv215AO_writeChannel8mp_obj_t8mp_obj_t"></span><span id="AO_writeChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga74dc863af40930e57d1a39927f013286"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AO_writeChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write to a single AO channel. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – The list of voltage (-10~10). </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ch</strong> – Channel number (0 to 7). </p></li>
+<li><p><strong>value</strong> – Voltage in [V] (-10 to 10). </p></li>
+</ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412AO_writePort8mp_obj_t">
+<span id="_CPPv312AO_writePort8mp_obj_t"></span><span id="_CPPv212AO_writePort8mp_obj_t"></span><span id="AO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga1f6603ed4d50a836a6a390da585ebd45"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412AO_writePort8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write to the whole AO port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
+<p>The length should be 8.</p>
+</p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -147,14 +186,31 @@
 <h2>DIO<a class="headerlink" href="#dio" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv412DO_writePort8mp_obj_t">
-<span id="_CPPv312DO_writePort8mp_obj_t"></span><span id="_CPPv212DO_writePort8mp_obj_t"></span><span id="DO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga227edfd42b12febc9923791f147e3209"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412DO_writePort8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write DO current voltage with the port. </p>
+<span id="_CPPv312DO_writePort8mp_obj_t"></span><span id="_CPPv212DO_writePort8mp_obj_t"></span><span id="DO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga0ccb984ad89997d3e144ef00588b6ab4"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412DO_writePort8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write to the whole DO port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – The list of voltage state. </p>
+<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415DO_writeChannel8mp_obj_t8mp_obj_t">
+<span id="_CPPv315DO_writeChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv215DO_writeChannel8mp_obj_t8mp_obj_t"></span><span id="DO_writeChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga55f784bebc316ee64d1d63676f2d55c4"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writeChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415DO_writeChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write to the a single DO channel. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ch</strong> – Channel number (0 to 7). </p></li>
+<li><p><strong>value</strong> – Pin state (0 or 1). </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -162,10 +218,24 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411DI_readPortv">
 <span id="_CPPv311DI_readPortv"></span><span id="_CPPv211DI_readPortv"></span><span id="DI_readPort"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411DI_readPortv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read DI current voltage from the port. </p>
+<dd><p>Read from the whole DI port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – The list of voltage state with port. </p>
+<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414DI_readChannel8mp_obj_t">
+<span id="_CPPv314DI_readChannel8mp_obj_t"></span><span id="_CPPv214DI_readChannel8mp_obj_t"></span><span id="DI_readChannel__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga8d2bade2277918c78e3eceb94bcd84d4"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414DI_readChannel8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read from a single DI channel. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ch</strong> – Channel number (0 to 7). </p>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>value</strong> – Pin state (0 or 1). </p>
 </dd>
 </dl>
 </dd></dl>
@@ -212,6 +282,28 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419Sys_startScanEnginev">
+<span id="_CPPv319Sys_startScanEnginev"></span><span id="_CPPv219Sys_startScanEnginev"></span><span id="Sys_startScanEngine"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gad15c87a501b575b42755061ef6eb6c72"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_startScanEngine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_startScanEnginev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Start scan engine. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>int</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418Sys_stopScanEnginev">
+<span id="_CPPv318Sys_stopScanEnginev"></span><span id="_CPPv218Sys_stopScanEnginev"></span><span id="Sys_stopScanEngine"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gaffbafae398c5f4774cc6d3c1fc89a545"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_stopScanEngine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418Sys_stopScanEnginev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stop scan engine. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>int</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -219,14 +311,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="examples/PYCO_WIFI/Modbus_master/write_register.html" class="btn btn-neutral float-left" title="Write register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples/PYCO_WIFI/Modbus%20master/write_register.html" class="btn btn-neutral float-left" title="Write register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="api_pyco_wifi.html" class="btn btn-neutral float-right" title="PYCO-WIFI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

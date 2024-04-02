@@ -19,11 +19,13 @@ Quick start
 ===========
 **Easy, fast, and just works!**
 
->>> import pywpc
->>> pywpc.Sys_getDriverName()
-'WPC_Stand-alone_Python'
->>> pywpc.AI_readOnDemand()
-[1.638031, 1.642151, 1.645813, 1.642303, 1.6362, 1.638489, 1.643829, 1.642761]
+.. code-block:: console
+
+    >>> import pywpc
+    >>> pywpc.Sys_getDriverName()
+    'WPC_Stand-alone_Python'
+    >>> pywpc.AI_readOnDemand()
+    [1.638031, 1.642151, 1.645813, 1.642303, 1.6362, 1.638489, 1.643829, 1.642761]
 
 Products
 ========
