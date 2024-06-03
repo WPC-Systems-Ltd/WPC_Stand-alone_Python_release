@@ -12,6 +12,7 @@
 
    examples_PYCO_ETH
    examples_PYCO_WIFI
+   examples_PYCO_WIFI_MINI
 
 .. toctree::
    :hidden:
@@ -20,6 +21,7 @@
 
    api_pyco_eth
    api_pyco_wifi
+   api_pyco_wifi_mini
 
 
 .. toctree::
