@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.6.3 documentation</title>
+  <title>PYCO-WIFI &mdash; WPC Stand-alone Python 0.7.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting_started.html" />
+    <link rel="next" title="PYCO-WIFI-MINI" href="api_pyco_wifi_mini.html" />
     <link rel="prev" title="PYCO-ETH" href="api_pyco_eth.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.3
+                0.7.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,13 +52,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples_PYCO_ETH.html">PYCO-ETH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples_PYCO_WIFI_MINI.html">PYCO-WIFI-MINI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API REFERENCE</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="api_pyco_eth.html">PYCO-ETH</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PYCO-WIFI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#aio">AIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ahrs">AHRS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ai">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ao">AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dio">DIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#battery">BATTERY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#led">LED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oled">OLED</a></li>
@@ -69,6 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#temperature">TEMPERATURE</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi_mini.html">PYCO-WIFI-MINI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
@@ -102,11 +105,11 @@
              
   <section id="pyco-wifi">
 <h1>PYCO-WIFI<a class="headerlink" href="#pyco-wifi" title="Permalink to this heading"></a></h1>
-<section id="aio">
-<h2>AIO<a class="headerlink" href="#aio" title="Permalink to this heading"></a></h2>
+<section id="ai">
+<h2>AI<a class="headerlink" href="#ai" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415AI_readOnDemandv">
-<span id="_CPPv315AI_readOnDemandv"></span><span id="_CPPv215AI_readOnDemandv"></span><span id="AI_readOnDemand"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv315AI_readOnDemandv"></span><span id="_CPPv215AI_readOnDemandv"></span><span id="AI_readOnDemand"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_1ga87c47a7ac356fae61bf509885c6c7144"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read AI on demand. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
@@ -120,7 +123,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv414AI_readNsample8mp_obj_t8mp_obj_t">
-<span id="_CPPv314AI_readNsample8mp_obj_t8mp_obj_t"></span><span id="_CPPv214AI_readNsample8mp_obj_t8mp_obj_t"></span><span id="AI_readNsample__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_o_1gadd7dd18bb48729ba1a54e236bbdaf593"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readNsample</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">points</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414AI_readNsample8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv314AI_readNsample8mp_obj_t8mp_obj_t"></span><span id="_CPPv214AI_readNsample8mp_obj_t8mp_obj_t"></span><span id="AI_readNsample__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_1gadd7dd18bb48729ba1a54e236bbdaf593"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readNsample</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">points</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414AI_readNsample8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Read AI N-samples. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -137,7 +140,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv48AI_start8mp_obj_t8mp_obj_t">
-<span id="_CPPv38AI_start8mp_obj_t8mp_obj_t"></span><span id="_CPPv28AI_start8mp_obj_t8mp_obj_t"></span><span id="AI_start__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_o_1ga57097e879cb871df2fb6edde4737d3d0"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_start</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampling_rate</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">points</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48AI_start8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv38AI_start8mp_obj_t8mp_obj_t"></span><span id="_CPPv28AI_start8mp_obj_t8mp_obj_t"></span><span id="AI_start__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_1ga57097e879cb871df2fb6edde4737d3d0"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_start</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampling_rate</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">points</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48AI_start8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Start AI streaming. Before executing <code class="docutils literal notranslate"><span class="pre">AI_readNsample</span></code>, it should call <code class="docutils literal notranslate"><span class="pre">AI_start</span></code>. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -152,60 +155,94 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47AI_stopv">
+<span id="_CPPv37AI_stopv"></span><span id="_CPPv27AI_stopv"></span><span id="AI_stop"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_i_1gad3cff436e272f13639477462f19aee0c"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47AI_stopv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stop AI streaming. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return values<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>int</strong> – WPC error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="ahrs">
-<h2>AHRS<a class="headerlink" href="#ahrs" title="Permalink to this heading"></a></h2>
+<section id="ao">
+<h2>AO<a class="headerlink" href="#ao" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv410AHRS_startv">
-<span id="_CPPv310AHRS_startv"></span><span id="_CPPv210AHRS_startv"></span><span id="AHRS_start"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga3b4d27265ad42ba01115b836bae054ff"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410AHRS_startv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Start AHRS. </p>
+<dt class="sig sig-object cpp" id="_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t">
+<span id="_CPPv318AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv218AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="AO_writeOneChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_o_1gaceb7181a1284fa5d9411d180ec869594"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write voltage to the specific channel. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>int</strong> – WPC error code. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – Channel number. </p></li>
+<li><p><strong>value</strong> – Voltage in volts. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>int</strong> – WPC error code. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv49AHRS_stopv">
-<span id="_CPPv39AHRS_stopv"></span><span id="_CPPv29AHRS_stopv"></span><span id="AHRS_stop"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gafd669a7861925429f6f8655cf488424d"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49AHRS_stopv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Stop AHRS. </p>
+<dt class="sig sig-object cpp" id="_CPPv419AO_writeAllChannels8mp_obj_t">
+<span id="_CPPv319AO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219AO_writeAllChannels8mp_obj_t"></span><span id="AO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Write to the whole AO channels. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
+<p>The length should be 8.</p>
+</p></li>
+<li><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
+<p>The length should be 8.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>status</strong> – WPC error code.</p></li>
+<li><p><strong>status</strong> – WPC error code. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="dio">
+<h2>DIO<a class="headerlink" href="#dio" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411DI_readPortv">
+<span id="_CPPv311DI_readPortv"></span><span id="_CPPv211DI_readPortv"></span><span id="DI_readPort"></span><span class="target" id="group___p_y_c_o___w_i_f_i___d_i_o_1ga5e82a5bfed9d548e0aa08a682929b606"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Read from the whole DI port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>int</strong> – WPC error code. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels.</p></li>
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv419AHRS_getOrientationv">
-<span id="_CPPv319AHRS_getOrientationv"></span><span id="_CPPv219AHRS_getOrientationv"></span><span id="AHRS_getOrientation"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga5a769464dfebb7b8a4ec9ccf0fc55325"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrientation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AHRS_getOrientationv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get AHRS’s 3 axis orientation. </p>
+<dt class="sig sig-object cpp" id="_CPPv412DO_writePort8mp_obj_t">
+<span id="_CPPv312DO_writePort8mp_obj_t"></span><span id="_CPPv212DO_writePort8mp_obj_t"></span><span id="DO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___d_i_o_1ga0ccb984ad89997d3e144ef00588b6ab4"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Write to the whole DO port. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – The list of 3 axis orientation. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+</ul>
 </dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv420AHRS_getAccelerationv">
-<span id="_CPPv320AHRS_getAccelerationv"></span><span id="_CPPv220AHRS_getAccelerationv"></span><span id="AHRS_getAcceleration"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gacc59248780a3cb587bfe16613b3da5cc"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getAcceleration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420AHRS_getAccelerationv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get AHRS’s 3 axis acceleration. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – The list of 3 axis acceleration. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv423AHRS_getAngularVelocityv">
-<span id="_CPPv323AHRS_getAngularVelocityv"></span><span id="_CPPv223AHRS_getAngularVelocityv"></span><span id="AHRS_getAngularVelocity"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga597e9fa18d8bf23c2113f8862e33d63e"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getAngularVelocity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423AHRS_getAngularVelocityv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get AHRS’s 3 axis angular velocity. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>List</strong> – The list of 3 axis angular velocity. </p>
+<dt class="field-even">Return values<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>status</strong> – WPC error code.</p></li>
+<li><p><strong>status</strong> – WPC error code. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -801,7 +838,7 @@ Write message in line on the screen.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="api_pyco_eth.html" class="btn btn-neutral float-left" title="PYCO-ETH" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api_pyco_wifi_mini.html" class="btn btn-neutral float-right" title="PYCO-WIFI-MINI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,6 @@
+AIO one channel loopback
+========================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/AIO/AIO_one_channel_loopback.py
+   :language: python
+   :linenos:

@@ -1,16 +1,22 @@
 PYCO-WIFI
 =========
 
-AIO
+AI
 ---
 
-.. doxygengroup:: PYCO_WIFI_AIO
+.. doxygengroup:: PYCO_WIFI_AI
    :content-only:
 
-AHRS
+AO
+---
+
+.. doxygengroup:: PYCO_WIFI_AO
+   :content-only:
+
+DIO
 ----
 
-.. doxygengroup:: PYCO_WIFI_AHRS
+.. doxygengroup:: PYCO_WIFI_DIO
    :content-only:
 
 BATTERY

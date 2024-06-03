@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.6.3 documentation</title>
+  <title>PYCO-ETH &mdash; WPC Stand-alone Python 0.7.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PYCO-WIFI" href="api_pyco_wifi.html" />
-    <link rel="prev" title="Write register" href="examples/PYCO_WIFI/Modbus%20master/write_register.html" /> 
+    <link rel="prev" title="Write register" href="examples/PYCO_WIFI_MINI/Modbus%20master/write_register.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.6.3
+                0.7.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,6 +52,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples_PYCO_ETH.html">PYCO-ETH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples_PYCO_WIFI.html">PYCO-WIFI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples_PYCO_WIFI_MINI.html">PYCO-WIFI-MINI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API REFERENCE</span></p>
 <ul class="current">
@@ -62,6 +63,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi.html">PYCO-WIFI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_pyco_wifi_mini.html">PYCO-WIFI-MINI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
@@ -166,17 +168,25 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv412AO_writePort8mp_obj_t">
-<span id="_CPPv312AO_writePort8mp_obj_t"></span><span id="_CPPv212AO_writePort8mp_obj_t"></span><span id="AO_writePort__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga1f6603ed4d50a836a6a390da585ebd45"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writePort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412AO_writePort8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write to the whole AO port. </p>
+<dt class="sig sig-object cpp" id="_CPPv419AO_writeAllChannels8mp_obj_t">
+<span id="_CPPv319AO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219AO_writeAllChannels8mp_obj_t"></span><span id="AO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AO_writeAllChannels8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write to the whole AO channels. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
 <p>The length should be 8.</p>
-</p>
+</p></li>
+<li><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
+<p>The length should be 8.</p>
+</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>status</strong> – WPC error code.</p></li>
+<li><p><strong>status</strong> – WPC error code. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -190,10 +200,16 @@
 <dd><p>Write to the whole DO port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – WPC error code. </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>status</strong> – WPC error code.</p></li>
+<li><p><strong>status</strong> – WPC error code. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -221,7 +237,10 @@
 <dd><p>Read from the whole DI port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels.</p></li>
+<li><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -311,7 +330,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="examples/PYCO_WIFI/Modbus%20master/write_register.html" class="btn btn-neutral float-left" title="Write register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples/PYCO_WIFI_MINI/Modbus%20master/write_register.html" class="btn btn-neutral float-left" title="Write register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="api_pyco_wifi.html" class="btn btn-neutral float-right" title="PYCO-WIFI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
