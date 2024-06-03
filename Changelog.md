@@ -1,6 +1,15 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.7.0 Date: 2024/06/03, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: PYCO WIFI MINI
+- API: AI_stop, AHRS_stop
+- Add DIO/AO module in PYCO WIFI product
+
+### Removed
+- Remove AHRS module in PYCO WIFI product
 
 v0.6.3 Date: 2024/04/02, Developer: Chunglee_people
 ---------------------------------------------------

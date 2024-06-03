@@ -12,13 +12,35 @@ AI
 
    examples/PYCO_WIFI/AI/AI_N_samples_with_logger.rst
 
-AHRS
-----
+AO
+--
 
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/AHRS/AHRS_read.rst
+   examples/PYCO_WIFI/AO/AO_write_all_channels.rst
+
+   examples/PYCO_WIFI/AO/AO_write_one_channel.rst
+
+AIO
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/AIO/AIO_one_channel_loopback.rst
+
+   examples/PYCO_WIFI/AIO/AIO_all_channels_loopback.rst
+
+DIO
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/DIO/DIO_loopback_port.rst
+
+   examples/PYCO_WIFI/DIO/DO_write_port.rst
 
 FFT
 ---
