@@ -16,3 +16,7 @@ print(version)
 ## Get driver name
 name = pywpc.Sys_getDriverName()
 print(name)
+
+## Get serial number
+serial_num = pywpc.Sys_getSerialNumber()
+print(serial_num)

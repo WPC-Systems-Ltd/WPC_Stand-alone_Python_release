@@ -9,12 +9,14 @@ Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
 ## WPC
 import pywpc
 
-## Get driver name
-name = pywpc.Sys_getDriverName()
-print(name)
-
 ## Get driver verion
 version = pywpc.Sys_getDriverVersion()
 print(version)
 
+## Get driver name
+name = pywpc.Sys_getDriverName()
+print(name)
 
+## Get serial number
+serial_num = pywpc.Sys_getSerialNumber()
+print(serial_num)

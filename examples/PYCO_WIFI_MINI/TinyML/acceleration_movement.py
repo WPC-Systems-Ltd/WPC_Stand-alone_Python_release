@@ -6,7 +6,11 @@ This example demonstrates how to detect the acceleration of movement from time-s
 In data read function, you should sequentially put acceleration X, acceleration Y, acceleration Z, gyro Y and gyro Z data in it.
 Then, It will predict three situation, which is X-move, Y-move and circle-move.
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 ## Standard

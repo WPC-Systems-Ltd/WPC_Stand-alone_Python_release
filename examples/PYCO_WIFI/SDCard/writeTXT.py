@@ -3,7 +3,11 @@ SDCard - Write to SD Card.py.
 
 This example demonstrates how to write messages into file.
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 import pywpc_sd
