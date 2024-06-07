@@ -62,6 +62,8 @@ System
 
    examples/PYCO_ETH/System/get_network_info.rst
 
+   examples/PYCO_ETH/System/scan_engine.rst
+
 Tutorial
 --------
 

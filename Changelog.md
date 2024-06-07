@@ -5,7 +5,7 @@ v0.7.6 Date: 2024/06/07, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
 - Add WPC error code link into API return function
-- example code: `get started.py` and `get network info.py`
+- example code: `get started.py` and `get network info.py` and `scan engine.py`
 - API: Sys_getSerialNumber, Sys_getIP, Sys_getSubmask, Sys_getGateway
 
 ### Fixed

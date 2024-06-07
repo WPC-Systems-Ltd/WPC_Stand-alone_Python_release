@@ -62,6 +62,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Get system info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_started.html">Get started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_network_info.html">Get network info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scan_engine.html">Scan engine</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI.html#sd-card">SD Card</a></li>
@@ -118,23 +119,27 @@
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="sd">This example demonstrates how to get system information.</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 6</span><span class="sd">For other examples please check:</span>
+<span class="linenos"> 7</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Get driver verion</span>
-<span class="linenos">13</span><span class="n">version</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverVersion</span><span class="p">()</span>
-<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
+<span class="linenos">10</span><span class="sd">All rights reserved.</span>
+<span class="linenos">11</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1">## WPC</span>
+<span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## Get driver name</span>
-<span class="linenos">17</span><span class="n">name</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverName</span><span class="p">()</span>
-<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos">16</span><span class="c1">## Get driver verion</span>
+<span class="linenos">17</span><span class="n">version</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverVersion</span><span class="p">()</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Get serial number</span>
-<span class="linenos">21</span><span class="n">serial_num</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getSerialNumber</span><span class="p">()</span>
-<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="n">serial_num</span><span class="p">)</span>
+<span class="linenos">20</span><span class="c1">## Get driver name</span>
+<span class="linenos">21</span><span class="n">name</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverName</span><span class="p">()</span>
+<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="c1">## Get serial number</span>
+<span class="linenos">25</span><span class="n">serial_num</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getSerialNumber</span><span class="p">()</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="n">serial_num</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

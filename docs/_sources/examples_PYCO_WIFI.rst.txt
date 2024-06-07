@@ -82,6 +82,8 @@ System
 
    examples/PYCO_WIFI/System/get_network_info.rst
 
+   examples/PYCO_WIFI/System/scan_engine.rst
+
 SD Card
 ------
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get system info &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
+  <title>Scan engine &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Get started" href="get_started.html" />
-    <link rel="prev" title="DO write port" href="../DIO/DO_write_port.html" /> 
+    <link rel="next" title="AIO thread" href="../Tutorial/Thread_AIO.html" />
+    <link rel="prev" title="Get network info" href="get_network_info.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -57,10 +57,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#oled">OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#dio">DIO</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_ETH.html#system">System</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Get system info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_system_info.html">Get system info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_started.html">Get started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_network_info.html">Get network info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scan_engine.html">Scan engine</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Scan engine</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#tutorial">Tutorial</a></li>
@@ -98,7 +98,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_ETH.html">PYCO-ETH</a></li>
-      <li class="breadcrumb-item active">Get system info</li>
+      <li class="breadcrumb-item active">Scan engine</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -107,34 +107,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="get-system-info">
-<h1>Get system info<a class="headerlink" href="#get-system-info" title="Permalink to this heading"></a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">System - get_system_info.py.</span>
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to get system information.</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">For other examples please check:</span>
-<span class="linenos"> 7</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
-<span class="linenos">10</span><span class="sd">All rights reserved.</span>
-<span class="linenos">11</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span><span class="c1">## WPC</span>
-<span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## Get driver verion</span>
-<span class="linenos">17</span><span class="n">version</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverVersion</span><span class="p">()</span>
-<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
-<span class="linenos">19</span>
-<span class="linenos">20</span><span class="c1">## Get driver name</span>
-<span class="linenos">21</span><span class="n">name</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getDriverName</span><span class="p">()</span>
-<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span><span class="c1">## Get serial number</span>
-<span class="linenos">25</span><span class="n">serial_num</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_getSerialNumber</span><span class="p">()</span>
-<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="n">serial_num</span><span class="p">)</span>
+  <section id="scan-engine">
+<h1>Scan engine<a class="headerlink" href="#scan-engine" title="Permalink to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>
+<span class="linenos"> 2</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 3</span><span class="sd">System - scan_engine.py.</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="sd">For other examples please check:</span>
+<span class="linenos"> 6</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
+<span class="linenos"> 9</span><span class="sd">All rights reserved.</span>
+<span class="linenos">10</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">## WPC</span>
+<span class="linenos">13</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1">## Start scanning engine</span>
+<span class="linenos">16</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_startScanEngine</span><span class="p">()</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="linenos">19</span><span class="n">do</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="linenos">20</span><span class="n">ao</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos">23</span>    <span class="n">di</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">DI_readPort</span><span class="p">()</span>
+<span class="linenos">24</span>    <span class="n">ai</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readPort</span><span class="p">()</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="n">do</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="n">di</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">27</span>    <span class="n">do</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ai</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">28</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">29</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">di</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">DO_writePort</span><span class="p">(</span><span class="n">do</span><span class="p">)</span>
+<span class="linenos">32</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">AO_writePort</span><span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="c1">## Stop scanning engine</span>
+<span class="linenos">37</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_stopScanEngine</span><span class="p">()</span>
+<span class="linenos">38</span>
 </pre></div>
 </div>
 </section>
@@ -143,8 +155,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../DIO/DO_write_port.html" class="btn btn-neutral float-left" title="DO write port" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get_started.html" class="btn btn-neutral float-right" title="Get started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="get_network_info.html" class="btn btn-neutral float-left" title="Get network info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Tutorial/Thread_AIO.html" class="btn btn-neutral float-right" title="AIO thread" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
