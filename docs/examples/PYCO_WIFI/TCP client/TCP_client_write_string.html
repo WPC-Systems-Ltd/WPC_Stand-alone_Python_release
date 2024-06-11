@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCP client write string &mdash; WPC Stand-alone Python 0.7.0 documentation</title>
+  <title>TCP client write string &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.7.0
+                 0.7.6 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -68,7 +68,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
@@ -83,8 +82,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../advantage.html">Advantage of PYCO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../error_code.html">Error code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../update_ota.html">Update with OTA</a></li>
 </ul>
 
@@ -119,29 +119,32 @@
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="sd">This example demonstrates how to write string to server</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 6</span><span class="sd">For other examples please check:</span>
+<span class="linenos"> 7</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="c1">## WPC</span>
-<span class="linenos">10</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="c1">## Paremeters setting</span>
-<span class="linenos">13</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;192.168.5.108&quot;</span>   <span class="c1">## The server&#39;s hostname or IP address</span>
-<span class="linenos">14</span><span class="n">port</span> <span class="o">=</span> <span class="mi">3333</span>                 <span class="c1">## The port used by the server</span>
+<span class="linenos"> 9</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
+<span class="linenos">10</span><span class="sd">All rights reserved.</span>
+<span class="linenos">11</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1">## WPC</span>
+<span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1">## First you should open tcp server</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="c1">## Open TCP client</span>
-<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="c1">## Write string to server</span>
-<span class="linenos">22</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
-<span class="linenos">23</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;WPC Systems Ltd.&quot;</span><span class="p">)</span>
-<span class="linenos">24</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;Good day&quot;</span><span class="p">)</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span><span class="c1">## Close TCP client</span>
-<span class="linenos">27</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_close</span><span class="p">()</span>
-<span class="linenos">28</span>
+<span class="linenos">16</span><span class="c1">## Paremeters setting</span>
+<span class="linenos">17</span><span class="n">host_ip</span> <span class="o">=</span> <span class="s2">&quot;192.168.5.108&quot;</span>   <span class="c1">## The server&#39;s hostname or IP address</span>
+<span class="linenos">18</span><span class="n">port</span> <span class="o">=</span> <span class="mi">3333</span>                 <span class="c1">## The port used by the server</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1">## First you should open tcp server</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1">## Open TCP client</span>
+<span class="linenos">23</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_open</span><span class="p">(</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1">## Write string to server</span>
+<span class="linenos">26</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="linenos">27</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;WPC Systems Ltd.&quot;</span><span class="p">)</span>
+<span class="linenos">28</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_writeString</span><span class="p">(</span><span class="s2">&quot;Good day&quot;</span><span class="p">)</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="c1">## Close TCP client</span>
+<span class="linenos">31</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPClient_close</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

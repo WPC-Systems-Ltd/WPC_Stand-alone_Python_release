@@ -3,7 +3,11 @@ TCP_client - TCP_client_write_string.py.
 
 This example demonstrates how to write string to server
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 ## WPC
@@ -25,4 +29,3 @@ pywpc.TCPClient_writeString("Good day")
 
 ## Close TCP client
 pywpc.TCPClient_close()
-

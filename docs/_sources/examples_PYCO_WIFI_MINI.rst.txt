@@ -56,8 +56,15 @@ System
 
    examples/PYCO_WIFI_MINI/System/get_system_info.rst
 
+   examples/PYCO_WIFI_MINI/System/get_started.rst
+
+   examples/PYCO_WIFI_MINI/System/get_network_info.rst
+
+   examples/PYCO_WIFI_MINI/System/scan_engine.rst
+
+
 SD Card
-------
+-------
 
 .. toctree::
    :maxdepth: 4
@@ -78,18 +85,6 @@ TCP client
 
    examples/PYCO_WIFI_MINI/TCP client/TCP_client_write_U8_list.rst
 
-Tutorial
--------------
-
-.. toctree::
-   :maxdepth: 4
-
-   examples/PYCO_WIFI_MINI/Tutorial/Thread_LED.rst
-
-   examples/PYCO_WIFI_MINI/Tutorial/get_memory_status.rst
-
-   examples/PYCO_WIFI_MINI/Tutorial/mip_install.rst
-
 TinyML
 ------
 
@@ -97,6 +92,18 @@ TinyML
    :maxdepth: 4
 
    examples/PYCO_WIFI_MINI/TinyML/acceleration_movement.rst
+
+Tutorial
+-------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI/Tutorial/get_memory_status.rst
+
+   examples/PYCO_WIFI_MINI/Tutorial/Thread_AIO.rst
+
+   examples/PYCO_WIFI_MINI/Tutorial/mip_install.rst
 
 Modbus slave
 ------------

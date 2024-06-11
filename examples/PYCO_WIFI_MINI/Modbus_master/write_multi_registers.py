@@ -3,7 +3,11 @@ Modbus_master - write_multi_registers.py.
 
 """ Write the contents of two analog output holding registers to the slave device."""
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 ## WPC

@@ -1,0 +1,6 @@
+AI N samples once
+=================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_ETH/AI/AI_N_samples_once.py
+   :language: python
+   :linenos:
