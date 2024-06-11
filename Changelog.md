@@ -1,7 +1,7 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
-v0.7.6 Date: 2024/06/07, Developer: Chunglee_people
+v0.7.6 Date: 2024/06/11, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
 - Add WPC error code link into API return function
