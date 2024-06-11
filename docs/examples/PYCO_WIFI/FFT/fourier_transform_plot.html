@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FFT (plot) &mdash; WPC Stand-alone Python 0.7.0 documentation</title>
+  <title>FFT (plot) &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.7.0
+                 0.7.6 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -68,7 +68,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
@@ -83,8 +82,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../advantage.html">Advantage of PYCO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../error_code.html">Error code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../update_ota.html">Update with OTA</a></li>
 </ul>
 
@@ -130,40 +130,44 @@
 <span class="linenos">14</span>
 <span class="linenos">15</span><span class="sd">Step5: Plot FFT signal in PC</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos">18</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">17</span><span class="sd">For other examples please check:</span>
+<span class="linenos">18</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="kn">from</span> <span class="nn">ulab</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="linenos">21</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="c1">## Parameters</span>
-<span class="linenos">24</span><span class="n">Fs</span> <span class="o">=</span> <span class="mi">256</span>                <span class="c1">## sampling rate</span>
-<span class="linenos">25</span><span class="n">Ts</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Fs</span>             <span class="c1">## sampling interval</span>
-<span class="linenos">26</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Ts</span><span class="p">)</span> <span class="c1">## time vector</span>
-<span class="linenos">27</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">50</span>          <span class="c1">## frequency of the signal</span>
-<span class="linenos">28</span>
-<span class="linenos">29</span><span class="c1">## Sine signal</span>
-<span class="linenos">30</span><span class="n">signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">frequency</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
-<span class="linenos">31</span>
-<span class="linenos">32</span><span class="c1">## Apply the FFT on the signal</span>
-<span class="linenos">33</span><span class="n">fourier_real</span><span class="p">,</span> <span class="n">fourier_imaginary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
-<span class="linenos">34</span><span class="n">power_spectrum</span> <span class="o">=</span> <span class="n">fourier_real</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fourier_imaginary</span><span class="o">**</span><span class="mi">2</span>
+<span class="linenos">20</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
+<span class="linenos">21</span><span class="sd">All rights reserved.</span>
+<span class="linenos">22</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="kn">from</span> <span class="nn">ulab</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="linenos">25</span><span class="kn">import</span> <span class="nn">pywpc</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1">## Parameters</span>
+<span class="linenos">28</span><span class="n">Fs</span> <span class="o">=</span> <span class="mi">256</span>                <span class="c1">## sampling rate</span>
+<span class="linenos">29</span><span class="n">Ts</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Fs</span>             <span class="c1">## sampling interval</span>
+<span class="linenos">30</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Ts</span><span class="p">)</span> <span class="c1">## time vector</span>
+<span class="linenos">31</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">50</span>          <span class="c1">## frequency of the signal</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="c1">## Sine signal</span>
+<span class="linenos">34</span><span class="n">signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">frequency</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
 <span class="linenos">35</span>
-<span class="linenos">36</span><span class="c1">## Create list</span>
-<span class="linenos">37</span><span class="n">u8_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="linenos">38</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">power_spectrum</span><span class="p">:</span>
-<span class="linenos">39</span>    <span class="n">u8_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_convertF32To4U8</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-<span class="linenos">40</span>
-<span class="linenos">41</span><span class="c1">## Connect to Wifi</span>
-<span class="linenos">42</span>
-<span class="linenos">43</span><span class="c1">## Open TCP server</span>
-<span class="linenos">44</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_open</span><span class="p">(</span><span class="mi">5566</span><span class="p">)</span>
-<span class="linenos">45</span>
-<span class="linenos">46</span><span class="c1">## Send u8 list data</span>
-<span class="linenos">47</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_writeU8List</span><span class="p">(</span><span class="n">u8_list</span><span class="p">)</span>
-<span class="linenos">48</span>
-<span class="linenos">49</span><span class="c1">## Close TCP server</span>
-<span class="linenos">50</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_close</span><span class="p">()</span>
+<span class="linenos">36</span><span class="c1">## Apply the FFT on the signal</span>
+<span class="linenos">37</span><span class="n">fourier_real</span><span class="p">,</span> <span class="n">fourier_imaginary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+<span class="linenos">38</span><span class="n">power_spectrum</span> <span class="o">=</span> <span class="n">fourier_real</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fourier_imaginary</span><span class="o">**</span><span class="mi">2</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="c1">## Create list</span>
+<span class="linenos">41</span><span class="n">u8_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">42</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">power_spectrum</span><span class="p">:</span>
+<span class="linenos">43</span>    <span class="n">u8_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_convertF32To4U8</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="c1">## Connect to Wifi</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span><span class="c1">## Open TCP server</span>
+<span class="linenos">48</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_open</span><span class="p">(</span><span class="mi">5566</span><span class="p">)</span>
+<span class="linenos">49</span>
+<span class="linenos">50</span><span class="c1">## Send u8 list data</span>
+<span class="linenos">51</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_writeU8List</span><span class="p">(</span><span class="n">u8_list</span><span class="p">)</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span><span class="c1">## Close TCP server</span>
+<span class="linenos">54</span><span class="n">pywpc</span><span class="o">.</span><span class="n">TCPServer_close</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

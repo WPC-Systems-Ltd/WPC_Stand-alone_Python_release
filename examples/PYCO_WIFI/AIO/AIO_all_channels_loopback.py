@@ -9,7 +9,11 @@ The AO range is -10 to 10 V.
 First, it reads AI data and displays its corresponding values.
 Following that, it writes digital signals to the AO pins and reads AI on demand data once again.
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 ## WPC

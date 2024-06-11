@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New package install &mdash; WPC Stand-alone Python 0.7.0 documentation</title>
+  <title>New package install &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -21,7 +21,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Movement classification" href="../TinyML/acceleration_movement.html" />
+    <link rel="next" title="Write data with register" href="../Modbus%20slave/write_data_with_register.html" />
     <link rel="prev" title="Get memory status" href="get_memory_status.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.7.0
+                 0.7.6 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -63,12 +63,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#sd-card">SD Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tcp-client">TCP client</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tutorial">Tutorial</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Thread_LED.html">LED thread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thread_AIO.html">AIO thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">New package install</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-slave">Modbus slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
@@ -83,8 +82,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../advantage.html">Advantage of PYCO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../error_code.html">Error code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../update_ota.html">Update with OTA</a></li>
 </ul>
 
@@ -119,13 +119,17 @@
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="sd">This example project demonstrates how to install new package.</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.</span>
-<span class="linenos"> 7</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos"> 6</span><span class="sd">For other examples please check:</span>
+<span class="linenos"> 7</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">mip</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="c1">## You should connect wifi first.</span>
-<span class="linenos">12</span><span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;what_you_want_download_package&#39;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="sd">Copyright (c) 2024 WPC Systems Ltd.</span>
+<span class="linenos">10</span><span class="sd">All rights reserved.</span>
+<span class="linenos">11</span><span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="kn">import</span> <span class="nn">mip</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1">## You should connect wifi first.</span>
+<span class="linenos">16</span><span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;what_you_want_download_package&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -135,7 +139,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="get_memory_status.html" class="btn btn-neutral float-left" title="Get memory status" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../TinyML/acceleration_movement.html" class="btn btn-neutral float-right" title="Movement classification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Modbus%20slave/write_data_with_register.html" class="btn btn-neutral float-right" title="Write data with register" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

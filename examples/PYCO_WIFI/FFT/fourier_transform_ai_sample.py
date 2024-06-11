@@ -4,7 +4,11 @@ FFT - fourier_transform_simulate.py.
 This example demonstrates how to use fourier transform with AI N-sample data
 
 
-Copyright (c) 2023-2024 WPC Systems Ltd. All rights reserved.
+For other examples please check:
+    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
+
+Copyright (c) 2024 WPC Systems Ltd.
+All rights reserved.
 '''
 
 from ulab import numpy as np

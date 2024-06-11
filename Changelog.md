@@ -1,6 +1,21 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.7.6 Date: 2024/06/11, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add WPC error code link into API return function
+- example code: `get started.py` and `get network info.py` and `scan engine.py`
+- API: Sys_getSerialNumber, Sys_getIP, Sys_getSubmask, Sys_getGateway
+- Error code
+
+### Fixed
+- API: Sys_reboot API
+- Support modules in product
+
+### Removed
+- example code: Thread_LED
+
 v0.7.0 Date: 2024/06/03, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

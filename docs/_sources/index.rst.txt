@@ -29,6 +29,7 @@
    :maxdepth: 2
    :caption: REFERENCE
 
-   getting_started
    advantage
+   error_code
+   getting_started
    update_ota
