@@ -12,6 +12,9 @@ All rights reserved.
 ## WPC
 import pywpc
 
+## Python
+import time
+
 ## Start scanning engine
 pywpc.Sys_startScanEngine()
 

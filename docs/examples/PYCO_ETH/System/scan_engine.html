@@ -123,30 +123,33 @@
 <span class="linenos">12</span><span class="c1">## WPC</span>
 <span class="linenos">13</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span><span class="c1">## Start scanning engine</span>
-<span class="linenos">16</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_startScanEngine</span><span class="p">()</span>
+<span class="linenos">15</span><span class="c1">## Python</span>
+<span class="linenos">16</span><span class="kn">import</span> <span class="nn">time</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="linenos">19</span><span class="n">do</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
-<span class="linenos">20</span><span class="n">ao</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="linenos">23</span>    <span class="n">di</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">DI_readPort</span><span class="p">()</span>
-<span class="linenos">24</span>    <span class="n">ai</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readPort</span><span class="p">()</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span>    <span class="n">do</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="n">di</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="linenos">27</span>    <span class="n">do</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ai</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
-<span class="linenos">28</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="linenos">29</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">di</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span>
-<span class="linenos">30</span>
-<span class="linenos">31</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">DO_writePort</span><span class="p">(</span><span class="n">do</span><span class="p">)</span>
-<span class="linenos">32</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">AO_writePort</span><span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+<span class="linenos">18</span><span class="c1">## Start scanning engine</span>
+<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_startScanEngine</span><span class="p">()</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="linenos">22</span><span class="n">do</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="linenos">23</span><span class="n">ao</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="n">di</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">DI_readPort</span><span class="p">()</span>
+<span class="linenos">27</span>    <span class="n">ai</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">AI_readPort</span><span class="p">()</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>    <span class="n">do</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="n">di</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">30</span>    <span class="n">do</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ai</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">31</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">32</span>    <span class="n">ao</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">di</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span>
 <span class="linenos">33</span>
-<span class="linenos">34</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
-<span class="linenos">35</span>
-<span class="linenos">36</span><span class="c1">## Stop scanning engine</span>
-<span class="linenos">37</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_stopScanEngine</span><span class="p">()</span>
+<span class="linenos">34</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">DO_writePort</span><span class="p">(</span><span class="n">do</span><span class="p">)</span>
+<span class="linenos">35</span>    <span class="n">pywpc</span><span class="o">.</span><span class="n">AO_writePort</span><span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
 <span class="linenos">38</span>
+<span class="linenos">39</span><span class="c1">## Stop scanning engine</span>
+<span class="linenos">40</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_stopScanEngine</span><span class="p">()</span>
+<span class="linenos">41</span>
 </pre></div>
 </div>
 </section>
