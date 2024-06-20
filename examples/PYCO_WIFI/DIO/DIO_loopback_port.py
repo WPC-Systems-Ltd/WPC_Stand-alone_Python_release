@@ -16,12 +16,12 @@ All rights reserved.
 import pywpc
 
 ## Parameters setting
-pin_state = [1, 0, 1, 0, 1, 0, 1]
+pin_state = [1, 0, 1, 0, 1, 0, 1, 0]
 
 ## Write port to high or low
 status = pywpc.DO_writeAllChannels(pin_state)
 print("DO_writeAllChannels status: ", status)
 
 ## Read DI port state
-state_list = pywpc.DO_readAllChannels()
-print("DO_readAllChannels: ", state_list)
+state_list = pywpc.DI_readAllChannels()
+print("DI_readAllChannels: ", state_list)

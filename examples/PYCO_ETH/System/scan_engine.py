@@ -23,16 +23,16 @@ do = [0] * 8
 ao = [0] * 8
 
 for i in range(n):
-    di = pywpc.DI_readPort()
-    ai = pywpc.AI_readPort()
+    di = pywpc.DI_readAllChannels()
+    ai = pywpc.AI_readAllChannels()
 
-    do[0]= di[0]
+    do[0] = di[0]
     do[1] = int(ai[1] > 5)
     ao[0] = ai[0]
     ao[1] = 10 * di[1] - 5
 
-    pywpc.DO_writePort(do)
-    pywpc.AO_writePort(ao)
+    pywpc.DO_writeAllChannels(do)
+    pywpc.AO_writeAllChannels(ao)
 
     time.sleep(0.02)
 
