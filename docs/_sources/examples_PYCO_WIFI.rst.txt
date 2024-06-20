@@ -78,9 +78,9 @@ System
 
    examples/PYCO_WIFI/System/get_system_info.rst
 
-   examples/PYCO_WIFI/System/get_started.rst
-
    examples/PYCO_WIFI/System/get_network_info.rst
+
+   examples/PYCO_WIFI/System/get_memory_status.rst
 
    examples/PYCO_WIFI/System/scan_engine.rst
 
@@ -112,9 +112,9 @@ Tutorial
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Tutorial/Thread_AIO.rst
+   examples/PYCO_WIFI/Tutorial/get_started.rst
 
-   examples/PYCO_WIFI/Tutorial/get_memory_status.rst
+   examples/PYCO_WIFI/Tutorial/Thread_AIO.rst
 
    examples/PYCO_WIFI/Tutorial/mip_install.rst
 

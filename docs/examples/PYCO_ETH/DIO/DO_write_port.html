@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DO write port &mdash; WPC Stand-alone Python  0.7.6  documentation</title>
+  <title>DO write port &mdash; WPC Stand-alone Python  0.7.9  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.7.6 
+                 0.7.9 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -54,7 +54,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#ai">AI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#ao">AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#aio">AIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_ETH.html#oled">OLED</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_ETH.html#dio">DIO</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="DIO_loopback_port.html">DIO loopback port</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">DO write port</a></li>
@@ -123,7 +122,7 @@
 <span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">15</span>
 <span class="linenos">16</span><span class="c1">## Parameters setting</span>
-<span class="linenos">17</span><span class="n">pin_state</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="linenos">17</span><span class="n">pin_state</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="linenos">18</span>
 <span class="linenos">19</span><span class="c1">## Write port to high or low</span>
 <span class="linenos">20</span><span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">DO_writeAllChannels</span><span class="p">(</span><span class="n">pin_state</span><span class="p">)</span>

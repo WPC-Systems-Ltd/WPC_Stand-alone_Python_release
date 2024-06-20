@@ -14,7 +14,7 @@ All rights reserved.
 import pywpc
 
 ## Parameters setting
-pin_state = [1, 0, 1, 0, 1, 0, 1]
+pin_state = [1, 0, 1, 0, 1, 0, 1, 0]
 
 ## Write port to high or low
 status = pywpc.DO_writeAllChannels(pin_state)

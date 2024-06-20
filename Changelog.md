@@ -1,6 +1,21 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.7.9 Date: 2024/06/20, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- API: Sys_readFuncButton in PYCO WIFI
+- API: Sys_getFlashSize in PYCO ETH
+- error code: -7000: This product did not support this API.
+
+### Fixed
+- TinyML's examples code
+- example code: scan_engine, DIO_loopback_port
+
+### Removed
+- OLED example code in PYCO ETH
+- example code: Movement classification.py in TinyML
+
 v0.7.6 Date: 2024/06/11, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
