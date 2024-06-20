@@ -1,5 +1,6 @@
+
 '''
-Tutorial - get_memory_status.py.
+System - get_memory_status.py.
 
 This example project shows how to get RAM and flash memory.
 

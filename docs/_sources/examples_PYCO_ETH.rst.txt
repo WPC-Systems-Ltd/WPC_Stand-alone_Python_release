@@ -32,14 +32,6 @@ AIO
 
    examples/PYCO_ETH/AIO/AIO_all_channels_loopback.rst
 
-OLED
-----
-
-.. toctree::
-   :maxdepth: 4
-
-   examples/PYCO_ETH/OLED/OLED_writeLine.rst
-
 DIO
 ---
 
@@ -58,9 +50,9 @@ System
 
    examples/PYCO_ETH/System/get_system_info.rst
 
-   examples/PYCO_ETH/System/get_started.rst
-
    examples/PYCO_ETH/System/get_network_info.rst
+
+   examples/PYCO_ETH/System/get_memory_status.rst
 
    examples/PYCO_ETH/System/scan_engine.rst
 
@@ -70,9 +62,9 @@ Tutorial
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_ETH/Tutorial/Thread_AIO.rst
+   examples/PYCO_ETH/Tutorial/get_started.rst
 
-   examples/PYCO_ETH/Tutorial/get_memory_status.rst
+   examples/PYCO_ETH/Tutorial/Thread_AIO.rst
 
    examples/PYCO_ETH/Tutorial/mip_install.rst
 

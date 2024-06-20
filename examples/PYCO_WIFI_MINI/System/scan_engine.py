@@ -1,2 +1,2 @@
 
-## PYCO_WIFI_MINI did not support this example code
+## PYCO_WIFI_MINI has not supported this example code yet

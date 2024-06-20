@@ -1,5 +1,5 @@
 '''
-System - get_started.py.
+Tutorial - get_started.py.
 
 This example demonstrates how to reboot the device
 

@@ -54,9 +54,9 @@ System
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI_MINI/System/get_system_info.rst
+   examples/PYCO_WIFI_MINI/System/get_memory_status.rst
 
-   examples/PYCO_WIFI_MINI/System/get_started.rst
+   examples/PYCO_WIFI_MINI/System/get_system_info.rst
 
    examples/PYCO_WIFI_MINI/System/get_network_info.rst
 
@@ -91,7 +91,9 @@ TinyML
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI_MINI/TinyML/acceleration_movement.rst
+   examples/PYCO_WIFI_MINI/TinyML/predict_acceleration.rst
+   examples/PYCO_WIFI_MINI/TinyML/predict_orientation.rst
+
 
 Tutorial
 -------------
@@ -99,11 +101,11 @@ Tutorial
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI_MINI/Tutorial/get_memory_status.rst
-
    examples/PYCO_WIFI_MINI/Tutorial/Thread_AIO.rst
 
    examples/PYCO_WIFI_MINI/Tutorial/mip_install.rst
+
+   examples/PYCO_WIFI_MINI/Tutorial/get_started.rst
 
 Modbus slave
 ------------
