@@ -2,27 +2,27 @@ PYCO-WIFI
 =========
 
 AI
----
+--
 
 .. doxygengroup:: PYCO_WIFI_AI
    :content-only:
 
 AO
----
+--
 
 .. doxygengroup:: PYCO_WIFI_AO
-   :content-only:
-
-DIO
-----
-
-.. doxygengroup:: PYCO_WIFI_DIO
    :content-only:
 
 BATTERY
 -------
 
 .. doxygengroup:: PYCO_WIFI_BATTERY
+   :content-only:
+
+DIO
+---
+
+.. doxygengroup:: PYCO_WIFI_DIO
    :content-only:
 
 LED
@@ -37,18 +37,6 @@ OLED
 .. doxygengroup:: PYCO_WIFI_OLED
    :content-only:
 
-SYSTEM
-------
-
-.. doxygengroup:: PYCO_WIFI_SYSTEM
-   :content-only:
-
-TCP CLIENT
-----------
-
-.. doxygengroup:: PYCO_WIFI_TCP
-   :content-only:
-
 MODBUS MASTER
 -------------
 
@@ -61,8 +49,22 @@ MODBUS SLAVE
 .. doxygengroup:: PYCO_WIFI_MODBUS_SLAVE
    :content-only:
 
+
+SYSTEM
+------
+
+.. doxygengroup:: PYCO_WIFI_SYSTEM
+   :content-only:
+
+TCP CLIENT
+----------
+
+.. doxygengroup:: PYCO_WIFI_TCP
+   :content-only:
+
 TEMPERATURE
 -----------
 
 .. doxygengroup:: PYCO_WIFI_TEMPERATURE
    :content-only:
+

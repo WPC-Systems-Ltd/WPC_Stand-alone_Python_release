@@ -32,6 +32,14 @@ AIO
 
    examples/PYCO_WIFI/AIO/AIO_all_channels_loopback.rst
 
+Button
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI/Button/read_func_button.rst
+
 DIO
 ---
 

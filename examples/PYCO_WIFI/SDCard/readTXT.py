@@ -6,7 +6,7 @@ This example demonstrates how to read from txt file.
 For other examples please check:
     https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
 
-Copyright (c) 2024 WPC Systems Ltd.
+Copyright (c) 2025 WPC Systems Ltd.
 All rights reserved.
 '''
 
@@ -20,11 +20,10 @@ print(dev.getFileDirectory())
 
 ## Open the file in "read mode".
 ## Read the file and print the text on debug port.
-file = dev.openFile("sample.txt","r")
+dev.openFile("sample.txt", "r")
 
-if file != 0:
-    print("Reading from SD card")
-    print (dev.readFile())
+## Reading from SD card
+print(dev.readStringFromFile())
 
 ## Close the file
 dev.closeFile()

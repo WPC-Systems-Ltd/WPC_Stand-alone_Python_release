@@ -31,18 +31,6 @@ OLED
 .. doxygengroup:: PYCO_WIFI_OLED
    :content-only:
 
-SYSTEM
-------
-
-.. doxygengroup:: PYCO_WIFI_SYSTEM
-   :content-only:
-
-TCP CLIENT
-----------
-
-.. doxygengroup:: PYCO_WIFI_TCP
-   :content-only:
-
 MODBUS MASTER
 -------------
 
@@ -53,6 +41,18 @@ MODBUS SLAVE
 ------------
 
 .. doxygengroup:: PYCO_WIFI_MODBUS_SLAVE
+   :content-only:
+
+SYSTEM
+------
+
+.. doxygengroup:: PYCO_WIFI_SYSTEM
+   :content-only:
+
+TCP CLIENT
+----------
+
+.. doxygengroup:: PYCO_WIFI_TCP
    :content-only:
 
 TEMPERATURE

@@ -1,0 +1,6 @@
+Read function button
+====================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI/Button/read_func_button.py
+   :language: python
+   :linenos:
