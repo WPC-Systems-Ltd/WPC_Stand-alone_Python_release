@@ -11,7 +11,7 @@ The output is the Led, which will be RED for X_acc, GREEN for Y_acc and BLUE for
 For other examples please check:
     https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
 
-Copyright (c) 2024 WPC Systems Ltd.
+Copyright (c) 2025 WPC Systems Ltd.
 All rights reserved.
 '''
 
@@ -76,7 +76,7 @@ def initialization(model):
 
     MODEL = model
 
-    MAP_LED = {0: pywpc.LED_reset, 1: pywpc.LED_setGreen, 2: pywpc.LED_setBlue, 3: pywpc.LED_setRed}
+    MAP_LED = {0: pywpc.LED_reset, 1: pywpc.LED_setRed, 2: pywpc.LED_setGreen, 3: pywpc.LED_setBlue}
 
 def read_and_predict(g):
     '''it reads the current data, and predicts the movement based on the last 7 data read'''

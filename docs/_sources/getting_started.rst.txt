@@ -1,30 +1,46 @@
 Getting Started
 ===============
 
-This document is intended to help you set up the software development environment for the hardware based on the PYCO by WPC Systems Ltd.
-After that, a simple example will show you how to use PYCO.
+Welcome!
+--------
+Thank you for choosing PYCO by WPC Systems Ltd. This guide will help you quickly set up your development environment and run your first program on the PYCO board.
 
-What You Need
--------------
+What You'll Need
+----------------
 
--  Hardware
+**Hardware:**
 
-1. A PYCO board.
-2. USB cable - USB A.
-3. Computer running Windows, Linux, or macOS.
+1. PYCO board
+2. USB A cable
+3. 24V DC power supply
+4. A computer (Windows, Linux, or macOS)
 
--  Software
+**Software:**
 
-1. WPC Device Manger(WDM) or any other IDE.
+1. WPC Stand-Alone Python Editor (recommended) or any Python IDE
 
-Installation
-------------
-- Download `WPC Stand-Alone Python Editor <https://www.wpc.com.tw/pyco-2551121046221201.html>`_.
-- Unpack and go to ``WPC Device Manager/data/WPCPyEditor``.
-- Open WPC Stand-Alone Python Editor.exe.
+Step 1: Install the Software
+----------------------------
+1. Download the `WPC Stand-Alone Python Editor <https://www.wpc.com.tw/stand-alone-python-editor.html>`_.
+2. Unzip the downloaded file to a folder of your choice.
+3. Open the editor by double-clicking the executable file.
 
-Run Your First Example Code
----------------------------
-If you already have installed IDE, you can run your `example code <https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html>`_ on your board.
+Step 2: Connect the Hardware
+----------------------------
+1. Connect the 24V DC power supply to your PYCO board.
+2. Use the USB A cable to connect the PYCO board to your computer.
+3. Wait for your computer to recognize the device (drivers may install automatically).
+
+Step 3: Run Your First Example
+------------------------------
+1. Open the WPC Stand-Alone Python Editor (or your preferred IDE).
+2. Download an example code from the `official examples page <https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html>`_.
+3. Open the example file in the editor.
+4. Make sure your PYCO board is selected as the target device (check the editor's device selection menu).
+5. Click the "Run" button to execute the code on your board.
+
+Congratulations!
+----------------
+You have successfully set up your environment and run your first program on the PYCO board. Explore more examples and start building your own projects!
 
 

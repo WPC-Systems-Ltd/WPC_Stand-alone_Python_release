@@ -11,7 +11,7 @@ The output is the Led, which will be RED for Roll, GREEN for Pitch and BLUE for 
 For other examples please check:
     https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples
 
-Copyright (c) 2024 WPC Systems Ltd.
+Copyright (c) 2025 WPC Systems Ltd.
 All rights reserved.
 '''
 
@@ -23,7 +23,7 @@ from ulab import numpy as np
 import pywpc
 
 ## TinyML
-from test_tree_acc import WPC_test_acceleration_tree
+from test_tree_gyr import WPC_test_orientation_tree
 
 ## Parameters
 DR = np.pi / 180

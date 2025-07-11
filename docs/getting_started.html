@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; WPC Stand-alone Python  0.7.9  documentation</title>
+  <title>Getting Started &mdash; WPC Stand-alone Python  0.8.2  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.7.9 
+                 0.8.2 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -65,9 +65,12 @@
 <li class="toctree-l1"><a class="reference internal" href="advantage.html">Advantage of PYCO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error_code.html">Error code</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-you-need">What You Need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#run-your-first-example-code">Run Your First Example Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#welcome">Welcome!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-ll-need">What You’ll Need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-install-the-software">Step 1: Install the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-connect-the-hardware">Step 2: Connect the Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-run-your-first-example">Step 3: Run Your First Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#congratulations">Congratulations!</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="update_ota.html">Update with OTA</a></li>
@@ -98,36 +101,53 @@
              
   <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
-<p>This document is intended to help you set up the software development environment for the hardware based on the PYCO by WPC Systems Ltd.
-After that, a simple example will show you how to use PYCO.</p>
-<section id="what-you-need">
-<h2>What You Need<a class="headerlink" href="#what-you-need" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>Hardware</p></li>
-</ul>
+<section id="welcome">
+<h2>Welcome!<a class="headerlink" href="#welcome" title="Permalink to this heading"></a></h2>
+<p>Thank you for choosing PYCO by WPC Systems Ltd. This guide will help you quickly set up your development environment and run your first program on the PYCO board.</p>
+</section>
+<section id="what-you-ll-need">
+<h2>What You’ll Need<a class="headerlink" href="#what-you-ll-need" title="Permalink to this heading"></a></h2>
+<p><strong>Hardware:</strong></p>
 <ol class="arabic simple">
-<li><p>A PYCO board.</p></li>
-<li><p>USB cable - USB A.</p></li>
-<li><p>Computer running Windows, Linux, or macOS.</p></li>
+<li><p>PYCO board</p></li>
+<li><p>USB A cable</p></li>
+<li><p>24V DC power supply</p></li>
+<li><p>A computer (Windows, Linux, or macOS)</p></li>
 </ol>
-<ul class="simple">
-<li><p>Software</p></li>
-</ul>
+<p><strong>Software:</strong></p>
 <ol class="arabic simple">
-<li><p>WPC Device Manger(WDM) or any other IDE.</p></li>
+<li><p>WPC Stand-Alone Python Editor (recommended) or any Python IDE</p></li>
 </ol>
 </section>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>Download <a class="reference external" href="https://www.wpc.com.tw/pyco-2551121046221201.html">WPC Stand-Alone Python Editor</a>.</p></li>
-<li><p>Unpack and go to <code class="docutils literal notranslate"><span class="pre">WPC</span> <span class="pre">Device</span> <span class="pre">Manager/data/WPCPyEditor</span></code>.</p></li>
-<li><p>Open WPC Stand-Alone Python Editor.exe.</p></li>
-</ul>
+<section id="step-1-install-the-software">
+<h2>Step 1: Install the Software<a class="headerlink" href="#step-1-install-the-software" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="https://www.wpc.com.tw/stand-alone-python-editor.html">WPC Stand-Alone Python Editor</a>.</p></li>
+<li><p>Unzip the downloaded file to a folder of your choice.</p></li>
+<li><p>Open the editor by double-clicking the executable file.</p></li>
+</ol>
 </section>
-<section id="run-your-first-example-code">
-<h2>Run Your First Example Code<a class="headerlink" href="#run-your-first-example-code" title="Permalink to this heading"></a></h2>
-<p>If you already have installed IDE, you can run your <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html">example code</a> on your board.</p>
+<section id="step-2-connect-the-hardware">
+<h2>Step 2: Connect the Hardware<a class="headerlink" href="#step-2-connect-the-hardware" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Connect the 24V DC power supply to your PYCO board.</p></li>
+<li><p>Use the USB A cable to connect the PYCO board to your computer.</p></li>
+<li><p>Wait for your computer to recognize the device (drivers may install automatically).</p></li>
+</ol>
+</section>
+<section id="step-3-run-your-first-example">
+<h2>Step 3: Run Your First Example<a class="headerlink" href="#step-3-run-your-first-example" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the WPC Stand-Alone Python Editor (or your preferred IDE).</p></li>
+<li><p>Download an example code from the <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/examples/PYCO_WIFI/System/get_system_info.html">official examples page</a>.</p></li>
+<li><p>Open the example file in the editor.</p></li>
+<li><p>Make sure your PYCO board is selected as the target device (check the editor’s device selection menu).</p></li>
+<li><p>Click the “Run” button to execute the code on your board.</p></li>
+</ol>
+</section>
+<section id="congratulations">
+<h2>Congratulations!<a class="headerlink" href="#congratulations" title="Permalink to this heading"></a></h2>
+<p>You have successfully set up your environment and run your first program on the PYCO board. Explore more examples and start building your own projects!</p>
 </section>
 </section>
 
@@ -142,7 +162,7 @@ After that, a simple example will show you how to use PYCO.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2025, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
