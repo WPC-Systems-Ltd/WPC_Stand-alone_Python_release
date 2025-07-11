@@ -1,6 +1,24 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.8.2 Date: 2025/07/11, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- example code `read_func_button`
+- API: Sys_getRTC, OLED_basicInfo
+- `Startup Sequence` & `How to Prevent or Stop main.py Execution` in release's Readme.rst
+- `LED control` & `Func Button` at Product in release's Readme.rst
+
+### Changed
+- API name: readFile ->  readStringFromFile
+- API name: writeFile ->  writeStringToFile
+
+### Fixed
+- Repeat sd card initial
+- Copy right's year
+- Getting started.rst
+- All API function description
+
 v0.7.9 Date: 2024/06/20, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

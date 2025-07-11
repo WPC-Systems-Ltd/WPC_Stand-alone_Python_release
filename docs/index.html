@@ -7,7 +7,7 @@
 <meta content="DAQ, Micropython, RealTime" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; WPC Stand-alone Python  0.7.9  documentation</title>
+  <title>Introduction &mdash; WPC Stand-alone Python  0.8.2  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -40,7 +40,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.7.9 
+                 0.8.2 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -116,6 +116,23 @@ For detailed API support, please refer to the <a class="reference external" href
 </pre></div>
 </div>
 </section>
+<section id="startup-sequence">
+<h1>Startup Sequence<a class="headerlink" href="#startup-sequence" title="Permalink to this heading"></a></h1>
+<p>When the PYCO board is powered on, it will first execute <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>, followed by <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">boot.py</span></code> is typically used for system or environment initialization.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> contains your main application logic and will run automatically after <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>.</p></li>
+</ul>
+</section>
+<section id="how-to-prevent-or-stop-main-py-execution">
+<h1>How to Prevent or Stop main.py Execution<a class="headerlink" href="#how-to-prevent-or-stop-main-py-execution" title="Permalink to this heading"></a></h1>
+<p>If your <code class="docutils literal notranslate"><span class="pre">main.py</span></code> script enters an infinite loop, or you want to prevent it from running on boot, you have two options:</p>
+<p><strong>Software Method:</strong>
+- Use the command <code class="docutils literal notranslate"><span class="pre">Sys_disableMain</span></code> to disable the automatic execution of <code class="docutils literal notranslate"><span class="pre">main.py</span></code> on startup.</p>
+<p><strong>Hardware Method:</strong>
+- On the PYCO board, short the <code class="docutils literal notranslate"><span class="pre">Save</span></code> pin before powering on. This will prevent <code class="docutils literal notranslate"><span class="pre">main.py</span></code> from being executed at boot.</p>
+<p>These methods help you get control back if your program gets stuck or if you want to upload new code to the board.</p>
+</section>
 <section id="products">
 <h1>Products<a class="headerlink" href="#products" title="Permalink to this heading"></a></h1>
 <table class="docutils align-default">
@@ -125,15 +142,15 @@ For detailed API support, please refer to the <a class="reference external" href
 <td><p>PYCO-WIFI</p></td>
 <td><p>PYCO-ETH</p></td>
 </tr>
-<tr class="row-even"><td><p>AI</p></td>
+<tr class="row-even"><td><p>AHRS</p></td>
 <td><p>V</p></td>
-<td><p>V</p></td>
-<td><p>V</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>AHRS</p></td>
+<tr class="row-odd"><td><p>AI</p></td>
 <td><p>V</p></td>
-<td></td>
-<td></td>
+<td><p>V</p></td>
+<td><p>V</p></td>
 </tr>
 <tr class="row-even"><td><p>AO</p></td>
 <td></td>
@@ -145,37 +162,42 @@ For detailed API support, please refer to the <a class="reference external" href
 <td><p>V</p></td>
 <td><p>V</p></td>
 </tr>
-<tr class="row-even"><td><p>TCP Client</p></td>
+<tr class="row-even"><td><p>FUNC Button</p></td>
+<td></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>LED control</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Modbus master</p></td>
+<tr class="row-even"><td><p>Modbus master</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Modbus slave</p></td>
+<tr class="row-odd"><td><p>Modbus slave</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>OLED</p></td>
+<tr class="row-even"><td><p>OLED</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
-</tr>
-<tr class="row-even"><td><p>LED</p></td>
-<td><p>V</p></td>
-<td><p>V</p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td><p>SD card</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>TinyML</p></td>
+<tr class="row-even"><td><p>TCP Client</p></td>
+<td><p>V</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>TinyML</p></td>
 <td><p>V</p></td>
 <td><p>V</p></td>
 <td></td>
@@ -206,7 +228,7 @@ All licenses allow for non-commercial and commercial use.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2025, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

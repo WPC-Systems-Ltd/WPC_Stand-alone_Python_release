@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-ETH &mdash; WPC Stand-alone Python  0.7.9  documentation</title>
+  <title>PYCO-ETH &mdash; WPC Stand-alone Python  0.8.2  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.7.9 
+                 0.8.2 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -103,13 +103,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv417AI_readOneChannel8mp_obj_t">
 <span id="_CPPv317AI_readOneChannel8mp_obj_t"></span><span id="_CPPv217AI_readOneChannel8mp_obj_t"></span><span id="AI_readOneChannel__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gaf51da03397b701d1e8c187a6b3c5c6e5"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417AI_readOneChannel8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read from a single AI channel. </p>
+<dd><p>Read voltage from a single analog input (AI) channel. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ch</strong> – Channel number (0 to 7). </p>
+<dd class="field-odd"><p><strong>ch</strong> – (int) Channel number (0 to 7). </p>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>volt</strong> – Voltage in [V]. </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>float: Voltage in volts. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -117,13 +117,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415AI_readOnDemandv">
 <span id="_CPPv315AI_readOnDemandv"></span><span id="_CPPv215AI_readOnDemandv"></span><span id="AI_readOnDemand"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga87c47a7ac356fae61bf509885c6c7144"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AI_readOnDemandv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read AI on demand. </p>
+<dd><p>Read voltage values from all 8 analog input (AI) channels on demand. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value_list</strong> – List of voltages in [V] of all 8 channels.</p></li>
-<li><p><strong>List</strong> – Analog voltage with 8 channels. </p></li>
-</ul>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 8 float values: Each value represents the voltage (in volts) of one AI channel. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -131,11 +128,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411AI_readPortv">
 <span id="_CPPv311AI_readPortv"></span><span id="_CPPv211AI_readPortv"></span><span id="AI_readPort"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga0170c45a7439132a333ce4eb1664b261"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_readPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411AI_readPortv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read from the whole AI port. </p>
-<p>This function is identical to <code class="docutils literal notranslate"><span class="pre">AI_readOnDemand</span></code>.</p>
+<dd><p>Read voltage values from the entire AI port. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – List of voltage in [V] of all 8 channels. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 8 float values: Each value represents the voltage (in volts) of one AI channel. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -143,10 +139,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415AI_sendOnDemandv">
 <span id="_CPPv315AI_sendOnDemandv"></span><span id="_CPPv215AI_sendOnDemandv"></span><span id="AI_sendOnDemand"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga77e2457581ab99b7e8974e0d10ee2f6b"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AI_sendOnDemand</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415AI_sendOnDemandv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Send data of the whole AI port via TCP to PC. </p>
+<dd><p>Send analog input (AI) data from all channels via TCP to PC. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>status</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -154,16 +150,16 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t">
 <span id="_CPPv318AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv218AO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="AO_writeOneChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1ga32606d2fb4989eb90c0e602e277a2f2e"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418AO_writeOneChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write to a single AO channel. </p>
+<dd><p>Write voltage to a single analog output (AO) channel. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ch</strong> – Channel number (0 to 7). </p></li>
-<li><p><strong>value</strong> – Voltage in [V] (-10 to 10). </p></li>
+<li><p><strong>channel</strong> – (int) AO channel index (0-7). </p></li>
+<li><p><strong>value</strong> – (float) Voltage to set (-10.0 to 10.0 V). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -171,15 +167,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419AO_writeAllChannels8mp_obj_t">
 <span id="_CPPv319AO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219AO_writeAllChannels8mp_obj_t"></span><span id="AO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___a_i_o_1gafa73d36ab0c12c11c5cbdbae0dfff2e1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419AO_writeAllChannels8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write to all AO channels. </p>
+<dd><p>Write voltages to all analog output (AO) channels. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – <p>List of voltages in [V] (-10 to 10) of all 8 channels.</p>
-<p>The length should be 8.</p>
-</p>
+<dd class="field-odd"><p><strong>value_list</strong> – (list of float) List of 8 voltages (-10.0 to 10.0 V each). </p>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -190,13 +184,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419DO_writeAllChannels8mp_obj_t">
 <span id="_CPPv319DO_writeAllChannels8mp_obj_t"></span><span id="_CPPv219DO_writeAllChannels8mp_obj_t"></span><span id="DO_writeAllChannels__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga7d228d49a1e84f8e2c254e0b9b3a5556"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writeAllChannels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419DO_writeAllChannels8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write to the whole DO port. </p>
+<dd><p>Write states to all digital output (DO) channels. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
+<dd class="field-odd"><p><strong>value_list</strong> – (list of int) List of 8 values (0 or 1) for each DO channel. </p>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -204,16 +198,16 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418DO_writeOneChannel8mp_obj_t8mp_obj_t">
 <span id="_CPPv318DO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="_CPPv218DO_writeOneChannel8mp_obj_t8mp_obj_t"></span><span id="DO_writeOneChannel__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1gad6d5d7af9ba88321df4c133789392dc3"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO_writeOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418DO_writeOneChannel8mp_obj_t8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Write to the a single DO channel. </p>
+<dd><p>Write state to a single digital output (DO) channel. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ch</strong> – Channel number (0 to 7). </p></li>
-<li><p><strong>value</strong> – Pin state (0 or 1). </p></li>
+<li><p><strong>ch</strong> – (int) Channel number (0 to 7). </p></li>
+<li><p><strong>value</strong> – (int) Pin state (0 or 1). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>status</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -221,10 +215,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418DI_readAllChannelsv">
 <span id="_CPPv318DI_readAllChannelsv"></span><span id="_CPPv218DI_readAllChannelsv"></span><span id="DI_readAllChannels"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga6af0a8d33b38a1bf53c632916b0f2e46"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readAllChannels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418DI_readAllChannelsv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read from the whole DI port. </p>
+<dd><p>Read states from all digital input (DI) channels. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – List of pin states (0 or 1) of all 8 channels. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 8 int values: Each value is 0 or 1, representing the state of a DI channel. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -232,13 +226,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv417DI_readOneChannel8mp_obj_t">
 <span id="_CPPv317DI_readOneChannel8mp_obj_t"></span><span id="_CPPv217DI_readOneChannel8mp_obj_t"></span><span id="DI_readOneChannel__mp_obj_t"></span><span class="target" id="group___p_y_c_o___e_t_h___d_i_o_1ga6c6a223bd40508df4ad29276546afbe8"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI_readOneChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417DI_readOneChannel8mp_obj_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Read from a single DI channel. </p>
+<dd><p>Read state from a single digital input (DI) channel. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ch</strong> – Channel number (0 to 7). </p>
+<dd class="field-odd"><p><strong>ch</strong> – (int) Channel number (0 to 7). </p>
 </dd>
-<dt class="field-even">Return values<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>value</strong> – Pin state (0 or 1). </p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int: Pin state (0 or 1). </p>
 </dd>
 </dl>
 </dd></dl>
@@ -249,10 +243,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420Sys_getDriverVersionv">
 <span id="_CPPv320Sys_getDriverVersionv"></span><span id="_CPPv220Sys_getDriverVersionv"></span><span id="Sys_getDriverVersion"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga2ab3af077ec59484a83e999c555465f9"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getDriverVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420Sys_getDriverVersionv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python version. </p>
+<dd><p>Get the version string of the stand-alone Python driver. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>String</strong> – Version name. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str: Version string. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -260,10 +254,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv417Sys_getDriverNamev">
 <span id="_CPPv317Sys_getDriverNamev"></span><span id="_CPPv217Sys_getDriverNamev"></span><span id="Sys_getDriverName"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5ccddfa4f61aac16f706131f6c150033"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getDriverName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417Sys_getDriverNamev" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python driver name. </p>
+<dd><p>Get the name string of the stand-alone Python driver. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>String</strong> – Driver name. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str: Driver name string. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -271,10 +265,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419Sys_getSerialNumberv">
 <span id="_CPPv319Sys_getSerialNumberv"></span><span id="_CPPv219Sys_getSerialNumberv"></span><span id="Sys_getSerialNumber"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga777287abf7210ddcb9d5435835a3a906"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getSerialNumber</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_getSerialNumberv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python driver serial number. </p>
+<dd><p>Get the device serial number. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>String</strong> – Serial number. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str: Serial number string (8 characters). </p>
 </dd>
 </dl>
 </dd></dl>
@@ -282,10 +276,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv49Sys_getIPv">
 <span id="_CPPv39Sys_getIPv"></span><span id="_CPPv29Sys_getIPv"></span><span id="Sys_getIP"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga5f9c14857d4ff8c84854022fba988e9e"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getIP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49Sys_getIPv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python driver IP. </p>
+<dd><p>Get the device’s IP address. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – A list with length of 4 representing IP address. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 4 int values: [x, x, x, x] representing IPv4 address. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -293,10 +287,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv414Sys_getSubmaskv">
 <span id="_CPPv314Sys_getSubmaskv"></span><span id="_CPPv214Sys_getSubmaskv"></span><span id="Sys_getSubmask"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga71b7db541fc785e58aa45940e17ee3e6"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getSubmask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414Sys_getSubmaskv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python driver submask. </p>
+<dd><p>Get the device’s subnet mask. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – A list with length of 4 representing submask. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 4 int values: [x, x, x, x] representing subnet mask. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -304,10 +298,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv414Sys_getGatewayv">
 <span id="_CPPv314Sys_getGatewayv"></span><span id="_CPPv214Sys_getGatewayv"></span><span id="Sys_getGateway"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga95a5a72e9451102c393c659567d04afb"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getGateway</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414Sys_getGatewayv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get stand-alone python driver gateway. </p>
+<dd><p>Get the device’s gateway address. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – A list with length of 4 representing gateway. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 4 int values: [x, x, x, x] representing gateway address. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -315,10 +309,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410Sys_getMACv">
 <span id="_CPPv310Sys_getMACv"></span><span id="_CPPv210Sys_getMACv"></span><span id="Sys_getMAC"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gac7bd1a827a494aeeab69871f6f34bc14"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getMAC</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410Sys_getMACv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get MAC address. </p>
+<dd><p>Get the device’s MAC address. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value_list</strong> – A list with length of 6 representing MAC address. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 6 int values: [x, x, x, x, x, x] representing MAC address. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -326,10 +320,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410Sys_rebootv">
 <span id="_CPPv310Sys_rebootv"></span><span id="_CPPv210Sys_rebootv"></span><span id="Sys_reboot"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1ga383f51950833445138fb23c8ffb5c7f1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_reboot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410Sys_rebootv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Reboot device. </p>
+<dd><p>Reboot the device system. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>int</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -337,10 +331,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419Sys_startScanEnginev">
 <span id="_CPPv319Sys_startScanEnginev"></span><span id="_CPPv219Sys_startScanEnginev"></span><span id="Sys_startScanEngine"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gad15c87a501b575b42755061ef6eb6c72"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_startScanEngine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419Sys_startScanEnginev" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Start scan engine. </p>
+<dd><p>Start the scan engine for data acquisition. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>int</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -348,10 +342,21 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418Sys_stopScanEnginev">
 <span id="_CPPv318Sys_stopScanEnginev"></span><span id="_CPPv218Sys_stopScanEnginev"></span><span id="Sys_stopScanEngine"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gaffbafae398c5f4774cc6d3c1fc89a545"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_stopScanEngine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418Sys_stopScanEnginev" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Stop scan engine. </p>
+<dd><p>Stop the scan engine for data acquisition. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Return values<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>int</strong> – <a class="reference external" href="https://wpc-systems-ltd.github.io/WPC_Stand-alone_Python_release/error_code.html">WPC error code</a>. </p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416Sys_getFlashSizev">
+<span id="_CPPv316Sys_getFlashSizev"></span><span id="_CPPv216Sys_getFlashSizev"></span><span id="Sys_getFlashSize"></span><span class="target" id="group___p_y_c_o___e_t_h___s_y_s_t_e_m_1gab8990dd6d6e4cf9e66c0a04d97b3d7ec"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sys_getFlashSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416Sys_getFlashSizev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the device’s flash memory size. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: Flash size in bytes. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -370,7 +375,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, WPC Systems Ltd..</p>
+    <p>&#169; Copyright 2025, WPC Systems Ltd..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

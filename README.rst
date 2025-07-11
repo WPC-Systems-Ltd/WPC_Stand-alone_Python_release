@@ -27,21 +27,43 @@ Quick start
     >>> pywpc.AI_readOnDemand()
     [1.638031, 1.642151, 1.645813, 1.642303, 1.6362, 1.638489, 1.643829, 1.642761]
 
+Startup Sequence
+================
+When the PYCO board is powered on, it will first execute ``boot.py``, followed by ``main.py``.
+
+- ``boot.py`` is typically used for system or environment initialization.
+- ``main.py`` contains your main application logic and will run automatically after ``boot.py``.
+
+How to Prevent or Stop main.py Execution
+========================================
+If your ``main.py`` script enters an infinite loop, or you want to prevent it from running on boot, you have two options:
+
+**Software Method:**
+- Use the command ``Sys_disableMain`` to disable the automatic execution of ``main.py`` on startup.
+
+**Hardware Method:**
+- On the PYCO board, short the ``Save`` pin before powering on. This will prevent ``main.py`` from being executed at boot.
+
+These methods help you get control back if your program gets stuck or if you want to upload new code to the board.
+
+
 Products
 ========
 
 +----------------+--------------+---------+---------+
 | Product/module |PYCO-WIFI-MINI|PYCO-WIFI|PYCO-ETH |
 +----------------+--------------+---------+---------+
-| AI             |V             |V        |V        |
-+----------------+--------------+---------+---------+
 | AHRS           |V             |         |         |
++----------------+--------------+---------+---------+
+| AI             |V             |V        |V        |
 +----------------+--------------+---------+---------+
 | AO             |              |V        |V        |
 +----------------+--------------+---------+---------+
-| DIO            |              | V       |V        |
+| DIO            |              |V        |V        |
 +----------------+--------------+---------+---------+
-| TCP Client     |V             |V        |         |
+| FUNC Button    |              |V        |         |
++----------------+--------------+---------+---------+
+| LED control    |V             |V        |         |
 +----------------+--------------+---------+---------+
 | Modbus master  |V             |V        |         |
 +----------------+--------------+---------+---------+
@@ -49,14 +71,16 @@ Products
 +----------------+--------------+---------+---------+
 | OLED           |V             |V        |V        |
 +----------------+--------------+---------+---------+
-| LED            |V             |V        |         |
-+----------------+--------------+---------+---------+
 | SD card        |V             |V        |         |
++----------------+--------------+---------+---------+
+| TCP Client     |V             |V        |         |
 +----------------+--------------+---------+---------+
 | TinyML         |V             |V        |         |
 +----------------+--------------+---------+---------+
 
+
 ``V`` stands for support
+
 
 License
 =======
