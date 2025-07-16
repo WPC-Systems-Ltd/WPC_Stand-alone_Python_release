@@ -1,6 +1,14 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.8.3 Date: 2025/07/16, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- API: OLED_fwVersion
+
+### Changed
+- API name: OLED_basicInfo -> OLED_networkInfo
+ 
 v0.8.2 Date: 2025/07/11, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
