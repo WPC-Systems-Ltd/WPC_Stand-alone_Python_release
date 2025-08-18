@@ -127,13 +127,14 @@
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="c1">## WPC</span>
 <span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start reading function button status&quot;</span><span class="p">)</span>
-<span class="linenos">17</span><span class="k">while</span> <span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_readFuncButton</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-<span class="linenos">18</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="linenos">19</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Push FUNC button to leave loop&quot;</span><span class="p">)</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End code&quot;</span><span class="p">)</span>
+<span class="linenos">15</span><span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start reading function button status&quot;</span><span class="p">)</span>
+<span class="linenos">18</span><span class="k">while</span> <span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_readFuncButton</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+<span class="linenos">19</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Push FUNC button to leave loop&quot;</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End code&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

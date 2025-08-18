@@ -1,10 +1,15 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.8.3.1 Date: 2025/08/18, Developer: Chunglee_people
+---------------------------------------------------
+### Added 
+- firmware: v0.8.3 for pyco_wifi & pyco_wifi_mini
+ 
 v0.8.3 Date: 2025/07/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
-- API: OLED_fwVersion
+- API: OLED_fwVersion 
 
 ### Changed
 - API name: OLED_basicInfo -> OLED_networkInfo
