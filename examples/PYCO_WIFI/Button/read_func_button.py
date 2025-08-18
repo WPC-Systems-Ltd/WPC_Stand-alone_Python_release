@@ -12,6 +12,7 @@ All rights reserved.
 
 ## WPC
 import pywpc
+import time
 
 print("Start reading function button status")
 while (pywpc.Sys_readFuncButton() == 1):
