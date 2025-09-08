@@ -1,6 +1,0 @@
-Write multi registers
-=====================
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/Modbus_master/write_multi_registers.py
-   :language: python
-   :linenos:

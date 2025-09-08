@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Read function button &mdash; WPC Stand-alone Python  0.8.3  documentation</title>
+  <title>Read function button &mdash; WPC Stand-alone Python  0.9.0  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.8.3 
+                 0.9.0 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -71,13 +71,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI.html#modbus-master">Modbus master</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI.html">PYCO-WIFI-MINI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AI.html">PYCO-WIFI-MINI-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AO.html">PYCO-WIFI-MINI-AO</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API REFERENCE</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../api_pyco_eth.html">PYCO-ETH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api_pyco_wifi.html">PYCO-WIFI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api_pyco_wifi_mini.html">PYCO-WIFI-MINI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_pyco_wifi_mini_ai.html">PYCO-WIFI-MINI-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_pyco_wifi_mini_ao.html">PYCO-WIFI-MINI-AO</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">REFERENCE</span></p>
 <ul>
@@ -127,14 +129,13 @@
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="c1">## WPC</span>
 <span class="linenos">14</span><span class="kn">import</span> <span class="nn">pywpc</span>
-<span class="linenos">15</span><span class="kn">import</span> <span class="nn">time</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start reading function button status&quot;</span><span class="p">)</span>
-<span class="linenos">18</span><span class="k">while</span> <span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_readFuncButton</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-<span class="linenos">19</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="linenos">20</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Push FUNC button to leave loop&quot;</span><span class="p">)</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End code&quot;</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start reading function button status&quot;</span><span class="p">)</span>
+<span class="linenos">17</span><span class="k">while</span> <span class="p">(</span><span class="n">pywpc</span><span class="o">.</span><span class="n">Sys_readFuncButton</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+<span class="linenos">18</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Push FUNC button to leave loop&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End code&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

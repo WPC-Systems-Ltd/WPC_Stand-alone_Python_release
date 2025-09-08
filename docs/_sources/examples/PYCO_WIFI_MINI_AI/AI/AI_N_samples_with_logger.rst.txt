@@ -1,0 +1,6 @@
+AI N samples with logger
+========================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AI/AI/AI_N_samples_with_logger.py
+   :language: python
+   :linenos:

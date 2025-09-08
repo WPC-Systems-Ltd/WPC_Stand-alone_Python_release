@@ -1,0 +1,139 @@
+PYCO-WIFI-MINI-AI
+=================
+AI
+-------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/AI/AI_on_demand_once.rst
+
+   examples/PYCO_WIFI_MINI_AI/AI/AI_N_samples_once.rst
+
+   examples/PYCO_WIFI_MINI_AI/AI/AI_N_samples_with_logger.rst
+
+AHRS
+-------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/AHRS/AHRS_read.rst
+
+FFT
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/FFT/fourier_transform_simulate.rst
+
+   examples/PYCO_WIFI_MINI_AI/FFT/fourier_transform_plot.rst
+
+   examples/PYCO_WIFI_MINI_AI/FFT/fourier_transform_ai_sample.rst
+
+LED
+---
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/LED/LED_control.rst
+
+OLED
+----
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/OLED/OLED_writeLine.rst
+
+System
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/System/get_memory_status.rst
+
+   examples/PYCO_WIFI_MINI_AI/System/get_system_info.rst
+
+   examples/PYCO_WIFI_MINI_AI/System/get_network_info.rst
+
+   examples/PYCO_WIFI_MINI_AI/System/scan_engine.rst
+
+
+SD Card
+-------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/SD Card/readTXT.rst
+
+   examples/PYCO_WIFI_MINI_AI/SD Card/writeTXT.rst
+
+TCP client
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/TCP client/TCP_client_read.rst
+
+   examples/PYCO_WIFI_MINI_AI/TCP client/TCP_client_write_string.rst
+
+   examples/PYCO_WIFI_MINI_AI/TCP client/TCP_client_write_U8_list.rst
+
+TinyML
+------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/TinyML/predict_acceleration.rst
+   examples/PYCO_WIFI_MINI_AI/TinyML/predict_orientation.rst
+
+
+Tutorial
+-------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/Tutorial/Thread_AIO.rst
+
+   examples/PYCO_WIFI_MINI_AI/Tutorial/mip_install.rst
+
+   examples/PYCO_WIFI_MINI_AI/Tutorial/get_started.rst
+
+Modbus slave
+------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/Modbus slave/write_data_with_register.rst
+
+Modbus master
+-------------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/read_coils.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/read_discrete_input.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/read_holding_registers.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/read_input_registers.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/write_coil.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/write_multi_coils.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/write_multi_registers.rst
+
+   examples/PYCO_WIFI_MINI_AI/Modbus master/write_register.rst
+

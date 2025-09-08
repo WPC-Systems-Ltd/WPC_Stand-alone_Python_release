@@ -1,6 +1,0 @@
-Read coils
-==========
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/Modbus_master/read_coils.py
-   :language: python
-   :linenos:

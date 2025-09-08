@@ -1,0 +1,6 @@
+Read holding registers
+======================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AO/Modbus_master/read_holding_registers.py
+   :language: python
+   :linenos:

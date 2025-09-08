@@ -1,6 +1,0 @@
-Write register
-==============
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/Modbus_master/write_register.py
-   :language: python
-   :linenos:

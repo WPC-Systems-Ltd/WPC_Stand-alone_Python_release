@@ -1,6 +1,0 @@
-Read from SD Card
-=================
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/SDCard/readTXT.py
-   :language: python
-   :linenos:

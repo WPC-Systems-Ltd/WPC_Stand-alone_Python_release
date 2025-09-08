@@ -1,0 +1,6 @@
+TCP client read
+===============
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AO/TCP_client/TCP_client_read.py
+   :language: python
+   :linenos:
