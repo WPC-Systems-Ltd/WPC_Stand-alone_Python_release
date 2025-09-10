@@ -1,6 +1,0 @@
-LED control
-===========
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/LED/LED_control.py
-   :language: python
-   :linenos:

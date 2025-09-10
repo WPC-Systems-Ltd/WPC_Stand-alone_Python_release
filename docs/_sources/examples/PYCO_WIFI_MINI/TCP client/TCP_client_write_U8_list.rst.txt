@@ -1,6 +1,0 @@
-TCP client write U8 list
-========================
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/TCP_client/TCP_client_write_U8_list.py
-   :language: python
-   :linenos:

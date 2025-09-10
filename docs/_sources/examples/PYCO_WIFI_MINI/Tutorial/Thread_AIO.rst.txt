@@ -1,6 +1,0 @@
-AIO thread
-==========
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/Tutorial/Thread_AIO.py
-   :language: python
-   :linenos:

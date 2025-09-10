@@ -1,6 +1,0 @@
-Write to SD Card
-================
-
-.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI/SDCard/writeTXT.py
-   :language: python
-   :linenos:
