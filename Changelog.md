@@ -1,6 +1,15 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.9.0 Date: 2025/09/10, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product release WifiDAQAO 
+
+### Changed
+- Aligned with ESP32 firmware R2.0.0
+- PYCO WIFI_MINI -> PYCO_WIFI_MINI_AI
+
 v0.8.3.1 Date: 2025/08/18, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added 
