@@ -9,7 +9,7 @@ v0.9.1 Date: 2025/09/16, Developer: Chunglee_people
 v0.9.0 Date: 2025/09/10, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
-- New product release WifiDAQAO 
+- New product release WifiDAQAO
 
 ### Changed
 - Aligned with ESP32 firmware R2.0.0
@@ -17,17 +17,17 @@ v0.9.0 Date: 2025/09/10, Developer: Chunglee_people
 
 v0.8.3.1 Date: 2025/08/18, Developer: Chunglee_people
 ---------------------------------------------------
-### Added 
+### Added
 - firmware: v0.8.3 for pyco_wifi & pyco_wifi_mini
- 
+
 v0.8.3 Date: 2025/07/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
-- API: OLED_fwVersion 
+- API: OLED_fwVersion
 
 ### Changed
 - API name: OLED_basicInfo -> OLED_networkInfo
- 
+
 v0.8.2 Date: 2025/07/11, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
