@@ -1,6 +1,11 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.9.1 Date: 2025/09/16, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add example code: change_ip, not_execute_main_py, set_wifi_info
+
 v0.9.0 Date: 2025/09/10, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

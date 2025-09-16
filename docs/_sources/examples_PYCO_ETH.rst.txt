@@ -56,6 +56,12 @@ System
 
    examples/PYCO_ETH/System/scan_engine.rst
 
+   examples/PYCO_ETH/System/set_wifi_info.rst
+
+   examples/PYCO_ETH/System/change_ip.rst
+
+   examples/PYCO_ETH/System/not_execute_main_py.rst
+
 Tutorial
 --------
 
