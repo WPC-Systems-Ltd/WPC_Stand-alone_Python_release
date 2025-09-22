@@ -1,0 +1,6 @@
+Change IP
+=========
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AI/System/change_ip.py
+   :language: python
+   :linenos:

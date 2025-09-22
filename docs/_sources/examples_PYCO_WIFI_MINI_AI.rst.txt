@@ -1,7 +1,7 @@
 PYCO-WIFI-MINI-AI
 =================
 AI
--------
+--
 
 .. toctree::
    :maxdepth: 4
@@ -13,7 +13,7 @@ AI
    examples/PYCO_WIFI_MINI_AI/AI/AI_N_samples_with_logger.rst
 
 AHRS
--------
+----
 
 .. toctree::
    :maxdepth: 4
@@ -54,17 +54,22 @@ System
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI_MINI_AI/System/get_memory_status.rst
-
    examples/PYCO_WIFI_MINI_AI/System/get_system_info.rst
 
    examples/PYCO_WIFI_MINI_AI/System/get_network_info.rst
 
+   examples/PYCO_WIFI_MINI_AI/System/get_memory_status.rst
+
    examples/PYCO_WIFI_MINI_AI/System/scan_engine.rst
 
+   examples/PYCO_WIFI_MINI_AI/System/set_wifi_info.rst
+
+   examples/PYCO_WIFI_MINI_AI/System/change_ip.rst
+
+   examples/PYCO_WIFI_MINI_AI/System/not_execute_main_py.rst
 
 SD Card
--------
+------
 
 .. toctree::
    :maxdepth: 4
@@ -92,20 +97,20 @@ TinyML
    :maxdepth: 4
 
    examples/PYCO_WIFI_MINI_AI/TinyML/predict_acceleration.rst
+
    examples/PYCO_WIFI_MINI_AI/TinyML/predict_orientation.rst
 
-
 Tutorial
--------------
+--------
 
 .. toctree::
    :maxdepth: 4
 
+   examples/PYCO_WIFI_MINI_AI/Tutorial/get_started.rst
+
    examples/PYCO_WIFI_MINI_AI/Tutorial/Thread_AIO.rst
 
    examples/PYCO_WIFI_MINI_AI/Tutorial/mip_install.rst
-
-   examples/PYCO_WIFI_MINI_AI/Tutorial/get_started.rst
 
 Modbus slave
 ------------
