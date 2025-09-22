@@ -1,6 +1,8 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+
+
 v0.9.1 Date: 2025/09/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
