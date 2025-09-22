@@ -1,0 +1,6 @@
+DONT execute main file
+======================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AO/System/not_execute_main_py.py
+   :language: python
+   :linenos:
