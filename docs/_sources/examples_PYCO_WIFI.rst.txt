@@ -92,6 +92,12 @@ System
 
    examples/PYCO_WIFI/System/scan_engine.rst
 
+   examples/PYCO_WIFI/System/set_wifi_info.rst
+
+   examples/PYCO_WIFI/System/change_ip.rst
+
+   examples/PYCO_WIFI/System/not_execute_main_py.rst
+
 SD Card
 ------
 

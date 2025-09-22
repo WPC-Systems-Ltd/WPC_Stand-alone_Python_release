@@ -1,0 +1,6 @@
+Set Wifi info
+=============
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_ETH/System/set_wifi_info.py
+   :language: python
+   :linenos:

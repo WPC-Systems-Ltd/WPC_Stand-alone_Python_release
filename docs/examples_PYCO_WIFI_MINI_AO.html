@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI-MINI-AO &mdash; WPC Stand-alone Python  0.9.0  documentation</title>
+  <title>PYCO-WIFI-MINI-AO &mdash; WPC Stand-alone Python  0.9.1  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AHRS read" href="examples/PYCO_WIFI_MINI_AO/AHRS/AHRS_read.html" />
+    <link rel="next" title="AO write all channels" href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_all_channels.html" />
     <link rel="prev" title="Write register" href="examples/PYCO_WIFI_MINI_AI/Modbus%20master/write_register.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.9.0 
+                 0.9.1 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="examples_PYCO_WIFI_MINI_AI.html">PYCO-WIFI-MINI-AI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PYCO-WIFI-MINI-AO</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ao">AO</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/AO/AO_write_all_channels.html">AO write all channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI/AO/AO_write_one_channel.html">AO write one channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_all_channels.html">AO write all channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_one_channel.html">AO write one channel</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ahrs">AHRS</a><ul>
@@ -78,10 +78,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#system">System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_system_info.html">Get system info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_network_info.html">Get network info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/scan_engine.html">Scan engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/set_wifi_info.html">Set Wifi info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/change_ip.html">Change IP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/not_execute_main_py.html">DONT execute main file</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#sd-card">SD Card</a><ul>
@@ -101,9 +104,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/get_started.html">Get started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/Thread_AIO.html">AIO thread</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/mip_install.html">New package install</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/get_started.html">Get started</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#modbus-slave">Modbus slave</a><ul>
@@ -168,8 +171,8 @@
 <h2>AO<a class="headerlink" href="#ao" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/AO/AO_write_all_channels.html">AO write all channels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI/AO/AO_write_one_channel.html">AO write one channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_all_channels.html">AO write all channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_one_channel.html">AO write one channel</a></li>
 </ul>
 </div>
 </section>
@@ -211,10 +214,13 @@
 <h2>System<a class="headerlink" href="#system" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_system_info.html">Get system info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_network_info.html">Get network info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/get_memory_status.html">Get memory status</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/scan_engine.html">Scan engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/set_wifi_info.html">Set Wifi info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/change_ip.html">Change IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/System/not_execute_main_py.html">DONT execute main file</a></li>
 </ul>
 </div>
 </section>
@@ -250,9 +256,9 @@
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/get_started.html">Get started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/Thread_AIO.html">AIO thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/mip_install.html">New package install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/PYCO_WIFI_MINI_AO/Tutorial/get_started.html">Get started</a></li>
 </ul>
 </div>
 </section>
@@ -286,7 +292,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="examples/PYCO_WIFI_MINI_AI/Modbus%20master/write_register.html" class="btn btn-neutral float-left" title="Write register" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="examples/PYCO_WIFI_MINI_AO/AHRS/AHRS_read.html" class="btn btn-neutral float-right" title="AHRS read" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples/PYCO_WIFI_MINI_AO/AO/AO_write_all_channels.html" class="btn btn-neutral float-right" title="AO write all channels" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
