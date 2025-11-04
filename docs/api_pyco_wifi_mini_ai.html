@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI-MINI-AI &mdash; WPC Stand-alone Python  0.9.1  documentation</title>
+  <title>PYCO-WIFI-MINI-AI &mdash; WPC Stand-alone Python  0.9.4  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.9.1 
+                 0.9.4 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -196,7 +196,28 @@
 <dd><p>Get 3-axis orientation from AHRS. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list of 3 float values: [roll, pitch, yaw] in degrees. </p>
+<dd class="field-odd"><p>list of 3 float values: [roll, pitch, yaw] in degrees.<ul class="simple">
+<li><p>roll: −180° ~ +180°</p></li>
+<li><p>pitch: −90° ~ +90°</p></li>
+<li><p>yaw: −180° ~ +180° </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423AHRS_getOrientation_radv">
+<span id="_CPPv323AHRS_getOrientation_radv"></span><span id="_CPPv223AHRS_getOrientation_radv"></span><span id="AHRS_getOrientation_rad"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gad11e4cf96a1437c79e305d04dfaa0680"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrientation_rad</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get 3-axis orientation from AHRS. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of 3 float values: [roll, pitch, yaw] in rad.<ul class="simple">
+<li><p>roll: −π ~ +π</p></li>
+<li><p>pitch: −π/2 ~ +π/2</p></li>
+<li><p>yaw: −π ~ +π </p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -288,9 +309,20 @@
 <section id="oled">
 <h2>OLED<a class="headerlink" href="#oled" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414OLED_basicInfov">
-<span id="_CPPv314OLED_basicInfov"></span><span id="_CPPv214OLED_basicInfov"></span><span id="OLED_basicInfo"></span><span class="target" id="group___p_y_c_o___w_i_f_i___o_l_e_d_1gad7a40a9f5ec90006d18321e1b87804ee"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OLED_basicInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv416OLED_networkInfov">
+<span id="_CPPv316OLED_networkInfov"></span><span id="_CPPv216OLED_networkInfov"></span><span id="OLED_networkInfo"></span><span class="target" id="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga3a182df795b01d970c6e83a9c1ae0fff"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OLED_networkInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Show SSID, IP, serial number, and firmware version on the screen. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414OLED_fwVersionv">
+<span id="_CPPv314OLED_fwVersionv"></span><span id="_CPPv214OLED_fwVersionv"></span><span id="OLED_fwVersion"></span><span class="target" id="group___p_y_c_o___w_i_f_i___o_l_e_d_1ga3865b28de4bf0416364c62b66b34c4f1"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OLED_fwVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Show firmware version on the screen. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
