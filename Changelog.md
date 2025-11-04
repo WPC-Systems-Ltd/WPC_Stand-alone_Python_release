@@ -1,6 +1,14 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.9.4 Date: 2025/11/04, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Error code: -8009/-8010
+- Function: AHRS_getOrientation_rad
+
+### Fixed
+- Fix the issue where AO could not output normally when AHRS was not enabled
 
 v0.9.1 Date: 2025/09/22, Developer: Chunglee_people
 ---------------------------------------------------
