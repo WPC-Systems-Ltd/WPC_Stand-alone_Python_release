@@ -18,6 +18,14 @@ AHRS
 
    examples/PYCO_WIFI_MINI_AO/AHRS/AHRS_read.rst
 
+AO_AHRS
+-------
+
+.. toctree::
+   :maxdepth: 4
+
+   examples/PYCO_WIFI_MINI_AO/AO_AHRS/AHRS_orientation_AO_output.rst
+
 FFT
 ---
 
@@ -116,7 +124,7 @@ Modbus slave
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI_MINI_AO/Modbus slave/write_data_with_register.rst
+   examples/PYCO_WIFI_MINI_AO/Modbus slave/modbus_slave_connect_read.rst
 
 Modbus master
 -------------
