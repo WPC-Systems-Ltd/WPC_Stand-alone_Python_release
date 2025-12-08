@@ -1,0 +1,6 @@
+Modbus slave connect read
+=========================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AI/Modbus_slave/modbus_slave_connect_read.py
+   :language: python
+   :linenos:

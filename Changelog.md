@@ -1,6 +1,16 @@
 WPC Stand-alone_python_release changelog
 =======================================
 
+v0.9.7 Date: 2025/12/08, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Modbus_slave example code: modbus_slave_connect_read
+- AO_AHRS example code: AHRS_orientation_AO_output
+- API: ModbusSlave_setHoldingRegisterMap, ModbusSlave_getHoldingRegisterMap, ModbusSlave_getConnectStatus, ModbusSlave_close
+
+### Removed
+- Modbus_slave example code: write_data_with_register
+
 v0.9.4 Date: 2025/11/04, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

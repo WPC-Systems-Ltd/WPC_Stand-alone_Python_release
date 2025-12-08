@@ -13,6 +13,13 @@ AHRS
 .. doxygengroup:: PYCO_WIFI_AHRS
    :content-only:
 
+AO_AHRS
+----
+
+.. doxygengroup:: PYCO_WIFI_AO_AHRS
+   :content-only:
+
+
 BATTERY
 -------
 

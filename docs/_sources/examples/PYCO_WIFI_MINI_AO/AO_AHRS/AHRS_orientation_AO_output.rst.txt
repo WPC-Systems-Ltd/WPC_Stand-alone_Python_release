@@ -1,0 +1,6 @@
+AHRS_orientation with AO_output
+===============================
+
+.. literalinclude:: ../../../../../../WPC_Stand-alone_Python_source/examples/PYCO_WIFI_MINI_AO/AO_AHRS/AHRS_orientation_AO_output.py
+   :language: python
+   :linenos:
