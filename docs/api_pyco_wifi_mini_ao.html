@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PYCO-WIFI-MINI-AO &mdash; WPC Stand-alone Python  0.9.4  documentation</title>
+  <title>PYCO-WIFI-MINI-AO &mdash; WPC Stand-alone Python  0.9.7  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.9.4 
+                 0.9.7 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -168,13 +168,14 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419AHRS_getOrientationv">
 <span id="_CPPv319AHRS_getOrientationv"></span><span id="_CPPv219AHRS_getOrientationv"></span><span id="AHRS_getOrientation"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1ga5a769464dfebb7b8a4ec9ccf0fc55325"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrientation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get 3-axis orientation from AHRS. </p>
+<dd><p>Get 3-axis orientation (Roll, Pitch, Yaw) from the AHRS. </p>
+<p>Retrieves the current estimated orientation angles from the Attitude and Heading Reference System (AHRS) and returns them in degrees.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list of 3 float values: [roll, pitch, yaw] in degrees.<ul class="simple">
-<li><p>roll: −180° ~ +180°</p></li>
-<li><p>pitch: −90° ~ +90°</p></li>
-<li><p>yaw: −180° ~ +180° </p></li>
+<dd class="field-odd"><p>mp_obj_t: A tuple of 3 float values: [roll, pitch, yaw]. The values are in degrees, with the following typical ranges:<ul class="simple">
+<li><p><strong>Roll</strong>: [-180° to +180°]</p></li>
+<li><p><strong>Pitch</strong>: [-90° to +90°]</p></li>
+<li><p><strong>Yaw</strong>: [-180° to +180°] </p></li>
 </ul>
 </p>
 </dd>
@@ -184,13 +185,14 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423AHRS_getOrientation_radv">
 <span id="_CPPv323AHRS_getOrientation_radv"></span><span id="_CPPv223AHRS_getOrientation_radv"></span><span id="AHRS_getOrientation_rad"></span><span class="target" id="group___p_y_c_o___w_i_f_i___a_h_r_s_1gad11e4cf96a1437c79e305d04dfaa0680"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AHRS_getOrientation_rad</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get 3-axis orientation from AHRS. </p>
+<dd><p>Get 3-axis orientation (Roll, Pitch, Yaw) from the AHRS system in radians. </p>
+<p>Retrieves the current estimated orientation angles from the Attitude and Heading Reference System (AHRS) and returns them using the base unit of radians.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list of 3 float values: [roll, pitch, yaw] in rad.<ul class="simple">
-<li><p>roll: −π ~ +π</p></li>
-<li><p>pitch: −π/2 ~ +π/2</p></li>
-<li><p>yaw: −π ~ +π </p></li>
+<dd class="field-odd"><p>mp_obj_t: A MicroPython tuple of 3 float values: [roll, pitch, yaw]. The values are in <strong>radians</strong>, with the following typical ranges:<ul class="simple">
+<li><p><strong>Roll</strong>: [-pi to pi rad]</p></li>
+<li><p><strong>Pitch</strong>: [-pi/2 to pi/2 rad]</p></li>
+<li><p><strong>Yaw</strong>: [-pi to pi rad] </p></li>
 </ul>
 </p>
 </dd>
@@ -522,57 +524,85 @@
 <section id="modbus-slave">
 <h2>MODBUS SLAVE<a class="headerlink" href="#modbus-slave" title="Permalink to this heading"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv417ModbusSlave_closev">
-<span id="_CPPv317ModbusSlave_closev"></span><span id="_CPPv217ModbusSlave_closev"></span><span id="ModbusSlave_close"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1gac99ddf1a335fb72d6c22141ae56970d3"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Close the Modbus slave TCP server. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv435ModbusSlave_inputRegisterWriteFloat8mp_obj_t8mp_obj_t">
-<span id="_CPPv335ModbusSlave_inputRegisterWriteFloat8mp_obj_t8mp_obj_t"></span><span id="_CPPv235ModbusSlave_inputRegisterWriteFloat8mp_obj_t8mp_obj_t"></span><span id="ModbusSlave_inputRegisterWriteFloat__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga336b36c76030fe0f80eea75d3f9c57a5"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_inputRegisterWriteFloat</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">float_data</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Write a float value to the input register at the specified address. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> – (int) Input register address (41000-41499). </p></li>
-<li><p><strong>value</strong> – (float) Value to write. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv433ModbusSlave_inputRegisterWriteInt8mp_obj_t8mp_obj_t">
-<span id="_CPPv333ModbusSlave_inputRegisterWriteInt8mp_obj_t8mp_obj_t"></span><span id="_CPPv233ModbusSlave_inputRegisterWriteInt8mp_obj_t8mp_obj_t"></span><span id="ModbusSlave_inputRegisterWriteInt__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga9cf738a12d414323d3eb35d112235d40"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_inputRegisterWriteInt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">int_data</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Write an int value to the input register at the specified address. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> – (int) Input register address (41000-41499). </p></li>
-<li><p><strong>value</strong> – (int) Value to write. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv416ModbusSlave_openv">
 <span id="_CPPv316ModbusSlave_openv"></span><span id="_CPPv216ModbusSlave_openv"></span><span id="ModbusSlave_open"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga726d39b6dffd0bf1e0426d6156e596a7"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Open the Modbus slave TCP server. </p>
+<dd><p>Open the Modbus Slave TCP server. </p>
+<p>Initializes and starts the Modbus Slave TCP server to begin listening for incoming Master connection requests.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int: WPC error code. Returns 0 on success, or a negative value on failure. </p>
+<dd class="field-odd"><p>int: WPC error code.<ul class="simple">
+<li><p><strong>0</strong>: Service started successfully (Success).</p></li>
+<li><p><strong>Negative value</strong>: Failed to start the service or an error occurred (Failure). </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ModbusSlave_closev">
+<span id="_CPPv317ModbusSlave_closev"></span><span id="_CPPv217ModbusSlave_closev"></span><span id="ModbusSlave_close"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1gac99ddf1a335fb72d6c22141ae56970d3"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Close the Modbus Slave TCP server. </p>
+<p>Shuts down the Modbus Slave TCP server, stopping all incoming connection handling and freeing associated network resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: WPC error code.<ul class="simple">
+<li><p><strong>0</strong>: Server was closed successfully (Success).</p></li>
+<li><p><strong>Negative value</strong>: Failed to close the server or an error occurred (Failure). </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428ModbusSlave_getConnectStatusv">
+<span id="_CPPv328ModbusSlave_getConnectStatusv"></span><span id="_CPPv228ModbusSlave_getConnectStatusv"></span><span id="ModbusSlave_getConnectStatus"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga101425529f0fa347895bfb53f4fe9cad"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_getConnectStatus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get Modbus Slave TCP service connection status. </p>
+<p>This function retrieves the active status of the internal TCP server handling the Modbus Slave communications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int: Service status code (WPC error code).<ul class="simple">
+<li><p><strong>0</strong>: Service is inactive or disconnected.</p></li>
+<li><p><strong>1</strong>: Service is active or connected. </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433ModbusSlave_getHoldingRegisterMap8mp_obj_t8mp_obj_t">
+<span id="_CPPv333ModbusSlave_getHoldingRegisterMap8mp_obj_t8mp_obj_t"></span><span id="_CPPv233ModbusSlave_getHoldingRegisterMap8mp_obj_t8mp_obj_t"></span><span id="ModbusSlave_getHoldingRegisterMap__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga235f8b287e733367079898a8b8019291"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_getHoldingRegisterMap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address_obj</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">register_num_obj</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get data from the Modbus Slave Holding Registers memory map. </p>
+<p>Reads a specified number of 16-bit register values starting from the given Modbus 4xxxx address in the internal map structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address_obj</strong> – (int) Modbus starting register address, <strong>range is 40001-40500</strong>. </p></li>
+<li><p><strong>register_num_obj</strong> – (int) Quantity of registers to read. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mp_obj_t: The u8 list containing the requested register values on success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433ModbusSlave_setHoldingRegisterMap8mp_obj_t8mp_obj_t">
+<span id="_CPPv333ModbusSlave_setHoldingRegisterMap8mp_obj_t8mp_obj_t"></span><span id="_CPPv233ModbusSlave_setHoldingRegisterMap8mp_obj_t8mp_obj_t"></span><span id="ModbusSlave_setHoldingRegisterMap__mp_obj_t.mp_obj_t"></span><span class="target" id="group___p_y_c_o___w_i_f_i___m_o_d_b_u_s___s_l_a_v_e_1ga789a79887f38f110a38e8734ef0d04b7"></span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModbusSlave_setHoldingRegisterMap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address_obj</span></span>, <span class="n"><span class="pre">mp_obj_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value_obj</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Set a single value in the Modbus Slave Holding Register map. </p>
+<p>Writes a 16-bit integer value into the internal memory map structure corresponding to the specified Modbus 4xxxx register address. Since the internal map stores uint8_t, the value is split into two bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address_obj</strong> – (mp_obj_t/int) The Modbus starting register address (e.g., 40001-40500). </p></li>
+<li><p><strong>value_obj</strong> – (mp_obj_t/int) The 16-bit integer value to be written to the register. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mp_obj_t: WPC error code (int). Returns 0 on success, or an error code (e.g., 0xFF) on failure. </p>
 </dd>
 </dl>
 </dd></dl>

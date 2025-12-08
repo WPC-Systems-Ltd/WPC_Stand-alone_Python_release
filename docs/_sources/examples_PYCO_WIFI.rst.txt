@@ -138,7 +138,7 @@ Modbus slave
 .. toctree::
    :maxdepth: 4
 
-   examples/PYCO_WIFI/Modbus slave/write_data_with_register.rst
+   examples/PYCO_WIFI/Modbus slave/modbus_slave_connect_read.rst
 
 Modbus master
 -------------

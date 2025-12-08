@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write data with register &mdash; WPC Stand-alone Python  0.9.4  documentation</title>
+  <title>Modbus slave connect read &mdash; WPC Stand-alone Python  0.9.7  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/custom_sphinx.css" type="text/css" />
@@ -38,7 +38,7 @@
               <img src="../../../_static/WPC-logo.PNG" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                 0.9.4 
+                 0.9.7 
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -64,7 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AI.html#tinyml">TinyML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AI.html#tutorial">Tutorial</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AI.html#modbus-slave">Modbus slave</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Write data with register</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Modbus slave connect read</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples_PYCO_WIFI_MINI_AI.html#modbus-master">Modbus master</a></li>
@@ -102,7 +102,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../examples_PYCO_WIFI_MINI_AI.html">PYCO-WIFI-MINI-AI</a></li>
-      <li class="breadcrumb-item active">Write data with register</li>
+      <li class="breadcrumb-item active">Modbus slave connect read</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -111,14 +111,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="write-data-with-register">
-<h1>Write data with register<a class="headerlink" href="#write-data-with-register" title="Permalink to this heading"></a></h1>
+  <section id="modbus-slave-connect-read">
+<h1>Modbus slave connect read<a class="headerlink" href="#modbus-slave-connect-read" title="Permalink to this heading"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos"> 2</span><span class="sd">Modbus_slave - write_data_with_register.py.</span>
+<span class="linenos"> 2</span><span class="sd">Modbus_slave - modbus_slave_connect_read.py.</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="sd">This example demonstrates how to write data into slave</span>
+<span class="linenos"> 4</span><span class="sd">This example demonstrates how to establish and manage a connection for a Modbus TCP Slave device, and then periodically read its internal data registers once a Modbus Master client connects.</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="sd">The range of input registers is from 41000 to 41499.</span>
+<span class="linenos"> 6</span><span class="sd">The range of Holding Registers is from 40001 to 40500</span>
 <span class="linenos"> 7</span>
 <span class="linenos"> 8</span><span class="sd">For other examples please check:</span>
 <span class="linenos"> 9</span><span class="sd">    https://github.com/WPC-Systems-Ltd/WPC_Stand-alone_Python_release/tree/main/examples</span>
@@ -130,17 +130,62 @@
 <span class="linenos">15</span><span class="c1">## WPC</span>
 <span class="linenos">16</span><span class="kn">import</span> <span class="nn">pywpc</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="c1">## Open Modbus slave in background</span>
-<span class="linenos">19</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_open</span><span class="p">()</span>
+<span class="linenos">18</span><span class="c1">## Python</span>
+<span class="linenos">19</span><span class="kn">import</span> <span class="nn">time</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span><span class="c1">## Write int value in Modbus slave&#39;s map</span>
-<span class="linenos">22</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_inputRegisterWriteInt</span><span class="p">(</span><span class="mi">41000</span><span class="p">,</span> <span class="mi">5566</span><span class="p">)</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span><span class="c1">## Write float value in Modbus slave&#39;s map</span>
-<span class="linenos">25</span><span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_inputRegisterWriteFloat</span><span class="p">(</span><span class="mi">41002</span><span class="p">,</span> <span class="mf">0.1234</span><span class="p">)</span>
+<span class="linenos">21</span><span class="c1"># --- Modbus Configuration ---</span>
+<span class="linenos">22</span><span class="n">START_ADDRESS</span> <span class="o">=</span> <span class="mi">40001</span> <span class="c1">## Assume Modbus Holding Registers start at 40001</span>
+<span class="linenos">23</span><span class="n">NUM_REGISTERS</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">## Assume we want to read 10 registers (40001 to 40010)</span>
+<span class="linenos">24</span><span class="n">READ_INTERVAL</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1">## Time interval for periodic data reading (seconds)</span>
+<span class="linenos">25</span><span class="n">CONNECTION_TIMEOUT</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">## Timeout for checking connection status (seconds)</span>
 <span class="linenos">26</span>
-<span class="linenos">27</span><span class="c1">## Close Modbus slave in background</span>
-<span class="linenos">28</span><span class="c1"># pywpc.ModbusSlave_close()</span>
+<span class="linenos">27</span><span class="k">def</span> <span class="nf">run_modbus_slave_example</span><span class="p">():</span>
+<span class="linenos">28</span>    <span class="c1">## Open Modbus Slave TCP server</span>
+<span class="linenos">29</span>    <span class="n">status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_open</span><span class="p">()</span>
+<span class="linenos">30</span>    <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">31</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to open Modbus Slave TCP server. Please try again.&quot;</span><span class="p">)</span>
+<span class="linenos">32</span>        <span class="k">return</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span>    <span class="c1">## Wait for master connection</span>
+<span class="linenos">35</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for master connection...&quot;</span><span class="p">)</span>
+<span class="linenos">36</span>    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="linenos">37</span>    <span class="n">is_connected</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span> <span class="o">&lt;</span> <span class="n">CONNECTION_TIMEOUT</span><span class="p">:</span>
+<span class="linenos">40</span>        <span class="n">connect_status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_getConnectStatus</span><span class="p">()</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>        <span class="k">if</span> <span class="n">connect_status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos">43</span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful!&quot;</span><span class="p">)</span>
+<span class="linenos">44</span>            <span class="n">is_connected</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">45</span>            <span class="k">break</span>
+<span class="linenos">46</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Check every 0.5s</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_connected</span><span class="p">:</span>
+<span class="linenos">49</span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connection failed after </span><span class="si">{</span><span class="n">CONNECTION_TIMEOUT</span><span class="si">}</span><span class="s2"> seconds timeout.&quot;</span><span class="p">)</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span>    <span class="c1">## Read Holding Registers periodically</span>
+<span class="linenos">52</span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos">53</span>        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">54</span>            <span class="c1"># Check current connection status</span>
+<span class="linenos">55</span>            <span class="n">connect_status</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_getConnectStatus</span><span class="p">()</span>
+<span class="linenos">56</span>            <span class="k">if</span> <span class="n">connect_status</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos">57</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client disconnected. Exiting read loop.&quot;</span><span class="p">)</span>
+<span class="linenos">58</span>                <span class="k">break</span>
+<span class="linenos">59</span>
+<span class="linenos">60</span>            <span class="c1">## Get holding register map</span>
+<span class="linenos">61</span>            <span class="n">register_data</span> <span class="o">=</span> <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_getHoldingRegisterMap</span><span class="p">(</span><span class="n">START_ADDRESS</span><span class="p">,</span> <span class="n">NUM_REGISTERS</span><span class="p">)</span>
+<span class="linenos">62</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Holding register data: </span><span class="si">{</span><span class="n">register_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">63</span>
+<span class="linenos">64</span>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">READ_INTERVAL</span><span class="p">)</span>
+<span class="linenos">65</span>
+<span class="linenos">66</span>    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+<span class="linenos">67</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Keyboard interrupt detected.&quot;</span><span class="p">)</span>
+<span class="linenos">68</span>
+<span class="linenos">69</span>    <span class="k">finally</span><span class="p">:</span>
+<span class="linenos">70</span>        <span class="n">pywpc</span><span class="o">.</span><span class="n">ModbusSlave_close</span><span class="p">()</span>
+<span class="linenos">71</span>
+<span class="linenos">72</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">73</span>    <span class="n">run_modbus_slave_example</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
